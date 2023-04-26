@@ -21,7 +21,7 @@ export class MGridItem extends LitElement {
   render() {
     return html`
       <div class="m-grid-item">
-        <slot name="content"></slot>
+        <slot></slot>
       </div>
     `;
   }
