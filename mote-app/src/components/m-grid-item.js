@@ -6,16 +6,33 @@ import { LitElement, css, html } from 'lit';
  * @slot - This element has a slot
  */
 export class MGridItem extends LitElement {
+  static get properties() {
+    return {
+      padding: { type: String },
+    };
+  }
+
+  constructor() {
+    super();
+    this.padding = {};
+  }
+
   static get styles() {
     return css`
       :host {
-        display: block;
+        display: inline-block;
+        background-color: crimson;
       }
 
       .m-grid-item {
-        display: flex;
+        padding: var(--padding);
       }
     `;
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    this.style.setProperty('--padding', this.padding);
   }
 
   render() {
