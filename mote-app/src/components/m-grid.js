@@ -26,7 +26,7 @@ export class MGrid extends LitElement {
 
     return html`
       <div class="${classMap(classes)}">
-        <slot name="content"></slot>
+        <slot></slot>
       </div>
     `;
   }
@@ -40,7 +40,7 @@ export class MGrid extends LitElement {
       .m-grid {
         display: grid;
         gap: 1rem;
-        margin-bottom: 1rem;
+        grid-template-rows: minmax(150px, auto);
       }
 
       .m-grid--side-by-side {

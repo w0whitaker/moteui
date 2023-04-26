@@ -42,8 +42,13 @@ export class MBox extends LitElement {
       :host {
         display: block;
       }
+
       .border {
         border-style: solid;
+      }
+
+      .m-box {
+        max-width: fit-content;
       }
 
       .m-box-padding--none {

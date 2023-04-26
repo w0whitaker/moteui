@@ -10,35 +10,36 @@
 </head>
 
 <body>
-  <main>
-    <m-box padding="scant" border thickness="medium">
-      <h1 slot="content">Mote UI</h1>
-    </m-box>
-    <section>
-      <m-grid variant="fit">
-        <m-grid-item slot="content">
-          <m-box slot="content" padding="scant" border thickness="medium">
-            <h2 slot="content">Grid</h2>
+  <div class="mote-container">
+    <header class="pv-xs">
+      <m-box padding="jumbo" border thickness="medium">
+        <h1 slot="content">Mote<span style="background-color: black; color: white;" class="pv-xs pl-xs pr-s">UI</span>
+        </h1>
+      </m-box>
+    </header>
+    <main>
+      <m-grid variant="2up">
+        <m-grid-item flex>
+          <m-box padding="wide" border>
+            <article slot="content">
+              <h2>introduction</h2>
+              <p>mote ui is a web component library.</p>
+            </article>
           </m-box>
         </m-grid-item>
-        <m-grid-item slot="content">
-          <m-box slot="content" padding="scant" border thickness="medium">
-            <h2 slot="content">Grid</h2>
-          </m-box>
-        </m-grid-item>
-        <m-grid-item slot="content">
-          <m-box slot="content" padding="scant" border thickness="medium">
-            <h2 slot="content">Grid</h2>
-          </m-box>
-        </m-grid-item>
-        <m-grid-item slot="content">
-          <m-box slot="content" padding="scant" border thickness="medium">
-            <h2 slot="content">Grid</h2>
+        <m-grid-item>
+          <m-box padding="wide" border>
+            <ul role="list" slot="content">
+              <li>button</li>
+              <li>list</li>
+              <li>card</li>
+              <li>banner</li>
+            </ul>
           </m-box>
         </m-grid-item>
       </m-grid>
-    </section>
-  </main>
+    </main>
+  </div>
 </body>
 
 </html>

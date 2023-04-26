@@ -3,6 +3,7 @@
 @import 'global/typography.css';
 @import 'global/layout.css';
 @import 'global/utilities.css';
+@import 'global/global-styles.css';
 
 .show-me {
 	background-color: hotpink;

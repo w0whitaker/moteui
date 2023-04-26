@@ -521,7 +521,7 @@ footer {
 }
 
 .m-in-start-l {
-	margin-inline-start: var(--space-);
+	margin-inline-start: var(--space-l);
 }
 
 .m-in-start-xl {
@@ -551,13 +551,14 @@ footer {
 
 .mote-container {
   max-width: var(--grid-max-width);
-  /* padding-inline: var(--grid-gutter); */
+  padding-inline: var(--grid-gutter);
   margin-inline: auto;
 }
 
 .mote-grid {
   display: grid;
   gap: var(--grid-gutter);
+  grid-auto-rows: minmax(150px, auto);
 }
 
 .mote-grid--side-by-side {
