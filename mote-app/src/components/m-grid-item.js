@@ -21,7 +21,6 @@ export class MGridItem extends LitElement {
     return css`
       :host {
         display: inline-block;
-        background-color: crimson;
       }
 
       .m-grid-item {

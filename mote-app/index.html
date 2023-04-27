@@ -12,32 +12,32 @@
 <body>
   <div class="mote-container">
     <header class="pv-xs">
-      <m-box padding="jumbo" border thickness="medium">
-        <h1 slot="content">Mote<span style="background-color: black; color: white;" class="pv-xs pl-xs pr-s">UI</span>
-        </h1>
-      </m-box>
+      <h1 class="m-b-start-xl">Mote<span
+          style="background-color: black; color: white; border-radius: 50%; margin-left: var(--space-2xs)"
+          class="pv-xs pl-s pr-xs">UI</span>
+      </h1>
     </header>
     <main>
-      <m-grid variant="2up">
-        <m-grid-item padding="jumbo">
-          <m-box border padding="jumbo">
-            <article slot="content">
-              <h2>introduction</h2>
-              <p>mote ui is a web component library.</p>
-            </article>
-          </m-box>
-        </m-grid-item>
-        <m-grid-item padding="none">
-          <m-box border padding="jumbo">
-            <ul role="list" slot="content">
-              <li>button</li>
-              <li>list</li>
-              <li>card</li>
-              <li>banner</li>
-            </ul>
-          </m-box>
-        </m-grid-item>
-      </m-grid>
+      <article class="flow">
+        <header>
+          <h2>introduction</h2>
+          <p>mote ui is a web component library.</p>
+        </header>
+        <section class="flow">
+          <h3>elements</h3>
+          <dl>
+            <dt>m-button</dt>
+            <dd>a clickable element</dd>
+            <dt>m-list</dt>
+            <dd>a list is a collection of items</dd>
+            <dt>card</dt>
+            <dd>a card is a container for displaying important content</dd>
+            <dt>banner</dt>
+            <dd>a banner is a full-width element</dd>
+            <dt>input</dt>
+            <dd>an input is a form element for entering information</dd>
+          </dl>
+        </section>
     </main>
   </div>
 </body>

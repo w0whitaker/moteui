@@ -41,6 +41,8 @@ export class MGrid extends LitElement {
         display: grid;
         gap: 1rem;
         grid-template-rows: minmax(150px, auto);
+        justify-content: center;
+        align-items: center;
       }
 
       .m-grid--side-by-side {

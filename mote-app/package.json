@@ -20,15 +20,18 @@
     "lit": "^2.6.1"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^7.0.5",
-    "@storybook/addon-links": "^7.0.5",
-    "@storybook/addon-mdx-gfm": "^7.0.5",
-    "@storybook/blocks": "^7.0.5",
-    "@storybook/web-components": "^7.0.5",
-    "@storybook/web-components-vite": "^7.0.5",
+    "@custom-elements-manifest/analyzer": "^0.8.0",
+    "@storybook/addon-docs": "^7.0.7",
+    "@storybook/addon-essentials": "^7.0.7",
+    "@storybook/addon-links": "^7.0.7",
+    "@storybook/addon-mdx-gfm": "^7.0.7",
+    "@storybook/blocks": "^7.0.7",
+    "@storybook/web-components": "^7.0.7",
+    "@storybook/web-components-vite": "^7.0.7",
+    "custom-elements-manifest": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "storybook": "^7.0.5",
+    "storybook": "^7.0.7",
     "vite": "^4.2.0"
   }
 }
