@@ -7,8 +7,12 @@ export default {
 };
 
 export const Default = {
-  render: () => html`
-    <m-box border thickness="thin" padding="wide">
+  render: args => html`
+    <m-box
+      border=${args.border}
+      padding=${args.padding}
+      thickness=${args.thickness}
+    >
       <p slot="content">
         Ryder passed his tongue over his parched lips. "I will tell you it just
         as it happened, sir," said he. "When Horner had been arrested, it seemed
@@ -27,4 +31,9 @@ export const Default = {
       </p>
     </m-box>
   `,
+  args: {
+    border: true,
+    padding: 'wide',
+    thickness: 'thin',
+  },
 };
