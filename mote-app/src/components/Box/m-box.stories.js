@@ -3,7 +3,7 @@ import './m-box.js';
 
 export default {
   title: 'Components/Box',
-  component: 'm-box',
+  component: 'MBox',
 };
 
 export const Default = {

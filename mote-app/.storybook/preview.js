@@ -1,4 +1,8 @@
 /** @type { import('@storybook/web-components').Preview } */
+import { setCustomElementsManifest } from '@storybook/web-components';
+import customElements from '../custom-elements.json';
+
+setCustomElementsManifest(customElements);
 
 const preview = {
   parameters: {
