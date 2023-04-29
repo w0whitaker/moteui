@@ -1,11 +1,14 @@
 import { LitElement } from 'lit';
-export declare class MInput extends LitElement {
-    name: string;
-    static styles: import("lit").CSSResult[];
+/**
+ * The Button element.
+ */
+export declare class MButton extends LitElement {
+    label: string;
+    constructor();
     render(): import("lit-html").TemplateResult<1>;
 }
 declare global {
     interface HTMLElementTagNameMap {
-        'm-input': MInput;
+        'm-button': MButton;
     }
 }

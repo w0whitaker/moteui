@@ -1,4 +1,4 @@
-import './m-list.js';
+import '../m-list.js';
 
 export default {
   title: 'Components/List',
@@ -6,12 +6,12 @@ export default {
 };
 
 export const Default = {
-  render: args => {
+  render: (args: { items: any; }) => {
     const { items } = args;
 
     return `
       <m-list>
-        ${items.map(item => `<li>${item}</li>`).join('')}
+        ${items.map((item: any) => `<li>${item}</li>`).join('')}
       </m-list>
     `;
   },

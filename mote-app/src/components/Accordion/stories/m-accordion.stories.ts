@@ -1,5 +1,6 @@
 import { html } from 'lit';
-import './m-accordion-item.js';
+import '../m-accordion.ts';
+import '../m-accordion-item.ts';
 
 export default {
   title: 'Components/Accordion',

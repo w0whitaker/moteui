@@ -1,12 +1,12 @@
 import { LitElement } from 'lit';
-import '../Box/m-box.js';
-export declare class MModal extends LitElement {
-    text: string;
+export declare class MInput extends LitElement {
+    name: string;
     static styles: import("lit").CSSResult[];
+    constructor();
     render(): import("lit-html").TemplateResult<1>;
 }
 declare global {
     interface HTMLElementTagNameMap {
-        'm-modal': MModal;
+        'm-input': MInput;
     }
 }

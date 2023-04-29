@@ -13,6 +13,11 @@ export class MInput extends LitElement {
     `,
   ];
 
+  constructor() {
+    super();
+    this.name = 'Input';
+  }
+
   render() {
     const { name } = this;
 

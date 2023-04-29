@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
+    "strict": true,
+    "outDir": "src/typings",
+    "sourceMap": true,
     "experimentalDecorators": true,
     "useDefineForClassFields": false,
     "emitDeclarationOnly": true,
-    "composite": true
+    "declaration": true
   },
   "include": [
     "src/**/*.ts", ".storybook/**/*.ts"

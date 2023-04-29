@@ -6,6 +6,11 @@ import '../Box/m-box.js';
 export class MModal extends LitElement {
   text: string;
 
+  constructor() {
+    super();
+    this.text = 'Modal';
+  }
+
   static styles = [
     css`
       :host {

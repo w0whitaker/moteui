@@ -1,5 +1,5 @@
 import { html } from 'lit';
-import './m-box.js';
+import '../m-box.js';
 
 export default {
   title: 'Components/Box',
@@ -7,7 +7,7 @@ export default {
 };
 
 export const Default = {
-  render: args => html`
+  render: (args: { border: unknown; padding: unknown; thickness: unknown; }) => html`
     <m-box
       border=${args.border}
       padding=${args.padding}
