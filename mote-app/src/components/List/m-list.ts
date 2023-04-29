@@ -1,5 +1,7 @@
 import { LitElement, html, css } from 'lit';
+import { customElement } from 'lit/decorators.js';
 
+@customElement('m-list')
 export class MList extends LitElement {
   static styles = [
     css`
@@ -18,4 +20,8 @@ export class MList extends LitElement {
   }
 }
 
-customElements.define('m-list', MList);
+declare global {
+  interface HTMLElementTagNameMap {
+    'm-list': MList;
+  }
+}

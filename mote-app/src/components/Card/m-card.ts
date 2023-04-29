@@ -1,12 +1,10 @@
 import { LitElement, html } from 'lit';
+import { customElement } from 'lit/decorators.js';
 import '../Box/m-box.js';
 
+@customElement('m-card')
 export class MCard extends LitElement {
-  static get properties() {
-    return {
-      shadow: { type: Boolean },
-    };
-  }
+  shadow: boolean;
 
   constructor() {
     super();
@@ -24,4 +22,8 @@ export class MCard extends LitElement {
   }
 }
 
-customElements.define('m-card', MCard);
+declare global {
+  interface HTMLElementTagNameMap {
+    'm-card': MCard;
+  }
+}

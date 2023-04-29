@@ -1,12 +1,10 @@
 import { LitElement, html, css } from 'lit';
+import { customElement } from 'lit/decorators.js';
 import '../Box/m-box.js';
 
+@customElement('m-modal')
 export class MModal extends LitElement {
-  static get properties() {
-    return {
-      text: { type: String },
-    };
-  }
+  text: string;
 
   static styles = [
     css`
@@ -27,4 +25,8 @@ export class MModal extends LitElement {
   }
 }
 
-customElements.define('m-modal', MModal);
+declare global {
+  interface HTMLElementTagNameMap {
+    'm-modal': MModal;
+  }
+}

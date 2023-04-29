@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
+    "emitDeclarationOnly": true,
+    "composite": true
+  },
+  "include": [
+    "src/**/*.ts", ".storybook/**/*.ts"
+  ]
+}

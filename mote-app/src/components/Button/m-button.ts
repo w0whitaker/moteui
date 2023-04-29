@@ -1,15 +1,13 @@
 import { LitElement, html } from 'lit';
+import { customElement } from 'lit/decorators.js';
 
 /**
  * The Button element.
  */
 
+@customElement('m-button')
 export class MButton extends LitElement {
-  static get properties() {
-    return {
-      label: { type: String },
-    };
-  }
+  label: string;
 
   constructor() {
     super();
@@ -27,4 +25,8 @@ export class MButton extends LitElement {
   }
 }
 
-customElements.define('m-button', MButton);
+declare global {
+  interface HTMLElementTagNameMap {
+    'm-button': MButton;
+  }
+}

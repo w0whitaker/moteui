@@ -1,19 +1,18 @@
-import { LitElement, css, html } from 'lit';
-import { classMap } from 'lit/directives/class-map.js';
-
 /**
  * The Box element.
  *
  * @slot - This element has a slot
+ *
  */
+import { LitElement, css, html } from 'lit';
+import { customElement } from 'lit/decorators.js';
+import { classMap } from 'lit/directives/class-map.js';
+
+@customElement('m-box')
 export class MBox extends LitElement {
-  static get properties() {
-    return {
-      border: { type: Boolean },
-      thickness: { type: String },
-      padding: { type: String },
-    };
-  }
+  border: boolean;
+  padding: string;
+  thickness: string;
 
   constructor() {
     super();
@@ -94,4 +93,8 @@ export class MBox extends LitElement {
   }
 }
 
-window.customElements.define('m-box', MBox);
+declare global {
+  interface HTMLElementTagNameMap {
+    'm-box': MBox;
+  }
+}

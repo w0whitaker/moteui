@@ -1,11 +1,9 @@
 import { LitElement, html, css } from 'lit';
+import { customElement } from 'lit/decorators.js';
 
+@customElement('m-input')
 export class MInput extends LitElement {
-  static get properties() {
-    return {
-      name: { type: String },
-    };
-  }
+  name: string;
 
   static styles = [
     css`
@@ -25,4 +23,8 @@ export class MInput extends LitElement {
   }
 }
 
-customElements.define('m-input', MInput);
+declare global {
+  interface HTMLElementTagNameMap {
+    'm-input': MInput;
+  }
+}

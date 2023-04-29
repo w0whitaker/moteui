@@ -1,4 +1,5 @@
 import { LitElement, html } from 'lit';
+import { customElement } from 'lit/decorators.js';
 
 /**
  * The Accordion element.
@@ -6,6 +7,7 @@ import { LitElement, html } from 'lit';
  * @slot - This element has a slot
  */
 
+@customElement('m-accordion')
 export class MAccordion extends LitElement {
   render() {
     return html`
@@ -13,5 +15,11 @@ export class MAccordion extends LitElement {
         <slot name="item"></slot>
       </div>
     `;
+  }
+}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'm-accordion': MAccordion;
   }
 }
