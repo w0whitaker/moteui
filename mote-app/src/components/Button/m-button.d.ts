@@ -1,14 +1,14 @@
 import { LitElement } from 'lit';
 /**
- * The Accordion element.
- *
- * @slot - This element has a slot
+ * The Button element.
  */
-export declare class MAccordion extends LitElement {
+export declare class MButton extends LitElement {
+    label: string;
+    constructor();
     render(): import("lit-html").TemplateResult<1>;
 }
 declare global {
     interface HTMLElementTagNameMap {
-        'm-accordion': MAccordion;
+        'm-button': MButton;
     }
 }
