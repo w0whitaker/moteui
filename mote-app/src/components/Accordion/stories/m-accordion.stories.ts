@@ -4,31 +4,31 @@ import '../m-accordion-item.ts';
 
 export default {
   title: 'Components/Accordion',
-  component: 'm-accordion',
+  component: 'MAccordion',
 };
 
 export const Default = {
   render: () => html`
     <m-accordion>
-      <m-accordion-item slot="item">
-        <div slot="title">Sherlock Holmes</div>
-        <span slot="content">
+      <m-accordion-item>
+        <p slot="title">Sherlock Holmes</p>
+        <p slot="content">
           My name is Sherlock Holmes. It is my business to know what other
           people don't know.
-        </span>
+        </p>
       </m-accordion-item>
-      <m-accordion-item slot="item">
-        <div slot="title">Dr. Watson</div>
-        <span slot="content">
+      <m-accordion-item>
+        <p slot="title">Dr. Watson</p>
+        <p slot="content">
           You have a grand gift for silence, Watson. It makes you quite
           invaluable as a companion.
-        </span>
+        </p>
       </m-accordion-item>
-      <m-accordion-item slot="item">
-        <div slot="title">Matlock</div>
-        <span slot="content">
+      <m-accordion-item>
+        <p slot="title">Matlock</p>
+        <p slot="content">
           I'm not a magician, I'm just a country lawyer.
-        </span>
+        </p>
       </m-accordion-item>
     </m-accordion>
   `,

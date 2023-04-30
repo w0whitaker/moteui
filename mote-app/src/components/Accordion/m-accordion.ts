@@ -1,6 +1,8 @@
 import { LitElement, html, css } from 'lit';
-import { customElement } from 'lit/decorators.js';
+import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
+import { ACCORDION_SIZE } from './defs';
+import { stackLayout } from '../Stack/m-stack';
 
 /**
  * The Accordion element.
@@ -10,28 +12,28 @@ import { classMap } from 'lit/directives/class-map.js';
 
 @customElement('m-accordion')
 export class MAccordion extends LitElement {
-  static styles = css`
-    :host {
-      display: block;
-    }
+  @property({ reflect: true})
+  size = ACCORDION_SIZE.MEDIUM;
 
-    .m-accordion {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      font-family: sans-serif;
-    }
-  `;
+  static styles = [
+    stackLayout,
+    css`
+      :host {
+        display: block;
+      }
+  `];
 
   render() {
-    const classes = {
-      'm-accordion': true,
-    };
     return html`
-      <div class="${classMap(classes)}">
-        <slot name="item"></slot>
-      </div>
+      <slot></slot>
     `;
+  }
+
+  connectedCallback() {
+    if (!this.hasAttribute('role')) {
+      this.setAttribute('role', 'list');
+    }
+    super.connectedCallback();
   }
 }
 

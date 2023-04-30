@@ -1,8 +1,8 @@
 import { html } from 'lit';
-import '../m-box.js';
+import '../index';
 
 export default {
-  title: 'Components/Box',
+  title: 'Layouts/Box',
   component: 'MBox',
 };
 

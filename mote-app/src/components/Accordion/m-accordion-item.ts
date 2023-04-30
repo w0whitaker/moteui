@@ -1,5 +1,6 @@
-import { LitElement, html } from 'lit';
+import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
+import { stackLayout } from '../Stack/m-stack';
 
 /**
  *
@@ -10,12 +11,16 @@ import { customElement } from 'lit/decorators.js';
 
 @customElement('m-accordion-item')
 export class MAccordionItem extends LitElement {
+  static styles = [
+    stackLayout,
+  ];
+/** simplify this markup */
   render() {
     return html`
-      <details>
-        <summary><slot name="title"></slot></summary>
-        <p><slot name="content"></slot></p>
-      </details>
+      <div class="m-stack">
+        <slot name="title"></slot>
+        <slot name="content"></slot>
+      </div>
     `;
   }
 }
