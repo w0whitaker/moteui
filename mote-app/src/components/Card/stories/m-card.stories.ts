@@ -1,5 +1,5 @@
 import { html } from 'lit';
-import './m-card.js';
+import '../m-card.js';
 
 export default {
   title: 'Components/Card',

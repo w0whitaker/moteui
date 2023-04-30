@@ -1,4 +1,4 @@
-import './m-input.js';
+import '../m-input.js';
 
 export default {
   title: 'Components/Input',

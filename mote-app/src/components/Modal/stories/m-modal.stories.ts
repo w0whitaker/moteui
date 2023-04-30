@@ -1,4 +1,4 @@
-import './m-modal.js';
+import '../m-modal.js';
 
 export default {
   title: 'Components/Modal',

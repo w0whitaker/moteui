@@ -18,7 +18,8 @@
     "cem": "./node_modules/.bin/cem analyze --config 'custom-elements-manifest.config.mjs'"
   },
   "dependencies": {
-    "lit": "^2.6.1"
+    "lit": "^2.6.1",
+    "postcss": "^8.4.23"
   },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "^0.8.1",
@@ -26,6 +27,7 @@
     "@storybook/addon-essentials": "^7.0.7",
     "@storybook/addon-links": "^7.0.7",
     "@storybook/addon-mdx-gfm": "^7.0.7",
+    "@storybook/addon-styling": "^1.0.5",
     "@storybook/blocks": "^7.0.7",
     "@storybook/web-components": "^7.0.7",
     "@storybook/web-components-vite": "^7.0.7",

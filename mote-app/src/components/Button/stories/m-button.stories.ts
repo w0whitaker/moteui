@@ -1,4 +1,4 @@
-import './m-button.js';
+import '../m-button.js';
 
 export default {
   title: 'Components/Button',
