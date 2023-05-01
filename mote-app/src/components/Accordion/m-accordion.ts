@@ -2,7 +2,7 @@ import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { ACCORDION_SIZE } from './defs';
-import { stackLayout } from '../Stack/m-stack';
+import { stackLayout } from '../../helpers/Stack/m-stack';
 
 /**
  * The Accordion element.
@@ -21,11 +21,22 @@ export class MAccordion extends LitElement {
       :host {
         display: block;
       }
-  `];
+
+      .m-accordion > ::slotted(*:not(:first-child)) {
+        margin-block-start: 0.125rem;
+      }
+    `
+  ];
 
   render() {
+    const classes = {
+      'm-accordion': true,
+    };
+
     return html`
-      <slot></slot>
+      <div class="${classMap(classes)}">
+        <slot></slot>
+      </div>
     `;
   }
 

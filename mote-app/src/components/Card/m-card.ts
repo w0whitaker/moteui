@@ -1,6 +1,6 @@
 import { LitElement, html } from 'lit';
 import { customElement } from 'lit/decorators.js';
-import '../Box/m-box.js';
+import '../../helpers/Box/m-box.js';
 
 @customElement('m-card')
 export class MCard extends LitElement {
