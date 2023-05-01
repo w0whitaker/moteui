@@ -1,5 +1,5 @@
 import { LitElement, html } from 'lit';
-import { customElement } from 'lit/decorators.js';
+import { customElement, property } from 'lit/decorators.js';
 
 /**
  * The Button element.
@@ -7,7 +7,8 @@ import { customElement } from 'lit/decorators.js';
 
 @customElement('m-button')
 export class MButton extends LitElement {
-  label: string;
+  @property({ reflect: true })
+  label = '';
 
   constructor() {
     super();

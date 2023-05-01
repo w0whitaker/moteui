@@ -2,11 +2,16 @@ import '../m-button.js';
 
 export default {
   title: 'Components/Button',
-  component: 'm-button',
+  component: 'MButton',
 };
 
 export const Primary = {
+  render: (args: { label: string; }) => {
+    const { label } = args;
+
+    return `<m-button label="${label}">${label}</m-button>`;
+  },
   args: {
-    label: 'primary',
+    label: 'Click me!',
   },
 };
