@@ -1,23 +1,40 @@
-import { LitElement, html } from 'lit';
+import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
-import '../../helpers/Box/m-box.js';
+import { boxLayout } from '@helpers/Box/m-box.js';
+import { classMap } from 'lit/directives/class-map.js';
 
 @customElement('m-card')
 export class MCard extends LitElement {
-  shadow: boolean;
+  static styles = [
+    boxLayout,
+    css`
+      :host {
+        display: block;
+      }
 
-  constructor() {
-    super();
-    this.shadow = false;
-  }
+      .m-box {
+        padding-block: var(--space-s, 1.125rem);
+        padding-inline: var(--space-m, 3.375ch);
+      }
+
+      ::slotted([slot="title"]) {
+        padding-block: var(--space-s, 1.125rem);
+        padding-inline: var(--space-m, 3.375ch);
+        background-color: var(--secondary, lightgray);
+      }
+    `
+  ];
 
   render() {
+    const classes = {
+      'm-box': true,
+    };
+
     return html`
-      <m-box border padding="wide">
-        <div slot="content">
-          <slot name="content"></slot>
-        </div>
-      </m-box>
+      <div class="${classMap(classes)}">
+        <slot name="title"></slot>
+        <slot name="content"></slot>
+      </div>
     `;
   }
 }
