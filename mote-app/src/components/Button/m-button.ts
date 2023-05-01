@@ -1,5 +1,6 @@
-import { LitElement, html } from 'lit';
+import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import { classMap } from 'lit/directives/class-map.js';
 
 /**
  * The Button element.
@@ -15,13 +16,27 @@ export class MButton extends LitElement {
     this.label = 'Button';
   }
 
+  static styles = css`
+    :host {
+      display: block;
+    }
+
+    .m-button {
+      border: none;
+      background-color: var(--secondary, lightgray);
+      padding-block: 1rem;
+      padding-inline: 4ch;
+    }
+  `;
+
   render() {
     const { label } = this;
+    const classes = {
+      'm-button': true,
+    };
 
     return html`
-      <div class="wrapper">
-        <button>${label}</button>
-      </div>
+      <button class="${classMap(classes)}">${label}</button>
     `;
   }
 }
