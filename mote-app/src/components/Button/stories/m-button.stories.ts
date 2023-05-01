@@ -1,4 +1,5 @@
-import '../m-button.js';
+import 'src/components/Button/m-button';
+import '.storybook/main.css';
 
 export default {
   title: 'Components/Button',

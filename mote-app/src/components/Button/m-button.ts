@@ -24,8 +24,8 @@ export class MButton extends LitElement {
     .m-button {
       border: none;
       background-color: var(--secondary, lightgray);
-      padding-block: 1rem;
-      padding-inline: 4ch;
+      padding-block: var(--space-s, 1.125rem);
+      padding-inline: var(--space-m, 3.375ch);
     }
   `;
 

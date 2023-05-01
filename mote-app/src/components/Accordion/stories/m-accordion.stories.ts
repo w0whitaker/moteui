@@ -1,6 +1,7 @@
 import { html } from 'lit';
-import '../m-accordion.ts';
-import '../m-accordion-item.ts';
+import 'src/components/Accordion/m-accordion';
+import 'src/components/Accordion/m-accordion-item';
+import '.storybook/main.css';
 
 export default {
   title: 'Components/Accordion',
