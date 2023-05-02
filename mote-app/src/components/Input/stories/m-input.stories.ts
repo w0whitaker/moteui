@@ -1,17 +1,18 @@
+import type { Meta, StoryObj } from '@storybook/web-components';
+
 import 'src/components/Input/m-input';
 import '.storybook/main.css';
 
-export default {
+const meta: Meta = {
   title: 'Components/Input',
-  component: 'MInput',
+  component: 'm-input',
 };
 
-export const Default = {
-  render: (args: { name: string; }) => {
-    const { name } = args;
+export default meta;
 
-    return `<m-input name="${name}"></m-input>`;
-  },
+type Story = StoryObj;
+
+export const Default: Story = {
   args: {
     name: 'enter',
   },

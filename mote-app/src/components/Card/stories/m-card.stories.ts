@@ -6,7 +6,7 @@ import '.storybook/main.css';
 
 const meta: Meta = {
   title: 'Components/Card',
-  component: 'MCard',
+  component: 'm-card',
 };
 
 export default meta;
