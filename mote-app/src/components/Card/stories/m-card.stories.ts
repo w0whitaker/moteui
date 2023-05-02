@@ -1,13 +1,19 @@
+import type { Meta, StoryObj } from '@storybook/web-components';
+
 import { html } from 'lit';
 import 'src/components/Card/m-card';
 import '.storybook/main.css';
 
-export default {
+const meta: Meta = {
   title: 'Components/Card',
   component: 'MCard',
 };
 
-export const Primary = {
+export default meta;
+
+type Story = StoryObj;
+
+export const Primary: Story = {
   render: () => html`
     <m-card>
       <h3 slot="title">Card Title</h3>
