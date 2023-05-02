@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
-import { stackLayout } from '@helpers/Stack/m-stack';
+import { stackLayout } from '@helpers/layouts';
 import '.storybook/main.css';
 
 /**

@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
-import { boxLayout, stackLayout } from '@helpers/index';
+import { boxLayout, stackLayout } from '@helpers/layouts';
 
 @customElement('m-modal')
 export class MModal extends LitElement {

@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
-import { boxLayout } from '@helpers/Box/m-box.js';
+import { boxLayout } from '@helpers/layouts';
 import { classMap } from 'lit/directives/class-map.js';
 
 @customElement('m-card')
