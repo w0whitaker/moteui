@@ -2,7 +2,6 @@ import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { ACCORDION_SIZE } from './defs';
-import { stackLayout } from '../../helpers/Stack/m-stack';
 
 /**
  * The Accordion element.
@@ -16,7 +15,6 @@ export class MAccordion extends LitElement {
   size = ACCORDION_SIZE.MEDIUM;
 
   static styles = [
-    stackLayout,
     css`
       :host {
         display: block;

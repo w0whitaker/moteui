@@ -1,4 +1,5 @@
-import '../m-list.js';
+import 'src/components/List/m-list.ts';
+import '.storybook/main.css';
 
 export default {
   title: 'Components/List',
@@ -6,15 +7,6 @@ export default {
 };
 
 export const Default = {
-  render: (args: { items: any; }) => {
-    const { items } = args;
-
-    return `
-      <m-list>
-        ${items.map((item: any) => `<li>${item}</li>`).join('')}
-      </m-list>
-    `;
-  },
   args: {
     items: ['Item 1', 'Item 2', 'Item 3'],
   },
