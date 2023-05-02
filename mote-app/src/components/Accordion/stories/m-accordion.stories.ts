@@ -1,14 +1,20 @@
+import type { Meta, StoryObj } from '@storybook/web-components';
+
 import { html } from 'lit';
 import 'src/components/Accordion/m-accordion';
 import 'src/components/Accordion/m-accordion-item';
 import '.storybook/main.css';
 
-export default {
+const meta: Meta = {
   title: 'Components/Accordion',
-  component: 'MAccordion',
+  component: 'm-accordion',
 };
 
-export const Default = {
+export default meta;
+
+type Story = StoryObj;
+
+export const Default: Story = {
   render: () => html`
     <m-accordion>
       <m-accordion-item>

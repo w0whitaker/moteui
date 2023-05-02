@@ -1,17 +1,18 @@
+import type { Meta, StoryObj } from '@storybook/web-components';
+
 import 'src/components/Button/m-button';
 import '.storybook/main.css';
 
-export default {
+const meta: Meta = {
   title: 'Components/Button',
-  component: 'MButton',
+  component: 'm-button',
 };
 
-export const Primary = {
-  render: (args: { label: string; }) => {
-    const { label } = args;
+export default meta;
 
-    return `<m-button label="${label}">${label}</m-button>`;
-  },
+type Story = StoryObj;
+
+export const Primary: Story = {
   args: {
     label: 'Click me!',
   },
