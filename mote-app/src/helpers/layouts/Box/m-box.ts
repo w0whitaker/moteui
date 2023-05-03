@@ -1,7 +1,9 @@
 import { css } from 'lit';
 
-export const boxLayout = css`
+export const boxLayout = [
+  css`
   .m-box {
-    border: 1px solid black;
-  }
-  `;
+    border-style: solid;
+    border-color: var(--border-color, black);
+  }`
+  ];

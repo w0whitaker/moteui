@@ -2,6 +2,7 @@ import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { boxLayout, stackLayout } from '@helpers/layouts';
+import { line } from '@helpers/borders';
 
 /**
  *
@@ -15,6 +16,7 @@ export class MAccordionItem extends LitElement {
   static styles = [
     stackLayout,
     boxLayout,
+    line,
     css`
       :host {
         display: block;
@@ -38,6 +40,7 @@ export class MAccordionItem extends LitElement {
     const classes = {
       'm-accordion-item': true,
       'm-box': true,
+      'm-border--line': true,
     };
     return html`
       <div class="${classMap(classes)}">
