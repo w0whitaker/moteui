@@ -17,7 +17,7 @@ type Story = StoryObj;
 export const Default: Story = {
   render: () => html`
     <m-accordion>
-      <m-accordion-item>
+      <m-accordion-item border>
         <p slot="title">Sherlock Holmes</p>
         <p slot="content">
           My name is Sherlock Holmes. It is my business to know what other

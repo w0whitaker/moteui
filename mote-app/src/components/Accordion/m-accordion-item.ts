@@ -1,5 +1,5 @@
-import { LitElement, html, css } from 'lit';
-import { customElement } from 'lit/decorators.js';
+import { LitElement, html, css, PropertyDeclarations } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { boxLayout, stackLayout } from '@helpers/layouts';
 import { line } from '@helpers/borders';
@@ -13,6 +13,9 @@ import { line } from '@helpers/borders';
 
 @customElement('m-accordion-item')
 export class MAccordionItem extends LitElement {
+  @property({ type: Boolean })
+  border = false;
+
   static styles = [
     stackLayout,
     boxLayout,
@@ -36,11 +39,14 @@ export class MAccordionItem extends LitElement {
       }
     `
   ];
+
   render() {
+    const { border } = this;
+
     const classes = {
       'm-accordion-item': true,
       'm-box': true,
-      'm-border--line': true,
+      'm-border--line': border,
     };
     return html`
       <div class="${classMap(classes)}">

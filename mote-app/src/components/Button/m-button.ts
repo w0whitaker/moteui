@@ -8,7 +8,7 @@ import { classMap } from 'lit/directives/class-map.js';
 
 @customElement('m-button')
 export class MButton extends LitElement {
-  @property({ reflect: true })
+  @property({ type: String })
   label = '';
 
   constructor() {
