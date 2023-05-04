@@ -15,7 +15,7 @@ import { line } from '@helpers/borders';
 export class MAccordionItem extends LitElement {
   @property({ type: Boolean })
   border = false;
-
+  
   static styles = [
     stackLayout,
     boxLayout,
