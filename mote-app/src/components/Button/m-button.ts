@@ -10,6 +10,8 @@ import { classMap } from 'lit/directives/class-map.js';
 export class MButton extends LitElement {
   @property({ type: String })
   buttonText = '';
+  @property({ type: Boolean })
+  disabled = false;
 
   constructor() {
     super();
@@ -31,12 +33,13 @@ export class MButton extends LitElement {
 
   render() {
     const { buttonText } = this;
+    const { disabled } = this;
     const classes = {
       'm-button': true,
     };
 
     return html`
-      <button class="${classMap(classes)}" >${buttonText}</button>
+      <button class="${classMap(classes)}" ?disabled=${disabled}>${buttonText}</button>
     `;
   }
 }

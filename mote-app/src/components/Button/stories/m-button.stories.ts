@@ -14,6 +14,7 @@ type Story = StoryObj;
 
 export const Primary: Story = {
   args: {
-    label: 'Click me!',
+    buttonText: 'Click me!',
+    disabled: false,
   },
 };
