@@ -19,6 +19,7 @@ export class MButton extends LitElement {
   }
 
   static styles = css`
+    /* https://spin.atomicobject.com/2015/07/14/css-responsive-square/ */
     :host {
       display: block;
     }
@@ -49,6 +50,10 @@ export class MButton extends LitElement {
       top: 0;
       left: 0;
     }
+
+    .disabled>span {
+      text-decoration: line-through;
+    }
   `;
 
   render() {
@@ -56,6 +61,7 @@ export class MButton extends LitElement {
     const { disabled } = this;
     const classes = {
       'm-button': true,
+      'disabled': disabled,
     };
 
     return html`
