@@ -24,10 +24,30 @@ export class MButton extends LitElement {
     }
 
     .m-button {
-      border: none;
-      background-color: var(--secondary, lightgray);
-      padding-block: var(--space-s, 1.125rem);
-      padding-inline: var(--space-m, 3.375ch);
+      border-style: solid;
+      border-width: 0.375em;
+      border-color: #00171F;
+      border-radius: 0.25em;
+      background-color: #E6EBFF;
+      width: 8em;
+      position: relative;
+    }
+
+    .m-button:after {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
+
+    .button-content {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      left: 0;
     }
   `;
 
@@ -39,7 +59,9 @@ export class MButton extends LitElement {
     };
 
     return html`
-      <button class="${classMap(classes)}" ?disabled=${disabled}>${buttonText}</button>
+      <button class="${classMap(classes)}" ?disabled=${disabled}>
+      <span class="button-content">${buttonText}</span>
+      </button>
     `;
   }
 }
