@@ -9,11 +9,11 @@ import { classMap } from 'lit/directives/class-map.js';
 @customElement('m-button')
 export class MButton extends LitElement {
   @property({ type: String })
-  label = '';
+  buttonText = '';
 
   constructor() {
     super();
-    this.label = 'Button';
+    this.buttonText = 'Button';
   }
 
   static styles = css`
@@ -30,13 +30,13 @@ export class MButton extends LitElement {
   `;
 
   render() {
-    const { label } = this;
+    const { buttonText } = this;
     const classes = {
       'm-button': true,
     };
 
     return html`
-      <button class="${classMap(classes)}">${label}</button>
+      <button class="${classMap(classes)}" >${buttonText}</button>
     `;
   }
 }
