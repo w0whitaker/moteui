@@ -26,7 +26,6 @@
     "@storybook/addon-docs": "^7.0.21",
     "@storybook/addon-essentials": "^7.0.21",
     "@storybook/addon-links": "^7.0.21",
-    "@storybook/addon-mdx-gfm": "^7.0.21",
     "@storybook/addon-styling": "^1.3.0",
     "@storybook/blocks": "^7.0.21",
     "@storybook/web-components": "^7.0.21",

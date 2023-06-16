@@ -1,0 +1,445 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Accordion/defs.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Accordion/index.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Accordion/m-accordion-item.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "\nThe Accordion item element.",
+          "name": "MAccordionItem",
+          "slots": [
+            {
+              "description": "This element has a slot",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "border",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "border"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "border",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "border"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "m-accordion-item",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MAccordionItem",
+          "declaration": {
+            "name": "MAccordionItem",
+            "module": "src/components/Accordion/m-accordion-item.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "m-accordion-item",
+          "declaration": {
+            "name": "MAccordionItem",
+            "module": "src/components/Accordion/m-accordion-item.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Accordion/m-accordion.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The Accordion element.",
+          "name": "MAccordion",
+          "slots": [
+            {
+              "description": "This element has a slot",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "size",
+              "attribute": "size",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "size",
+              "fieldName": "size"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "m-accordion",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MAccordion",
+          "declaration": {
+            "name": "MAccordion",
+            "module": "src/components/Accordion/m-accordion.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "m-accordion",
+          "declaration": {
+            "name": "MAccordion",
+            "module": "src/components/Accordion/m-accordion.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Button/index.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Button/m-button.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The Button element.",
+          "name": "MButton",
+          "members": [
+            {
+              "kind": "field",
+              "name": "buttonText",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Button'",
+              "attribute": "buttonText"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "disabled"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "buttonText",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Button'",
+              "fieldName": "buttonText"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "disabled"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "m-button",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MButton",
+          "declaration": {
+            "name": "MButton",
+            "module": "src/components/Button/m-button.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "m-button",
+          "declaration": {
+            "name": "MButton",
+            "module": "src/components/Button/m-button.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Input/index.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Input/m-input.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The Input element.",
+          "name": "MInput",
+          "members": [
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "'enter'",
+              "attribute": "name",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "'enter'",
+              "fieldName": "name"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "m-input",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MInput",
+          "declaration": {
+            "name": "MInput",
+            "module": "src/components/Input/m-input.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "m-input",
+          "declaration": {
+            "name": "MInput",
+            "module": "src/components/Input/m-input.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Card/index.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Card/m-card.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MCard",
+          "members": [],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "m-card",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MCard",
+          "declaration": {
+            "name": "MCard",
+            "module": "src/components/Card/m-card.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "m-card",
+          "declaration": {
+            "name": "MCard",
+            "module": "src/components/Card/m-card.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Modal/index.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Modal/m-modal.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MModal",
+          "members": [
+            {
+              "kind": "field",
+              "name": "text",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Modal'",
+              "attribute": "text",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "text",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Modal'",
+              "fieldName": "text"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "m-modal",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MModal",
+          "declaration": {
+            "name": "MModal",
+            "module": "src/components/Modal/m-modal.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "m-modal",
+          "declaration": {
+            "name": "MModal",
+            "module": "src/components/Modal/m-modal.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/List/index.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/List/m-list.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MList",
+          "members": [
+            {
+              "kind": "field",
+              "name": "items",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "attribute": "items",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "items",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "fieldName": "items"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "m-list",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MList",
+          "declaration": {
+            "name": "MList",
+            "module": "src/components/List/m-list.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "m-list",
+          "declaration": {
+            "name": "MList",
+            "module": "src/components/List/m-list.ts"
+          }
+        }
+      ]
+    }
+  ]
+}
