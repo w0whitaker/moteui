@@ -13,6 +13,7 @@ export default meta;
 type Story = StoryObj;
 
 export const Primary: Story = {
+  name: 'Generic',
   args: {
     buttonText: 'Click me!',
     disabled: false,
