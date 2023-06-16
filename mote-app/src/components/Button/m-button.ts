@@ -27,9 +27,9 @@ export class MButton extends LitElement {
     .m-button {
       border-style: solid;
       border-width: 0.375em;
-      border-color: #00171F;
+      border-color: #E6EBFF;
       border-radius: 0.25em;
-      background-color: #E6EBFF;
+      background-color: #00171F;
       width: 8em;
       position: relative;
     }
@@ -49,6 +49,7 @@ export class MButton extends LitElement {
       align-items: center;
       top: 0;
       left: 0;
+      color: #E6EBFF;
     }
 
     .disabled>span {
