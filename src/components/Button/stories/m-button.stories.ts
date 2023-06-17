@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/web-components';
 
 import 'src/components/Button/m-button';
 import '.storybook/main.css';
+import { html } from 'lit';
 
 const meta: Meta = {
   title: 'Components/Button',
@@ -17,6 +18,11 @@ export const Generic: Story = {
     buttonText: 'Click me!',
     disabled: false,
   },
+  render: (args) => html`
+    <m-button ${args.disabled}>
+      <pre slot="button-content">${args.buttonText}</pre>
+    </m-button>
+  `,
 };
 
 export const Submit: Story = {

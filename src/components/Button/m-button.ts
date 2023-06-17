@@ -73,7 +73,7 @@ export class MButton extends LitElement {
 
     return html`
       <button class="${classMap(classes)}" ?disabled=${disabled} type="${buttonType}">
-      <span class="button-content">${buttonText}</span>
+        <slot class="button-content" name="button-content">${buttonText}</slot>
       </button>
     `;
   }
