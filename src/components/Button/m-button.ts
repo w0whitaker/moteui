@@ -37,6 +37,7 @@ export class MButton extends LitElement {
       background-color: #00171F;
       width: 8em;
       position: relative;
+      font-size: 1.5rem;
     }
 
     .m-button:after {
