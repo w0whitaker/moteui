@@ -2,6 +2,12 @@ import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 
+enum ButtonType {
+  Button = 'button',
+  Submit = 'submit',
+  Reset = 'reset',
+}
+
 /**
  * The Button element.
  */
@@ -12,15 +18,13 @@ export class MButton extends LitElement {
   buttonText = '';
   @property({ type: Boolean })
   disabled = false;
-  // button type: submit, reset, button
-  @property({ type: String })
-  buttonType = 'button';
+  @property({ reflect: true })
+  buttonType = ButtonType.Button;
 
   constructor() {
     super();
     this.buttonText = 'Button';
     this.disabled = false;
-    this.buttonType = 'button';
   }
 
   static styles = css`
@@ -66,14 +70,13 @@ export class MButton extends LitElement {
   render() {
     const { buttonText } = this;
     const { disabled } = this;
-    const { buttonType } = this;
     const classes = {
       'm-button': true,
       'disabled': disabled,
     };
 
     return html`
-      <button class="${classMap(classes)}" ?disabled=${disabled} type="${buttonType}">
+      <button class="${classMap(classes)}" ?disabled=${disabled} type="${ButtonType.Button}">
         <slot class="button-content" name="button-content">${buttonText}</slot>
       </button>
     `;
