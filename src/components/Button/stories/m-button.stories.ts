@@ -20,7 +20,7 @@ export const Generic: Story = {
   },
   render: (args) => html`
     <m-button ${args.disabled}>
-      <pre slot="button-content">${args.buttonText}</pre>
+      <p slot="button-content">${args.buttonText}</p>
     </m-button>
   `,
 };
