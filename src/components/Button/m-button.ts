@@ -12,10 +12,15 @@ export class MButton extends LitElement {
   buttonText = '';
   @property({ type: Boolean })
   disabled = false;
+  // button type: submit, reset, button
+  @property({ type: String })
+  buttonType = 'button';
 
   constructor() {
     super();
     this.buttonText = 'Button';
+    this.disabled = false;
+    this.buttonType = 'button';
   }
 
   static styles = css`
@@ -60,13 +65,14 @@ export class MButton extends LitElement {
   render() {
     const { buttonText } = this;
     const { disabled } = this;
+    const { buttonType } = this;
     const classes = {
       'm-button': true,
       'disabled': disabled,
     };
 
     return html`
-      <button class="${classMap(classes)}" ?disabled=${disabled}>
+      <button class="${classMap(classes)}" ?disabled=${disabled} type="${buttonType}">
       <span class="button-content">${buttonText}</span>
       </button>
     `;
