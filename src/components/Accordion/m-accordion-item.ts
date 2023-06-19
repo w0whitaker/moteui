@@ -54,7 +54,9 @@ export class MAccordionItem extends LitElement {
           <slot name="title"></slot>
           <slot name="content"></slot>
         </div>
-        <button>Toggle</button>
+        <m-button>
+          <p slot="button-content">Toggle</p>
+        </m-button>
       </div>
     `;
   }
