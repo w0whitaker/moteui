@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 
 import 'src/components/Button/m-button';
-import '.storybook/main.css';
 import { html } from 'lit';
 
 const meta: Meta = {

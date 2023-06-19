@@ -3,7 +3,6 @@ import { html } from 'lit';
 
 import 'src/components/Modal/m-modal';
 import 'src/components/Button/m-button';
-import '.storybook/main.css';
 
 const meta: Meta = {
   title: 'Components/Modal',

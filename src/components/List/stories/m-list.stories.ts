@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 
 import 'src/components/List/m-list.ts';
-import '.storybook/main.css';
 
 const meta: Meta = {
   title: 'Components/List',
