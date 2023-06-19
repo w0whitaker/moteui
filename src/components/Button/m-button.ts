@@ -39,8 +39,9 @@ export class MButton extends LitElement {
       border-color: #E6EBFF;
       border-radius: 0.25em;
       background-color: #00171F;
-      width: 8em;
+      width: 6em;
       position: relative;
+      font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       font-size: 1.5rem;
     }
 

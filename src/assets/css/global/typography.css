@@ -1,6 +1,4 @@
-body {
-	font-family: serif;
-}
+@import url('../../../../public/fonts/fredoka/fredoka.css');
 
 h1 {
 	font-size: var(--step-2);
