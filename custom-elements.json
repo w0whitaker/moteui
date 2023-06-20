@@ -133,69 +133,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/Input/index.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/Input/m-input.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "The Input element.",
-          "name": "MInput",
-          "members": [
-            {
-              "kind": "field",
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "'enter'",
-              "attribute": "name",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "'enter'",
-              "fieldName": "name"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "m-input",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "MInput",
-          "declaration": {
-            "name": "MInput",
-            "module": "src/components/Input/m-input.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "m-input",
-          "declaration": {
-            "name": "MInput",
-            "module": "src/components/Input/m-input.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/Button/index.ts",
       "declarations": [],
       "exports": []
@@ -217,15 +154,6 @@
               },
               "default": "'Button'",
               "attribute": "buttonText"
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "attribute": "disabled"
             }
           ],
           "attributes": [
@@ -236,14 +164,6 @@
               },
               "default": "'Button'",
               "fieldName": "buttonText"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "fieldName": "disabled"
             }
           ],
           "superclass": {
@@ -269,6 +189,69 @@
           "declaration": {
             "name": "MButton",
             "module": "src/components/Button/m-button.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/List/index.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/List/m-list.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MList",
+          "members": [
+            {
+              "kind": "field",
+              "name": "items",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "attribute": "items",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "items",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "fieldName": "items"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "m-list",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MList",
+          "declaration": {
+            "name": "MList",
+            "module": "src/components/List/m-list.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "m-list",
+          "declaration": {
+            "name": "MList",
+            "module": "src/components/List/m-list.ts"
           }
         }
       ]
@@ -338,6 +321,69 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/Input/index.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Input/m-input.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The Input element.",
+          "name": "MInput",
+          "members": [
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "'enter'",
+              "attribute": "name",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "'enter'",
+              "fieldName": "name"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "m-input",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MInput",
+          "declaration": {
+            "name": "MInput",
+            "module": "src/components/Input/m-input.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "m-input",
+          "declaration": {
+            "name": "MInput",
+            "module": "src/components/Input/m-input.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/Card/index.ts",
       "declarations": [],
       "exports": []
@@ -374,69 +420,6 @@
           "declaration": {
             "name": "MCard",
             "module": "src/components/Card/m-card.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/List/index.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/List/m-list.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "MList",
-          "members": [
-            {
-              "kind": "field",
-              "name": "items",
-              "type": {
-                "text": "array"
-              },
-              "default": "[]",
-              "attribute": "items",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "items",
-              "type": {
-                "text": "array"
-              },
-              "default": "[]",
-              "fieldName": "items"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "m-list",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "MList",
-          "declaration": {
-            "name": "MList",
-            "module": "src/components/List/m-list.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "m-list",
-          "declaration": {
-            "name": "MList",
-            "module": "src/components/List/m-list.ts"
           }
         }
       ]

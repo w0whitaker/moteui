@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/web-components';
+import type { Meta } from '@storybook/web-components';
+import '../m-button';
 
-import 'src/components/Button/m-button';
 import { html } from 'lit';
 
 const meta: Meta = {
@@ -10,23 +10,14 @@ const meta: Meta = {
 
 export default meta;
 
-type Story = StoryObj;
 
-export const Generic: Story = {
+export const Generic = {
   args: {
     buttonText: 'Click me!',
-    disabled: false,
   },
-  render: (args) => html`
-    <m-button ${args.disabled}>
+  render: (args: { buttonText: string; }) => html`
+    <m-button>
       <p slot="button-content">${args.buttonText}</p>
     </m-button>
   `,
-};
-
-export const Submit: Story = {
-  args: {
-    buttonText: 'Submit',
-    disabled: false,
-  },
 };

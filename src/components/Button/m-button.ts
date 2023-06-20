@@ -16,15 +16,10 @@ enum ButtonType {
 export class MButton extends LitElement {
   @property({ type: String })
   buttonText = '';
-  @property({ type: Boolean })
-  disabled = false;
-  @property({ reflect: true })
-  buttonType = ButtonType.Button;
 
   constructor() {
     super();
     this.buttonText = 'Button';
-    this.disabled = false;
   }
 
   static styles = css`
@@ -70,14 +65,12 @@ export class MButton extends LitElement {
 
   render() {
     const { buttonText } = this;
-    const { disabled } = this;
     const classes = {
       'm-button': true,
-      'disabled': disabled,
     };
 
     return html`
-      <button class="${classMap(classes)}" ?disabled=${disabled} type="${ButtonType.Button}">
+      <button class="${classMap(classes)}">
         <slot class="button-content" name="button-content">${buttonText}</slot>
       </button>
     `;
