@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
-import '../m-button';
 import { action } from '@storybook/addon-actions';
 import { html } from 'lit';
+import '../m-button';
 
 const meta: Meta = {
   title: 'Components/Button',
@@ -14,13 +14,8 @@ type Story = StoryObj;
 
 
 export const Generic: Story = {
-  render: ({buttonText, onClick}) => html`
-    <m-button @click=${onClick}>
-      <span slot="button-content">${buttonText}</span>
-    </m-button>
-  `,
   args: {
-    buttonText: 'Click me!',
-    onClick: action('clicked')
+    buttonText: 'from storybook',
+    buttonSize: 'lg',
   },
 };
