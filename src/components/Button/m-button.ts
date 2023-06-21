@@ -15,12 +15,9 @@ enum ButtonType {
 @customElement('m-button')
 export class MButton extends LitElement {
   @property({ type: String })
-  buttonText = '';
-
-  constructor() {
-    super();
-    this.buttonText = 'Button';
-  }
+  buttonText = 'Button';
+  @property({ type: String })
+  buttonSize = '';
 
   static styles = css`
     /* https://spin.atomicobject.com/2015/07/14/css-responsive-square/ */
@@ -33,6 +30,7 @@ export class MButton extends LitElement {
         border-width: 0.375em;
         border-color: #E6EBFF;
         border-radius: 0.25em;
+        padding: 0;
         background-color: #00171F;
         position: relative;
         font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -52,27 +50,36 @@ export class MButton extends LitElement {
 
       .m-button--md {
         width: 6em;
-        background-color: magenta;
       }
 
       .m-button--lg {
         width: 8em;
-        background-color: yellow;
       }
-    `
-  ];
+
+      .m-button--content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        color: #E6EBFF;
+      }
+    `;
 
 
   render() {
-    const { buttonSize } = this;
-
     const classes = {
       'm-button': true,
-      [`m-button--${buttonSize}`]: true,
+      [`m-button--${this.buttonSize}`]: true,
     };
 
     return html`
-      <button size="${this.buttonSize}">${this.buttonText}--${this.buttonSize}</button>
+      <button class="${classMap(classes)}" size="${this.buttonSize}">
+        <slot name="button-content" class="m-button--content">${this.buttonText}</slot>
+      </button>
     `;
   }
 }
