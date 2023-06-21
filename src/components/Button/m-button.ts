@@ -28,51 +28,51 @@ export class MButton extends LitElement {
       display: block;
     }
 
-    .m-button {
-      border-style: solid;
-      border-width: 0.375em;
-      border-color: #E6EBFF;
-      border-radius: 0.25em;
-      background-color: #00171F;
-      width: 6em;
-      position: relative;
-      font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      font-size: 1.5rem;
-    }
+      .m-button {
+        border-style: solid;
+        border-width: 0.375em;
+        border-color: #E6EBFF;
+        border-radius: 0.25em;
+        background-color: #00171F;
+        position: relative;
+        font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 1.5rem;
+        color: #E6EBFF;
+      }
 
-    .m-button:after {
-      content: '';
-      display: block;
-      padding-bottom: 100%;
-    }
+      .m-button:after {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+      }
 
-    .button-content {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      top: 0;
-      left: 0;
-      color: #E6EBFF;
-    }
+      .m-button--sm {
+        width: 4em;
+      }
 
-    .disabled>span {
-      text-decoration: line-through;
-    }
-  `;
+      .m-button--md {
+        width: 6em;
+        background-color: magenta;
+      }
+
+      .m-button--lg {
+        width: 8em;
+        background-color: yellow;
+      }
+    `
+  ];
+
 
   render() {
-    const { buttonText } = this;
+    const { buttonSize } = this;
+
     const classes = {
       'm-button': true,
+      [`m-button--${buttonSize}`]: true,
     };
 
     return html`
-      <button class="${classMap(classes)}">
-        <slot class="button-content" name="button-content">${buttonText}</slot>
-      </button>
+      <button size="${this.buttonSize}">${this.buttonText}--${this.buttonSize}</button>
     `;
   }
 }
