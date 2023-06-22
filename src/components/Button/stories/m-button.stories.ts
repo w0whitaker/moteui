@@ -7,7 +7,18 @@ import { html } from 'lit';
 const meta: Meta = {
   title: 'Components/Button',
   component: 'm-button',
-  decorators: [(story) => html`<div style="width: 200px">${story()}</div>`],
+  decorators: [(story) => html`<div style="width: 200px; margin: 2em auto;">${story()}</div>`],
+  argTypes: {
+    buttonSize: {
+      options: ['sm', 'md', 'lg'],
+      control: { type: 'select' },
+    },
+    onClick: {
+      table: {
+        disable: true,
+      }
+    }
+  }
 };
 
 export default meta;
