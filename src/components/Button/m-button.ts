@@ -18,6 +18,10 @@ export class MButton extends LitElement {
   buttonText = 'Button';
   @property({ type: String })
   buttonSize = '';
+  @property({ attribute: false })
+  onClick = () => {
+    return;
+  }
 
   static styles = css`
     /* https://spin.atomicobject.com/2015/07/14/css-responsive-square/ */
@@ -79,7 +83,7 @@ export class MButton extends LitElement {
     };
 
     return html`
-      <button class="${classMap(classes)}" size="${this.buttonSize}">
+      <button class="${classMap(classes)}" size="${this.buttonSize}" @click="${this.onClick}">
         <slot name="button-content" class="m-button--content">${this.buttonText}</slot>
       </button>
     `;

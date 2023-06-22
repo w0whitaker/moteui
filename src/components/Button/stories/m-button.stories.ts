@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import '../m-button';
-// import { action } from '@storybook/addon-actions';
+import { action } from '@storybook/addon-actions';
 import { html } from 'lit';
 
 const meta: Meta = {
@@ -17,6 +17,7 @@ type Story = StoryObj;
 export const Generic: Story = {
   args: {
     buttonSize: 'md',
-    buttonText: 'from sb'
+    buttonText: 'from sb',
+    onClick: action('clicked')
   },
 };
