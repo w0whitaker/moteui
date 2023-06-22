@@ -18,6 +18,8 @@ export class MButton extends LitElement {
   buttonText = 'Button';
   @property({ type: String })
   buttonSize = Sizes.Medium;
+  @property({ type: Boolean })
+  disabled = false;
   @property({ attribute: false })
   onClick = () => {
     return;
@@ -73,6 +75,18 @@ export class MButton extends LitElement {
         left: 0;
         color: #E6EBFF;
       }
+
+      .m-button[disabled] {
+        /* filter: brightness(0.5); */
+        filter: invert(25%);
+      }
+      
+      .m-button[disabled] > * {
+        text-decoration: underline;
+        text-underline-offset: -0.3em;
+        text-decoration-skip-ink: none;
+        /* text-decoration: line-through; */
+      }
     `;
 
 
@@ -83,7 +97,7 @@ export class MButton extends LitElement {
     };
 
     return html`
-      <button class="${classMap(classes)}" size="${this.buttonSize}" @click="${this.onClick}">
+      <button class="${classMap(classes)}" size="${this.buttonSize}" @click="${this.onClick}" ?disabled="${this.disabled}" >
         <slot name="button-content" class="m-button--content">${this.buttonText}</slot>
       </button>
     `;

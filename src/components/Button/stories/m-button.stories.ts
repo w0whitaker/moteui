@@ -17,6 +17,9 @@ const meta: Meta = {
       table: {
         disable: true,
       }
+    },
+    disabled: {
+      control: { type: 'boolean' },
     }
   }
 };
@@ -28,6 +31,7 @@ type Story = StoryObj;
 
 export const Generic: Story = {
   args: {
+    disabled: false,
     buttonSize: Sizes.Large,
     buttonText: 'from sb',
     onClick: action('clicked')
