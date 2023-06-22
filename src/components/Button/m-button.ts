@@ -1,13 +1,13 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
-/*
-enum ButtonType {
-  Button = 'button',
-  Submit = 'submit',
-  Reset = 'reset',
-}
-*/
+
+export const Sizes = {
+  Small: 'sm',
+  Medium: 'md',
+  Large: 'lg',
+} as const;
+
 /**
  * The Button element.
  */
@@ -17,7 +17,7 @@ export class MButton extends LitElement {
   @property({ type: String })
   buttonText = 'Button';
   @property({ type: String })
-  buttonSize = '';
+  buttonSize = Sizes.Medium;
   @property({ attribute: false })
   onClick = () => {
     return;
