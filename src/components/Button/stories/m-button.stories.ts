@@ -33,7 +33,7 @@ export const Generic: Story = {
   args: {
     disabled: false,
     buttonSize: Sizes.Large,
-    buttonText: 'from sb',
+    buttonText: 'Click me!',
     onClick: action('clicked')
   },
 };
