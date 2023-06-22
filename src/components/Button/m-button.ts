@@ -34,7 +34,6 @@ export class MButton extends LitElement {
         background-color: #00171F;
         position: relative;
         font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-size: 1.5rem;
         color: #E6EBFF;
       }
 
@@ -45,15 +44,18 @@ export class MButton extends LitElement {
       }
 
       .m-button--sm {
-        width: 4em;
+        width: 50%;
+        font-size: 1em;
       }
 
       .m-button--md {
-        width: 6em;
+        width: 75%;
+        font-size: 1.5em;
       }
 
       .m-button--lg {
-        width: 8em;
+        width: 100%;
+        font-size: 1.75em
       }
 
       .m-button--content {
