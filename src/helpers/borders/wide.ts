@@ -5,4 +5,4 @@ export const wide = css`
     border-block-width: 1rem;
     border-inline-width: 1ch;
   }
-  `;
+`;

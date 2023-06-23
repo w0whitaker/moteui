@@ -6,4 +6,4 @@ export const line = css`
     border-inline-width: 0.125ch;
     border-radius: 15px;
   }
-  `;
+`;

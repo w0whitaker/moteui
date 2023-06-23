@@ -5,4 +5,4 @@ export const jumbo = css`
     border-block-width: 2rem;
     border-inline-width: 2ch;
   }
-  `;
+`;

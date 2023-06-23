@@ -8,7 +8,10 @@ const meta: Meta = {
   title: 'Components/Button',
   component: 'm-button',
   tags: ['autodocs'],
-  decorators: [(story) => html`<div style="width: 200px; margin: 2em auto;">${story()}</div>`],
+  decorators: [
+    (story) =>
+      html`<div style="width: 200px; margin: 2em auto;">${story()}</div>`,
+  ],
   argTypes: {
     buttonSize: {
       options: ['sm', 'md', 'lg'],
@@ -17,12 +20,12 @@ const meta: Meta = {
     onClick: {
       table: {
         disable: true,
-      }
+      },
     },
     disabled: {
       control: { type: 'boolean' },
-    }
-  }
+    },
+  },
 };
 
 export default meta;
@@ -35,6 +38,6 @@ export const Generic: Story = {
     disabled: false,
     buttonSize: Sizes.Medium,
     buttonText: 'Click me!',
-    onClick: action('clicked')
+    onClick: action('clicked'),
   },
-}; 
+};

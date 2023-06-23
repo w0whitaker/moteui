@@ -11,7 +11,7 @@ import { ACCORDION_SIZE } from './defs';
 
 @customElement('m-accordion')
 export class MAccordion extends LitElement {
-  @property({ reflect: true})
+  @property({ reflect: true })
   size = ACCORDION_SIZE.MEDIUM;
 
   static styles = [
@@ -23,7 +23,7 @@ export class MAccordion extends LitElement {
       .m-accordion > ::slotted(*:not(:first-child)) {
         margin-block-start: 0.125rem;
       }
-    `
+    `,
   ];
 
   render() {

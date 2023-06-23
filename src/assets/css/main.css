@@ -6,7 +6,7 @@
 @import 'global/global-styles.css';
 
 .show-me {
-	background-color: hotpink;
-	opacity: 0.5;
-	z-index: 999;
+  background-color: hotpink;
+  opacity: 0.5;
+  z-index: 999;
 }

@@ -5,56 +5,56 @@
 /* @link https://utopia.fyi/grid/calculator?c=316,16,1.5,1116,18,1.5,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
 :root {
-	--measure: 60ch;
+  --measure: 60ch;
 
-  --step--2: clamp(0.44rem, calc(0.43rem + 0.10vw), 0.50rem);
+  --step--2: clamp(0.44rem, calc(0.43rem + 0.1vw), 0.5rem);
   --step--1: clamp(0.67rem, calc(0.64rem + 0.14vw), 0.75rem);
-  --step-0: clamp(1.00rem, calc(0.96rem + 0.22vw), 1.13rem);
-  --step-1: clamp(1.50rem, calc(1.43rem + 0.33vw), 1.69rem);
+  --step-0: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem);
+  --step-1: clamp(1.5rem, calc(1.43rem + 0.33vw), 1.69rem);
   --step-2: clamp(2.25rem, calc(2.15rem + 0.49vw), 2.53rem);
-  --step-3: clamp(3.38rem, calc(3.23rem + 0.73vw), 3.80rem);
-  --step-4: clamp(5.06rem, calc(4.84rem + 1.10vw), 5.70rem);
+  --step-3: clamp(3.38rem, calc(3.23rem + 0.73vw), 3.8rem);
+  --step-4: clamp(5.06rem, calc(4.84rem + 1.1vw), 5.7rem);
   --step-5: clamp(7.59rem, calc(7.26rem + 1.65vw), 8.54rem);
 
-	--space-3xs: clamp(0.25rem, calc(0.23rem + 0.11vw), 0.31rem);
-  --space-2xs: clamp(0.50rem, calc(0.48rem + 0.11vw), 0.56rem);
+  --space-3xs: clamp(0.25rem, calc(0.23rem + 0.11vw), 0.31rem);
+  --space-2xs: clamp(0.5rem, calc(0.48rem + 0.11vw), 0.56rem);
   --space-xs: clamp(0.75rem, calc(0.71rem + 0.22vw), 0.88rem);
-  --space-s: clamp(1.00rem, calc(0.96rem + 0.22vw), 1.13rem);
-  --space-m: clamp(1.50rem, calc(1.43rem + 0.33vw), 1.69rem);
-  --space-l: clamp(2.00rem, calc(1.91rem + 0.43vw), 2.25rem);
-  --space-xl: clamp(3.00rem, calc(2.87rem + 0.65vw), 3.38rem);
-  --space-2xl: clamp(4.00rem, calc(3.83rem + 0.87vw), 4.50rem);
-  --space-3xl: clamp(6.00rem, calc(5.74rem + 1.30vw), 6.75rem);
+  --space-s: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem);
+  --space-m: clamp(1.5rem, calc(1.43rem + 0.33vw), 1.69rem);
+  --space-l: clamp(2rem, calc(1.91rem + 0.43vw), 2.25rem);
+  --space-xl: clamp(3rem, calc(2.87rem + 0.65vw), 3.38rem);
+  --space-2xl: clamp(4rem, calc(3.83rem + 0.87vw), 4.5rem);
+  --space-3xl: clamp(6rem, calc(5.74rem + 1.3vw), 6.75rem);
 
   /* One-up pairs */
   --space-3xs-2xs: clamp(0.25rem, calc(0.14rem + 0.54vw), 0.56rem);
-  --space-2xs-xs: clamp(0.50rem, calc(0.37rem + 0.65vw), 0.88rem);
+  --space-2xs-xs: clamp(0.5rem, calc(0.37rem + 0.65vw), 0.88rem);
   --space-xs-s: clamp(0.75rem, calc(0.62rem + 0.65vw), 1.13rem);
-  --space-s-m: clamp(1.00rem, calc(0.76rem + 1.20vw), 1.69rem);
-  --space-m-l: clamp(1.50rem, calc(1.24rem + 1.30vw), 2.25rem);
-  --space-l-xl: clamp(2.00rem, calc(1.52rem + 2.39vw), 3.38rem);
-  --space-xl-2xl: clamp(3.00rem, calc(2.48rem + 2.61vw), 4.50rem);
-  --space-2xl-3xl: clamp(4.00rem, calc(3.04rem + 4.78vw), 6.75rem);
+  --space-s-m: clamp(1rem, calc(0.76rem + 1.2vw), 1.69rem);
+  --space-m-l: clamp(1.5rem, calc(1.24rem + 1.3vw), 2.25rem);
+  --space-l-xl: clamp(2rem, calc(1.52rem + 2.39vw), 3.38rem);
+  --space-xl-2xl: clamp(3rem, calc(2.48rem + 2.61vw), 4.5rem);
+  --space-2xl-3xl: clamp(4rem, calc(3.04rem + 4.78vw), 6.75rem);
 
   /* Custom pairs */
-  --space-s-l: clamp(1.00rem, calc(0.57rem + 2.17vw), 2.25rem);
-	--space-s-2xl: clamp(1.00rem, calc(-0.22rem + 6.09vw), 4.50rem);
+  --space-s-l: clamp(1rem, calc(0.57rem + 2.17vw), 2.25rem);
+  --space-s-2xl: clamp(1rem, calc(-0.22rem + 6.09vw), 4.5rem);
 
-	--grid-max-width: calc(100vw - (var(--measure) / 2));
-  --grid-gutter: var(--space-s-l, clamp(1.00rem, calc(0.51rem + 2.50vw), 2.25rem));
+  --grid-max-width: calc(100vw - (var(--measure) / 2));
+  --grid-gutter: var(--space-s-l, clamp(1rem, calc(0.51rem + 2.5vw), 2.25rem));
   --grid-columns: 12;
 
-	/* Colors */
+  /* Colors */
 
---light: hsla(226, 50%, 97%, 1);
---dark: hsla(195, 90%, 6%, 1);
+  --light: hsla(226, 50%, 97%, 1);
+  --dark: hsla(195, 90%, 6%, 1);
 
---primary: hsla(160, 88%, 19%, 1);
---secondary: hsla(343, 90%, 46%, 1);
-/* Against '--light', passes all AA and AAA for text over 18pt/bold 14pt */
-/* Against '--dark', only passes AA for text over 18pt/bold 14pt */
+  --primary: hsla(160, 88%, 19%, 1);
+  --secondary: hsla(343, 90%, 46%, 1);
+  /* Against '--light', passes all AA and AAA for text over 18pt/bold 14pt */
+  /* Against '--dark', only passes AA for text over 18pt/bold 14pt */
 
---success: hsla(160, 81%, 41%, 1);
---warning: hsla(44, 89%, 62%, 1);
---danger: hsla(11, 91%, 55%, 1);
+  --success: hsla(160, 81%, 41%, 1);
+  --warning: hsla(44, 89%, 62%, 1);
+  --danger: hsla(11, 91%, 55%, 1);
 }

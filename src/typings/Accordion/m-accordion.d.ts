@@ -5,10 +5,10 @@ import { LitElement } from 'lit';
  * @slot - This element has a slot
  */
 export declare class MAccordion extends LitElement {
-    render(): import("lit-html").TemplateResult<1>;
+  render(): import('lit-html').TemplateResult<1>;
 }
 declare global {
-    interface HTMLElementTagNameMap {
-        'm-accordion': MAccordion;
-    }
+  interface HTMLElementTagNameMap {
+    'm-accordion': MAccordion;
+  }
 }

@@ -29,10 +29,8 @@ export class MList extends LitElement {
     };
 
     return html`
-      <ul class="${classMap(classes)}">${this.items.map((i) => 
-        html`
-        <li class="m-box">${i}</li>
-        `)}
+      <ul class="${classMap(classes)}">
+        ${this.items.map((i) => html` <li class="m-box">${i}</li> `)}
       </ul>
     `;
   }

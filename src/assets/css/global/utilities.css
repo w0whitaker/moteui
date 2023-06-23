@@ -1,104 +1,104 @@
 .no-border {
-	border-style: none;
+  border-style: none;
 }
 
 .invert {
-	filter: invert(100%);
+  filter: invert(100%);
 }
 
 .theme-link a {
-	color: inherit;
+  color: inherit;
 }
 
 .thin-border {
-	border-width: 0.286rem;
+  border-width: 0.286rem;
 }
 
 .medium-border {
-	border-width: 0.44rem;
+  border-width: 0.44rem;
 }
 
 .thick-border {
-	border-width: 0.44rem;
+  border-width: 0.44rem;
 }
 
 .bg-light {
-	background-color: var(--light);
-	color: inherit;
+  background-color: var(--light);
+  color: inherit;
 }
 
 .bg-dark {
-	background-color: inherit;
-	color: var(--light);
+  background-color: inherit;
+  color: var(--light);
 }
 
 .text-dark {
-	color: var(--dark);
+  color: var(--dark);
 }
 
 .text-light {
-	color: var(--light);
+  color: var(--light);
 }
 
 .border-light {
-	border-color: var(--light);
+  border-color: var(--light);
 }
 
 .border-dark {
-	border-color: var(--dark);
+  border-color: var(--dark);
 }
 
 .border-inverse {
-	border-color: inherit;
-	filter: invert(100%);
+  border-color: inherit;
+  filter: invert(100%);
 }
 
 .desaturated {
-	filter: brightness(2.5);
+  filter: brightness(2.5);
 }
 
 .strikethrough {
-	text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 .light {
-	background-color: var(--light);
+  background-color: var(--light);
 }
 
 .dark {
-	background-color: var(--dark);
+  background-color: var(--dark);
 }
 
 .primary {
-	background-color: var(--primary);
+  background-color: var(--primary);
 }
 
 .secondary {
-	background-color: var(--secondary);
+  background-color: var(--secondary);
 }
 
 .success {
-	background-color: var(--success);
-	border-color: var(--success);
-	color: var(--success);
+  background-color: var(--success);
+  border-color: var(--success);
+  color: var(--success);
 }
 
 .danger {
-	background-color: var(--danger);
-	border-color: var(--danger);
-	color: var(--danger);
+  background-color: var(--danger);
+  border-color: var(--danger);
+  color: var(--danger);
 }
 
 .warning {
-	background-color: var(--warning);
-	border-color: var(--warning);
-	color: var(--warning);
+  background-color: var(--warning);
+  border-color: var(--warning);
+  color: var(--warning);
 }
 
 .inline-block {
-	display: inline-block;
+  display: inline-block;
 }
 
 .full-width {
-	width: 100%;
+  width: 100%;
 }

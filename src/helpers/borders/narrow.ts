@@ -5,4 +5,4 @@ export const narrow = css`
     border-block-width: 0.25rem;
     border-inline-width: 0.25ch;
   }
-  `;
+`;

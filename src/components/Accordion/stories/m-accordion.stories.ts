@@ -32,9 +32,7 @@ export const Default: Story = {
       </m-accordion-item>
       <m-accordion-item>
         <p slot="title">Matlock</p>
-        <p slot="content">
-          I'm not a magician, I'm just a country lawyer.
-        </p>
+        <p slot="content">I'm not a magician, I'm just a country lawyer.</p>
       </m-accordion-item>
     </m-accordion>
   `,

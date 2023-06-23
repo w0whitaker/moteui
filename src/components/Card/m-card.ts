@@ -17,12 +17,12 @@ export class MCard extends LitElement {
         padding-inline: var(--space-m, 3.375ch);
       }
 
-      ::slotted([slot="title"]) {
+      ::slotted([slot='title']) {
         padding-block: var(--space-s, 1.125rem);
         padding-inline: var(--space-m, 3.375ch);
         background-color: var(--secondary, lightgray);
       }
-    `
+    `,
   ];
 
   render() {

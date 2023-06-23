@@ -14,4 +14,4 @@ export const stackLayout = css`
   .m-stack > * + * {
     margin-block-start: var(--space, 1em);
   }
-  `;
+`;
