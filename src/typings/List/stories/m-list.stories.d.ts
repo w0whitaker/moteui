@@ -5,7 +5,7 @@ declare const _default: {
 };
 export default _default;
 export declare const Default: {
-  render: (args: { items: any }) => string;
+  render: (args: { items: object }) => string;
   args: {
     items: string[];
   };

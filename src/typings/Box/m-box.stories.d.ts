@@ -5,7 +5,7 @@ declare const _default: {
 };
 export default _default;
 export declare const Default: {
-  render: (args: any) => import('lit-html').TemplateResult<1>;
+  render: (args: object) => import('lit-html').TemplateResult<1>;
   args: {
     border: boolean;
     padding: string;
