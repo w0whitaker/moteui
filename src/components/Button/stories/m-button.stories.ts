@@ -37,4 +37,4 @@ export const Generic: Story = {
     buttonText: 'Click me!',
     onClick: action('clicked')
   },
-};
+}; 
