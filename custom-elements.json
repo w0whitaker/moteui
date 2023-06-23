@@ -133,42 +133,110 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/Card/index.ts",
+      "path": "src/components/Button/index.ts",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/Card/m-card.ts",
+      "path": "src/components/Button/m-button.ts",
       "declarations": [
         {
+          "kind": "variable",
+          "name": "Sizes",
+          "type": {
+            "text": "{\n  Small: 'sm',\n  Medium: 'md',\n  Large: 'lg',\n}"
+          },
+          "default": "{\n  Small: 'sm',\n  Medium: 'md',\n  Large: 'lg',\n}"
+        },
+        {
           "kind": "class",
-          "description": "",
-          "name": "MCard",
-          "members": [],
+          "description": "The Button element.",
+          "name": "MButton",
+          "members": [
+            {
+              "kind": "field",
+              "name": "buttonText",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Button'",
+              "description": "Keep it short and use verbs."
+            },
+            {
+              "kind": "field",
+              "name": "buttonSize",
+              "type": {
+                "text": "string"
+              },
+              "default": "'md'",
+              "description": "'sm' || 'md' || 'lg'",
+              "attribute": "buttonSize"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "disabled"
+            },
+            {
+              "kind": "field",
+              "name": "onClick"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "buttonSize",
+              "type": {
+                "text": "string"
+              },
+              "default": "'md'",
+              "description": "'sm' || 'md' || 'lg'",
+              "fieldName": "buttonSize"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "disabled"
+            }
+          ],
           "superclass": {
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "m-card",
+          "tagName": "m-button",
           "customElement": true
         }
       ],
       "exports": [
         {
           "kind": "js",
-          "name": "MCard",
+          "name": "Sizes",
           "declaration": {
-            "name": "MCard",
-            "module": "src/components/Card/m-card.ts"
+            "name": "Sizes",
+            "module": "src/components/Button/m-button.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "MButton",
+          "declaration": {
+            "name": "MButton",
+            "module": "src/components/Button/m-button.ts"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "m-card",
+          "name": "m-button",
           "declaration": {
-            "name": "MCard",
-            "module": "src/components/Card/m-card.ts"
+            "name": "MButton",
+            "module": "src/components/Button/m-button.ts"
           }
         }
       ]
@@ -301,6 +369,48 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/Card/index.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Card/m-card.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MCard",
+          "members": [],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "m-card",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MCard",
+          "declaration": {
+            "name": "MCard",
+            "module": "src/components/Card/m-card.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "m-card",
+          "declaration": {
+            "name": "MCard",
+            "module": "src/components/Card/m-card.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/Input/index.ts",
       "declarations": [],
       "exports": []
@@ -358,116 +468,6 @@
           "declaration": {
             "name": "MInput",
             "module": "src/components/Input/m-input.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/Button/index.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/Button/m-button.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "Sizes",
-          "type": {
-            "text": "{\n  Small: 'sm',\n  Medium: 'md',\n  Large: 'lg',\n}"
-          },
-          "default": "{\n  Small: 'sm',\n  Medium: 'md',\n  Large: 'lg',\n}"
-        },
-        {
-          "kind": "class",
-          "description": "The Button element.",
-          "name": "MButton",
-          "members": [
-            {
-              "kind": "field",
-              "name": "buttonText",
-              "type": {
-                "text": "string"
-              },
-              "default": "'Button'",
-              "description": "Keep it short and use verbs."
-            },
-            {
-              "kind": "field",
-              "name": "buttonSize",
-              "type": {
-                "text": "string"
-              },
-              "default": "'md'",
-              "description": "'sm' || 'md' || 'lg'",
-              "attribute": "buttonSize"
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "attribute": "disabled"
-            },
-            {
-              "kind": "field",
-              "name": "onClick"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "buttonSize",
-              "type": {
-                "text": "string"
-              },
-              "default": "'md'",
-              "description": "'sm' || 'md' || 'lg'",
-              "fieldName": "buttonSize"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "fieldName": "disabled"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "m-button",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "Sizes",
-          "declaration": {
-            "name": "Sizes",
-            "module": "src/components/Button/m-button.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "MButton",
-          "declaration": {
-            "name": "MButton",
-            "module": "src/components/Button/m-button.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "m-button",
-          "declaration": {
-            "name": "MButton",
-            "module": "src/components/Button/m-button.ts"
           }
         }
       ]
