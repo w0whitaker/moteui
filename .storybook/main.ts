@@ -6,9 +6,11 @@ const config: StorybookConfig = {
   addons: [
     '@storybook/addon-essentials',
     '@storybook/addon-links',
+    '@storybook/addon-docs'
   ],
   docs: {
     autodocs: 'tag',
+    defaultName: 'Documentation',
   },
   staticDirs: ['../public'],
 };

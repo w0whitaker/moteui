@@ -14,10 +14,12 @@ export const Sizes = {
 
 @customElement('m-button')
 export class MButton extends LitElement {
-  @property({ type: String })
+  /** Keep it short and use verbs. */
+  @property({ type: String, attribute: false })
   buttonText = 'Button';
+  /** 'sm' || 'md' || 'lg' */
   @property({ type: String })
-  buttonSize = Sizes.Medium;
+  buttonSize = 'md';
   @property({ type: Boolean })
   disabled = false;
   @property({ attribute: false })
@@ -98,7 +100,9 @@ export class MButton extends LitElement {
 
     return html`
       <button class="${classMap(classes)}" size="${this.buttonSize}" @click="${this.onClick}" ?disabled="${this.disabled}" >
-        <slot name="button-content" class="m-button--content">${this.buttonText}</slot>
+        <slot name="button-content" class="m-button--content">
+          <span>${this.buttonText}</span>
+        </slot>
       </button>
     `;
   }
