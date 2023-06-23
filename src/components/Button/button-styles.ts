@@ -20,6 +20,7 @@ export const buttonStyles = css`
       Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
       sans-serif;
     color: #e6ebff;
+    box-shadow: -0.125em 0.33em hsla(0, 0%, 0%, 0.25);
   }
 
   .m-button:after {
@@ -31,6 +32,7 @@ export const buttonStyles = css`
   .m-button--sm {
     width: 50%;
     font-size: 1em;
+    position: relative;
   }
 
   .m-button--md {
