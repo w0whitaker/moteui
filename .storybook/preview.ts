@@ -8,9 +8,7 @@ setCustomElementsManifest(customElements);
 
 import '../src/assets/css/main.css';
 
-const preview: Preview = {
-  parameters: {},
-};
+const preview: Preview = {};
 
 export default preview;
 
