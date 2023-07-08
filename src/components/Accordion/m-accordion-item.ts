@@ -1,8 +1,10 @@
-import { LitElement, html, css } from 'lit';
+/** @format */
+
+import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { boxLayout, stackLayout } from '@helpers/layouts';
-import { line } from '@helpers/borders';
+import { accordionItemStyles } from './accordion-item-styles';
 
 /**
  *
@@ -16,29 +18,7 @@ export class MAccordionItem extends LitElement {
   @property({ type: Boolean })
   border = false;
 
-  static styles = [
-    stackLayout,
-    boxLayout,
-    line,
-    css`
-      :host {
-        display: block;
-      }
-
-      button {
-        border: none;
-        background-color: var(--secondary, lightgray);
-        padding-inline: 2rem;
-        border-left: 1px solid black;
-      }
-
-      .m-accordion-item {
-        padding-inline-start: var(--space-s, 1rem);
-        display: flex;
-        justify-content: space-between;
-      }
-    `,
-  ];
+  static styles = [stackLayout, boxLayout, accordionItemStyles];
 
   render() {
     const { border } = this;

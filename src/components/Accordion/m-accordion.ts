@@ -1,6 +1,9 @@
-import { LitElement, html, css } from 'lit';
+/** @format */
+
+import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
+import { accordionStyles } from './accordion-styles';
 import { ACCORDION_SIZE } from './defs';
 
 /**
@@ -14,17 +17,7 @@ export class MAccordion extends LitElement {
   @property({ reflect: true })
   size = ACCORDION_SIZE.MEDIUM;
 
-  static styles = [
-    css`
-      :host {
-        display: block;
-      }
-
-      .m-accordion > ::slotted(*:not(:first-child)) {
-        margin-block-start: 0.125rem;
-      }
-    `,
-  ];
+  static styles = [accordionStyles];
 
   render() {
     const classes = {
