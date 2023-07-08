@@ -9,7 +9,7 @@
         {
           "kind": "variable",
           "name": "accordionItemStyles",
-          "default": "css`\n  :host {\n    display: block;\n  }\n\n  button {\n    border: none;\n    background-color: var(--secondary, lightgray);\n    padding-inline: 2rem;\n    border-left: 1px solid black;\n  }\n\n  .m-accordion-item {\n    border-style: solid;\n    border-width: 0.375em;\n    border-color: #e6ebff;\n    border-radius: 0.25em;\n    padding-inline-start: var(--space-s, 1rem);\n    display: flex;\n    justify-content: space-between;\n  }\n`"
+          "default": "css`\n  :host {\n    display: block;\n  }\n\n  .m-accordion-item {\n    padding-inline-start: var(--space-s, 1rem);\n    display: flex;\n    justify-content: space-between;\n  }\n\n  .m-accordion-item--border {\n    border-style: solid;\n    border-width: 0.375em;\n    border-color: #e6ebff;\n    border-radius: 0.25em;\n  }\n`"
         }
       ],
       "exports": [
@@ -73,6 +73,22 @@
           "members": [
             {
               "kind": "field",
+              "name": "itemTitle",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Accordion Item'"
+            },
+            {
+              "kind": "field",
+              "name": "itemContent",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Accordion Item Content'"
+            },
+            {
+              "kind": "field",
               "name": "border",
               "type": {
                 "text": "boolean"
@@ -132,20 +148,7 @@
               "name": ""
             }
           ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "size",
-              "attribute": "size",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "size",
-              "fieldName": "size"
-            }
-          ],
+          "members": [],
           "superclass": {
             "name": "LitElement",
             "package": "lit"
@@ -217,69 +220,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/List/index.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/List/m-list.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "MList",
-          "members": [
-            {
-              "kind": "field",
-              "name": "items",
-              "type": {
-                "text": "array"
-              },
-              "default": "[]",
-              "attribute": "items",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "items",
-              "type": {
-                "text": "array"
-              },
-              "default": "[]",
-              "fieldName": "items"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "m-list",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "MList",
-          "declaration": {
-            "name": "MList",
-            "module": "src/components/List/m-list.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "m-list",
-          "declaration": {
-            "name": "MList",
-            "module": "src/components/List/m-list.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/Input/index.ts",
       "declarations": [],
       "exports": []
@@ -343,63 +283,63 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/Modal/index.ts",
+      "path": "src/components/List/index.ts",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/Modal/m-modal.ts",
+      "path": "src/components/List/m-list.ts",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "MModal",
+          "name": "MList",
           "members": [
             {
               "kind": "field",
-              "name": "text",
+              "name": "items",
               "type": {
-                "text": "string"
+                "text": "array"
               },
-              "default": "'Modal'",
-              "attribute": "text",
+              "default": "[]",
+              "attribute": "items",
               "reflects": true
             }
           ],
           "attributes": [
             {
-              "name": "text",
+              "name": "items",
               "type": {
-                "text": "string"
+                "text": "array"
               },
-              "default": "'Modal'",
-              "fieldName": "text"
+              "default": "[]",
+              "fieldName": "items"
             }
           ],
           "superclass": {
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "m-modal",
+          "tagName": "m-list",
           "customElement": true
         }
       ],
       "exports": [
         {
           "kind": "js",
-          "name": "MModal",
+          "name": "MList",
           "declaration": {
-            "name": "MModal",
-            "module": "src/components/Modal/m-modal.ts"
+            "name": "MList",
+            "module": "src/components/List/m-list.ts"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "m-modal",
+          "name": "m-list",
           "declaration": {
-            "name": "MModal",
-            "module": "src/components/Modal/m-modal.ts"
+            "name": "MList",
+            "module": "src/components/List/m-list.ts"
           }
         }
       ]
@@ -531,6 +471,69 @@
           "declaration": {
             "name": "MButton",
             "module": "src/components/Button/m-button.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Modal/index.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Modal/m-modal.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MModal",
+          "members": [
+            {
+              "kind": "field",
+              "name": "text",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Modal'",
+              "attribute": "text",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "text",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Modal'",
+              "fieldName": "text"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "m-modal",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MModal",
+          "declaration": {
+            "name": "MModal",
+            "module": "src/components/Modal/m-modal.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "m-modal",
+          "declaration": {
+            "name": "MModal",
+            "module": "src/components/Modal/m-modal.ts"
           }
         }
       ]

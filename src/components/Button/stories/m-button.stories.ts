@@ -1,3 +1,5 @@
+/** @format */
+
 import type { Meta, StoryObj } from '@storybook/web-components';
 import '../m-button';
 import { Sizes } from '../m-button';

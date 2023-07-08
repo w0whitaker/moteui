@@ -1,10 +1,10 @@
 /** @format */
 
 import { LitElement, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
+import { stackLayout } from '@helpers/layouts';
 import { accordionStyles } from './accordion-styles';
-import { ACCORDION_SIZE } from './defs';
 
 /**
  * The Accordion element.
@@ -14,10 +14,7 @@ import { ACCORDION_SIZE } from './defs';
 
 @customElement('m-accordion')
 export class MAccordion extends LitElement {
-  @property({ reflect: true })
-  size = ACCORDION_SIZE.MEDIUM;
-
-  static styles = [accordionStyles];
+  static styles = [stackLayout, accordionStyles];
 
   render() {
     const classes = {
