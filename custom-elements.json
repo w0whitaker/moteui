@@ -4,6 +4,48 @@
   "modules": [
     {
       "kind": "javascript-module",
+      "path": "src/components/Accordion/accordion-item-styles.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "accordionItemStyles",
+          "default": "css`\n  :host {\n    display: block;\n  }\n\n  button {\n    border: none;\n    background-color: var(--secondary, lightgray);\n    padding-inline: 2rem;\n    border-left: 1px solid black;\n  }\n\n  .m-accordion-item {\n    border-style: solid;\n    border-width: 0.375em;\n    border-color: #e6ebff;\n    border-radius: 0.25em;\n    padding-inline-start: var(--space-s, 1rem);\n    display: flex;\n    justify-content: space-between;\n  }\n`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "accordionItemStyles",
+          "declaration": {
+            "name": "accordionItemStyles",
+            "module": "src/components/Accordion/accordion-item-styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Accordion/accordion-styles.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "accordionStyles",
+          "default": "css`\n  :host {\n    display: block;\n  }\n\n  .m-accordion > ::slotted(*:not(:first-child)) {\n    margin-block-start: 0.125rem;\n  }\n`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "accordionStyles",
+          "declaration": {
+            "name": "accordionStyles",
+            "module": "src/components/Accordion/accordion-styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/Accordion/defs.ts",
       "declarations": [],
       "exports": []
@@ -133,6 +175,111 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/Card/index.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Card/m-card.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MCard",
+          "members": [],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "m-card",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MCard",
+          "declaration": {
+            "name": "MCard",
+            "module": "src/components/Card/m-card.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "m-card",
+          "declaration": {
+            "name": "MCard",
+            "module": "src/components/Card/m-card.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/List/index.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/List/m-list.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MList",
+          "members": [
+            {
+              "kind": "field",
+              "name": "items",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "attribute": "items",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "items",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "fieldName": "items"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "m-list",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MList",
+          "declaration": {
+            "name": "MList",
+            "module": "src/components/List/m-list.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "m-list",
+          "declaration": {
+            "name": "MList",
+            "module": "src/components/List/m-list.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/Input/index.ts",
       "declarations": [],
       "exports": []
@@ -196,42 +343,63 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/Card/index.ts",
+      "path": "src/components/Modal/index.ts",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/Card/m-card.ts",
+      "path": "src/components/Modal/m-modal.ts",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "MCard",
-          "members": [],
+          "name": "MModal",
+          "members": [
+            {
+              "kind": "field",
+              "name": "text",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Modal'",
+              "attribute": "text",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "text",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Modal'",
+              "fieldName": "text"
+            }
+          ],
           "superclass": {
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "m-card",
+          "tagName": "m-modal",
           "customElement": true
         }
       ],
       "exports": [
         {
           "kind": "js",
-          "name": "MCard",
+          "name": "MModal",
           "declaration": {
-            "name": "MCard",
-            "module": "src/components/Card/m-card.ts"
+            "name": "MModal",
+            "module": "src/components/Modal/m-modal.ts"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "m-card",
+          "name": "m-modal",
           "declaration": {
-            "name": "MCard",
-            "module": "src/components/Card/m-card.ts"
+            "name": "MModal",
+            "module": "src/components/Modal/m-modal.ts"
           }
         }
       ]
@@ -243,7 +411,7 @@
         {
           "kind": "variable",
           "name": "buttonStyles",
-          "default": "css`\n  /* https://spin.atomicobject.com/2015/07/14/css-responsive-square/ */\n  :host {\n    display: block;\n  }\n\n  .m-button {\n    border-style: solid;\n    border-width: 0.375em;\n    border-color: #e6ebff;\n    border-radius: 0.25em;\n    padding: 0;\n    background-color: #00171f;\n    position: relative;\n    font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, 'Segoe UI',\n      Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',\n      sans-serif;\n    color: #e6ebff;\n  }\n\n  .m-button:after {\n    content: '';\n    display: block;\n    padding-bottom: 100%;\n  }\n\n  .m-button--sm {\n    width: 50%;\n    font-size: 1em;\n  }\n\n  .m-button--md {\n    width: 75%;\n    font-size: 1.5em;\n  }\n\n  .m-button--lg {\n    width: 100%;\n    font-size: 1.75em;\n  }\n\n  .m-button--content {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    top: 0;\n    left: 0;\n    color: #e6ebff;\n  }\n\n  .m-button[disabled] {\n    /* filter: brightness(0.5); */\n    filter: invert(25%);\n  }\n\n  .m-button[disabled] > * {\n    text-decoration: underline;\n    text-underline-offset: -0.3em;\n    text-decoration-skip-ink: none;\n    /* text-decoration: line-through; */\n  }\n`"
+          "default": "css`\n  /* https://spin.atomicobject.com/2015/07/14/css-responsive-square/ */\n  :host {\n    display: block;\n  }\n\n  .m-button {\n    border-style: solid;\n    border-width: 0.375em;\n    border-color: #e6ebff;\n    border-radius: 0.25em;\n    padding: 0;\n    background-color: #00171f;\n    position: relative;\n    font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, 'Segoe UI',\n      Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',\n      sans-serif;\n    color: #e6ebff;\n    box-shadow: -0.0625em 0.165em hsla(0, 0%, 0%, 0.25),\n      inset -0.125em 0.165em hsla(0, 100%, 100%, 0.25);\n  }\n\n  .m-button:after {\n    content: '';\n    display: block;\n    padding-bottom: 100%;\n  }\n\n  .m-button--sm {\n    width: 50%;\n    font-size: 1em;\n    position: relative;\n  }\n\n  .m-button--md {\n    width: 75%;\n    font-size: 1.5em;\n  }\n\n  .m-button--lg {\n    width: 100%;\n    font-size: 1.75em;\n  }\n\n  .m-button--content {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    top: 0;\n    left: 0;\n    color: #e6ebff;\n  }\n\n  .m-button[disabled] {\n    /* filter: brightness(0.5); */\n    filter: invert(25%);\n    box-shadow: none;\n  }\n\n  .m-button[disabled] > * {\n    text-decoration: underline;\n    text-underline-offset: -0.3em;\n    text-decoration-skip-ink: none;\n    /* text-decoration: line-through; */\n  }\n`"
         }
       ],
       "exports": [
@@ -363,132 +531,6 @@
           "declaration": {
             "name": "MButton",
             "module": "src/components/Button/m-button.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/List/index.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/List/m-list.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "MList",
-          "members": [
-            {
-              "kind": "field",
-              "name": "items",
-              "type": {
-                "text": "array"
-              },
-              "default": "[]",
-              "attribute": "items",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "items",
-              "type": {
-                "text": "array"
-              },
-              "default": "[]",
-              "fieldName": "items"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "m-list",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "MList",
-          "declaration": {
-            "name": "MList",
-            "module": "src/components/List/m-list.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "m-list",
-          "declaration": {
-            "name": "MList",
-            "module": "src/components/List/m-list.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/Modal/index.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/Modal/m-modal.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "MModal",
-          "members": [
-            {
-              "kind": "field",
-              "name": "text",
-              "type": {
-                "text": "string"
-              },
-              "default": "'Modal'",
-              "attribute": "text",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "text",
-              "type": {
-                "text": "string"
-              },
-              "default": "'Modal'",
-              "fieldName": "text"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "m-modal",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "MModal",
-          "declaration": {
-            "name": "MModal",
-            "module": "src/components/Modal/m-modal.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "m-modal",
-          "declaration": {
-            "name": "MModal",
-            "module": "src/components/Modal/m-modal.ts"
           }
         }
       ]
