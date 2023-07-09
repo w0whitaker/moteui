@@ -10,6 +10,7 @@ import { accordionStyles } from './accordion-styles';
  * The Accordion element.
  *
  * @slot - This element has a slot
+ * just a dummy change
  */
 
 @customElement('m-accordion')
