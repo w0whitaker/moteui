@@ -11,6 +11,7 @@ import { accordionStyles } from './accordion-styles';
  *
  * @slot - This element has a slot
  * just a dummy change
+ * another dummy change
  */
 
 @customElement('m-accordion')
