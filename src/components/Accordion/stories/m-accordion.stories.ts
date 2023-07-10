@@ -3,6 +3,7 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import '../m-accordion';
 import '../m-accordion-item';
+import '../../Button/m-button';
 import { html } from 'lit';
 
 const meta: Meta = {
@@ -29,6 +30,9 @@ export const Default: Story = {
           My name is Sherlock Holmes. It is my business to know what other
           people don't know.
         </p>
+        <m-button slot="actions" buttonSize="lg" style="width: 8em">
+          <span slot="button-content">${args.buttonText}</span>
+        </m-button>
       </m-accordion-item>
       <m-accordion-item ?border=${args.border}>
         <p slot="title">Dr. Watson</p>
@@ -36,14 +40,21 @@ export const Default: Story = {
           You have a grand gift for silence, Watson. It makes you quite
           invaluable as a companion.
         </p>
+        <m-button slot="actions" buttonSize="lg" style="width: 8em">
+          <span slot="button-content">${args.buttonText}</span>
+        </m-button>
       </m-accordion-item>
       <m-accordion-item ?border=${args.border}>
         <p slot="title">Matlock</p>
         <p slot="content">I'm not a magician, I'm just a country lawyer.</p>
+        <m-button slot="actions" buttonSize="lg" style="width: 8em">
+          <span slot="button-content">${args.buttonText}</span>
+        </m-button>
       </m-accordion-item>
     </m-accordion>
   `,
   args: {
-    border: false,
+    border: true,
+    buttonText: 'expand',
   },
 };

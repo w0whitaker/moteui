@@ -39,6 +39,9 @@ export class MAccordionItem extends LitElement {
             <p>${this.itemContent}</p>
           </slot>
         </div>
+        <div>
+          <slot name="actions"></slot>
+        </div>
       </div>
     `;
   }
