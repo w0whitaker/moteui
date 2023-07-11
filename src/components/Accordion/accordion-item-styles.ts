@@ -19,7 +19,6 @@ export const accordionItemStyles = css`
 
   .m-accordion-item--border {
     border-style: solid;
-    border-width: 0.375em;
     border-radius: 0.25em;
   }
 `;

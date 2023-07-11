@@ -18,6 +18,10 @@ const meta: Meta = {
       options: ['primary', 'secondary', 'light', 'dark'],
       control: { type: 'select' },
     },
+    borderWeight: {
+      options: ['line', 'narrow', 'standard', 'wide', 'jumbo'],
+      control: { type: 'select' },
+    },
   },
 };
 
@@ -28,7 +32,11 @@ type Story = StoryObj;
 export const Default: Story = {
   render: (args) => html`
     <m-accordion>
-      <m-accordion-item ?border=${args.border} borderColor=${args.borderColor}>
+      <m-accordion-item
+        ?border=${args.border}
+        borderColor=${args.borderColor}
+        borderWeight=${args.borderWeight}
+      >
         <p slot="title">Sherlock Holmes</p>
         <p slot="content">
           My name is Sherlock Holmes. It is my business to know what other
@@ -38,7 +46,11 @@ export const Default: Story = {
           <span slot="button-content">${args.buttonText}</span>
         </m-button>
       </m-accordion-item>
-      <m-accordion-item ?border=${args.border} borderColor=${args.borderColor}>
+      <m-accordion-item
+        ?border=${args.border}
+        borderColor=${args.borderColor}
+        borderWeight=${args.borderWeight}
+      >
         <p slot="title">Dr. Watson</p>
         <p slot="content">
           You have a grand gift for silence, Watson. It makes you quite
@@ -48,7 +60,11 @@ export const Default: Story = {
           <span slot="button-content">${args.buttonText}</span>
         </m-button>
       </m-accordion-item>
-      <m-accordion-item ?border=${args.border} borderColor=${args.borderColor}>
+      <m-accordion-item
+        ?border=${args.border}
+        borderColor=${args.borderColor}
+        borderWeight=${args.borderWeight}
+      >
         <p slot="title">Matlock</p>
         <p slot="content">I'm not a magician, I'm just a country lawyer.</p>
         <m-button slot="actions" buttonSize="lg" style="width: 8em">
@@ -61,5 +77,6 @@ export const Default: Story = {
     border: true,
     buttonText: 'expand',
     borderColor: 'primary',
+    borderWeight: 'standard',
   },
 };

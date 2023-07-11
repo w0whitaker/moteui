@@ -2,7 +2,7 @@
 
 import { css } from 'lit';
 
-export const borderSecondary = css`
+export const secondary = css`
   .border-secondary {
     border-color: var(--secondary, blue);
   }

@@ -6,6 +6,11 @@ import { classMap } from 'lit/directives/class-map.js';
 import { stackLayout } from '@helpers/layouts';
 import { accordionItemStyles } from './accordion-item-styles';
 import {
+  borderLine,
+  borderNarrow,
+  borderStandard,
+  borderWide,
+  borderJumbo,
   borderPrimary,
   borderSecondary,
   borderLight,
@@ -17,6 +22,14 @@ export const BorderColor = {
   Secondary: 'secondary',
   Light: 'light',
   Dark: 'dark',
+} as const;
+
+export const BorderWeight = {
+  Line: 'line',
+  Narrow: 'narrow',
+  Standard: 'standard',
+  Wide: 'wide',
+  Jumbo: 'jumbo',
 } as const;
 
 /**
@@ -35,10 +48,17 @@ export class MAccordionItem extends LitElement {
   @property({ type: Boolean })
   border = false;
   @property({ type: String })
-  borderColor = 'light';
+  borderColor = 'primary';
+  @property({ type: String })
+  borderWeight = 'standard';
 
   static styles = [
     stackLayout,
+    borderLine,
+    borderNarrow,
+    borderStandard,
+    borderWide,
+    borderJumbo,
     borderPrimary,
     borderSecondary,
     borderLight,
@@ -50,7 +70,8 @@ export class MAccordionItem extends LitElement {
     const classes = {
       'm-accordion-item': true,
       'm-accordion-item--border': this.border,
-      [`border-${this.borderColor}`]: this.borderColor,
+      [`border-${this.borderColor}`]: this.border ? this.borderColor : false,
+      [`border-${this.borderWeight}`]: this.border ? this.borderWeight : false,
     };
 
     return html`
@@ -58,6 +79,7 @@ export class MAccordionItem extends LitElement {
         class="${classMap(classes)}"
         ?border="${this.border}"
         borderColor="${this.borderColor}"
+        borderWeight="${this.borderWeight}"
       >
         <div class="m-stack">
           <slot name="title">

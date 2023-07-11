@@ -2,7 +2,7 @@
 
 import { css } from 'lit';
 
-export const borderLight = css`
+export const light = css`
   .border-light {
     border-color: var(--light, lightgray);
   }
