@@ -6,6 +6,13 @@ import { classMap } from 'lit/directives/class-map.js';
 import { stackLayout } from '@helpers/layouts';
 import { accordionItemStyles } from './accordion-item-styles';
 
+export const BorderColor = {
+  Primary: 'primary',
+  Secondary: 'secondary',
+  Light: 'light',
+  Dark: 'dark',
+} as const;
+
 /**
  *
  * The Accordion item element.
@@ -21,6 +28,8 @@ export class MAccordionItem extends LitElement {
   itemContent = 'Accordion Item Content';
   @property({ type: Boolean })
   border = false;
+  @property({ type: String })
+  borderColor = 'light';
 
   static styles = [stackLayout, accordionItemStyles];
 
@@ -28,9 +37,14 @@ export class MAccordionItem extends LitElement {
     const classes = {
       'm-accordion-item': true,
       'm-accordion-item--border': this.border,
+      [`border-${this.borderColor}`]: this.borderColor,
     };
     return html`
-      <div class="${classMap(classes)}" ?border="${this.border}">
+      <div
+        class="${classMap(classes)}"
+        ?border="${this.border}"
+        borderColor="${this.borderColor}"
+      >
         <div class="m-stack">
           <slot name="title">
             <p>${this.itemTitle}</p>

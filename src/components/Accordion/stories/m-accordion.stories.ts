@@ -14,6 +14,10 @@ const meta: Meta = {
     border: {
       control: { type: 'boolean' },
     },
+    borderColor: {
+      options: ['primary', 'secondary', 'light', 'dark'],
+      control: { type: 'select' },
+    },
   },
 };
 
@@ -24,7 +28,7 @@ type Story = StoryObj;
 export const Default: Story = {
   render: (args) => html`
     <m-accordion>
-      <m-accordion-item ?border=${args.border}>
+      <m-accordion-item ?border=${args.border} borderColor=${args.borderColor}>
         <p slot="title">Sherlock Holmes</p>
         <p slot="content">
           My name is Sherlock Holmes. It is my business to know what other
@@ -34,7 +38,7 @@ export const Default: Story = {
           <span slot="button-content">${args.buttonText}</span>
         </m-button>
       </m-accordion-item>
-      <m-accordion-item ?border=${args.border}>
+      <m-accordion-item ?border=${args.border} borderColor=${args.borderColor}>
         <p slot="title">Dr. Watson</p>
         <p slot="content">
           You have a grand gift for silence, Watson. It makes you quite
@@ -44,7 +48,7 @@ export const Default: Story = {
           <span slot="button-content">${args.buttonText}</span>
         </m-button>
       </m-accordion-item>
-      <m-accordion-item ?border=${args.border}>
+      <m-accordion-item ?border=${args.border} borderColor=${args.borderColor}>
         <p slot="title">Matlock</p>
         <p slot="content">I'm not a magician, I'm just a country lawyer.</p>
         <m-button slot="actions" buttonSize="lg" style="width: 8em">
@@ -56,5 +60,6 @@ export const Default: Story = {
   args: {
     border: true,
     buttonText: 'expand',
+    borderColor: 'primary',
   },
 };
