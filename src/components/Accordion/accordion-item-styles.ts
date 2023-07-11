@@ -8,7 +8,8 @@ export const accordionItemStyles = css`
   }
 
   .m-accordion-item {
-    padding-inline-start: var(--space-s, 1rem);
+    padding-inline: var(--space-s, 1rem);
+    padding-block: var(--space-m, 1.5rem);
     display: flex;
     justify-content: space-between;
     font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, 'Segoe UI',
