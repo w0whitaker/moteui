@@ -5,6 +5,12 @@ import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { stackLayout } from '@helpers/layouts';
 import { accordionItemStyles } from './accordion-item-styles';
+import {
+  borderPrimary,
+  borderSecondary,
+  borderLight,
+  borderDark,
+} from '@helpers/borders';
 
 export const BorderColor = {
   Primary: 'primary',
@@ -31,7 +37,14 @@ export class MAccordionItem extends LitElement {
   @property({ type: String })
   borderColor = 'light';
 
-  static styles = [stackLayout, accordionItemStyles];
+  static styles = [
+    stackLayout,
+    borderPrimary,
+    borderSecondary,
+    borderLight,
+    borderDark,
+    accordionItemStyles,
+  ];
 
   render() {
     const classes = {
@@ -39,6 +52,7 @@ export class MAccordionItem extends LitElement {
       'm-accordion-item--border': this.border,
       [`border-${this.borderColor}`]: this.borderColor,
     };
+
     return html`
       <div
         class="${classMap(classes)}"

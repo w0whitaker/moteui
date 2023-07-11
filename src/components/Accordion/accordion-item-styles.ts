@@ -22,20 +22,4 @@ export const accordionItemStyles = css`
     border-width: 0.375em;
     border-radius: 0.25em;
   }
-
-  .border-primary {
-    border-color: var(--primary, red);
-  }
-
-  .border-secondary {
-    border-color: var(--secondary, blue);
-  }
-
-  .border-light {
-    border-color: var(--light, lightgray);
-  }
-
-  .border-dark {
-    border-color: var(--dark, black);
-  }
 `;
