@@ -38,10 +38,7 @@ export const Default: Story = {
         borderWeight=${args.borderWeight}
       >
         <p slot="title">Sherlock Holmes</p>
-        <p slot="content">
-          My name is Sherlock Holmes. It is my business to know what other
-          people don't know.
-        </p>
+        <p>${args.itemContent}</p>
         <m-button slot="actions" buttonSize="lg" style="width: 8em">
           <span slot="button-content">${args.buttonText}</span>
         </m-button>
@@ -78,5 +75,6 @@ export const Default: Story = {
     buttonText: 'expand',
     borderColor: 'primary',
     borderWeight: 'standard',
+    itemContent: 'My name is Sherlock Holmes',
   },
 };

@@ -1,6 +1,6 @@
 /** @format */
 
-import { LitElement, html } from 'lit';
+import { LitElement, html, nothing } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { stackLayout } from '@helpers/layouts';
@@ -51,8 +51,10 @@ export class MAccordionItem extends LitElement {
   borderColor = 'primary';
   @property({ type: String })
   borderWeight = 'standard';
+  @property({ type: String, attribute: false })
+  buttonText = 'Button';
   @state()
-  protected _open = false;
+  protected _open = true;
 
   static styles = [
     stackLayout,
@@ -88,12 +90,13 @@ export class MAccordionItem extends LitElement {
             <p>${this.itemTitle}</p>
           </slot>
           <slot name="content">
-            <p>${this.itemContent}</p>
+            <p>${this._open ? this.itemContent : nothing}</p>
           </slot>
-          <p>${this._open ? 'open' : 'closed'}</p>
         </div>
         <div>
-          <slot name="actions"></slot>
+          <m-button buttonSize="lg" style="width: 8em">
+            <span slot="button-content">${this.buttonText}</span>
+          </m-button>
         </div>
       </div>
     `;
