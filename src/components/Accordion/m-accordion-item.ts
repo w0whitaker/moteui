@@ -53,6 +53,11 @@ export class MAccordionItem extends LitElement {
   borderWeight = 'standard';
   @property({ type: String, attribute: false })
   buttonText = 'Button';
+  @property({ attribute: false })
+  onClick = () => {
+    return this.fold();
+  };
+
   @state()
   protected _open = true;
 
@@ -69,6 +74,10 @@ export class MAccordionItem extends LitElement {
     borderDark,
     accordionItemStyles,
   ];
+
+  fold() {
+    this._open = !this._open;
+  }
 
   render() {
     const classes = {
@@ -94,7 +103,7 @@ export class MAccordionItem extends LitElement {
           </slot>
         </div>
         <div>
-          <m-button buttonSize="lg" style="width: 8em">
+          <m-button buttonSize="lg" style="width: 8em" @click=${this.onClick}>
             <span slot="button-content">${this.buttonText}</span>
           </m-button>
         </div>
