@@ -1,7 +1,7 @@
 /** @format */
 
 import { LitElement, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement, property, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { stackLayout } from '@helpers/layouts';
 import { accordionItemStyles } from './accordion-item-styles';
@@ -51,6 +51,8 @@ export class MAccordionItem extends LitElement {
   borderColor = 'primary';
   @property({ type: String })
   borderWeight = 'standard';
+  @state()
+  protected _open = false;
 
   static styles = [
     stackLayout,
@@ -88,6 +90,7 @@ export class MAccordionItem extends LitElement {
           <slot name="content">
             <p>${this.itemContent}</p>
           </slot>
+          <p>${this._open ? 'open' : 'closed'}</p>
         </div>
         <div>
           <slot name="actions"></slot>
