@@ -1,8 +1,6 @@
 /** @format */
 
 import type { Meta, StoryObj } from '@storybook/web-components';
-import '../m-accordion-item';
-import '../../Button/m-button';
 
 const meta: Meta = {
   title: 'Components/Accordion Item',
