@@ -95,12 +95,8 @@ export class MAccordionItem extends LitElement {
         borderWeight="${this.borderWeight}"
       >
         <div class="m-stack">
-          <slot name="title">
-            <p>${this.itemTitle}</p>
-          </slot>
-          <slot name="content">
-            <p>${this._open ? this.itemContent : nothing}</p>
-          </slot>
+          <div>${this.itemTitle}</div>
+          <div>${this._open ? this.itemContent : nothing}</div>
         </div>
         <div>
           <m-button buttonSize="lg" style="width: 8em" @click=${this.onClick}>

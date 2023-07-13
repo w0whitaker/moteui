@@ -1,6 +1,7 @@
 /** @format */
 
 import type { Meta, StoryObj } from '@storybook/web-components';
+import { html } from 'lit';
 
 const meta: Meta = {
   title: 'Components/Accordion Item',
@@ -25,13 +26,18 @@ export default meta;
 
 type Story = StoryObj;
 
-export const Default: Story = {
+export const Sherlock: Story = {
   args: {
     border: true,
     borderColor: 'primary',
     borderWeight: 'standard',
-    itemContent: 'My name is Sherlock Holmes.',
-    itemTitle: 'Sherlock Holmes',
+    itemTitle: html` <h3>Sherlock Holmes</h3> `,
+    itemContent: html`
+      <p>
+        "My name is Sherlock Holmes. It is my business to know what other people
+        don't know."
+      </p>
+    `,
     buttonText: 'Click me!',
   },
 };
