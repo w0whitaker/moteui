@@ -41,6 +41,9 @@ export const BorderWeight = {
 
 @customElement('m-accordion-item')
 export class MAccordionItem extends LitElement {
+  @state()
+  protected _open = true;
+
   @property({ type: String, attribute: false })
   itemTitle = 'Accordion Item';
   @property({ type: String, attribute: false })
@@ -51,15 +54,10 @@ export class MAccordionItem extends LitElement {
   borderColor = 'primary';
   @property({ type: String })
   borderWeight = 'standard';
-  @property({ type: String, attribute: false })
-  buttonText = 'Button';
   @property({ attribute: false })
   onClick = () => {
     return this.fold();
   };
-
-  @state()
-  protected _open = true;
 
   static styles = [
     stackLayout,
@@ -100,7 +98,7 @@ export class MAccordionItem extends LitElement {
         </div>
         <div>
           <m-button buttonSize="lg" style="width: 8em" @click=${this.onClick}>
-            <span slot="button-content">${this.buttonText}</span>
+            <span slot="button-content">${this._open ? 'close' : 'open'}</span>
           </m-button>
         </div>
       </div>
