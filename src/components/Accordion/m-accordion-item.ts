@@ -44,10 +44,11 @@ export class MAccordionItem extends LitElement {
   @state()
   protected _open = true;
 
-  @property({ type: String, attribute: false })
-  itemTitle = 'Accordion Item';
-  @property({ type: String, attribute: false })
-  itemContent = 'Accordion Item Content';
+  @property({ type: Object, attribute: false })
+  item = {
+    itemTitle: 'Item Title',
+    itemContent: 'Item Content',
+  };
   @property({ type: Boolean })
   border = false;
   @property({ type: String })
@@ -78,6 +79,8 @@ export class MAccordionItem extends LitElement {
   }
 
   render() {
+    const { item } = this;
+
     const classes = {
       'm-accordion-item': true,
       'm-accordion-item--border': this.border,
@@ -93,8 +96,8 @@ export class MAccordionItem extends LitElement {
         borderWeight="${this.borderWeight}"
       >
         <div class="m-stack">
-          <div>${this.itemTitle}</div>
-          <div>${this._open ? this.itemContent : nothing}</div>
+          <div>${item.itemTitle}</div>
+          <div>${this._open ? item.itemContent : nothing}</div>
         </div>
         <div>
           <m-button buttonSize="lg" style="width: 8em" @click=${this.onClick}>

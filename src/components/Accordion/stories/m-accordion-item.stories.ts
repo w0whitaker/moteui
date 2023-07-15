@@ -1,9 +1,10 @@
 /** @format */
 
 import type { Meta, StoryObj } from '@storybook/web-components';
+import { MAccordionItem } from '../m-accordion-item';
 import { html } from 'lit';
 
-const meta: Meta = {
+const meta: Meta<MAccordionItem> = {
   title: 'Components/Accordion Item',
   component: 'm-accordion-item',
   tags: ['autodocs'],
@@ -26,18 +27,14 @@ export default meta;
 
 type Story = StoryObj;
 
-export const Sherlock: Story = {
+export const Default: Story = {
   args: {
+    item: {
+      itemTitle: html`<h3>the title</h3>`,
+      itemContent: html`<p>the content</p>`,
+    },
     border: true,
     borderColor: 'primary',
     borderWeight: 'standard',
-    itemTitle: html` <h3>Sherlock Holmes</h3> `,
-    itemContent: html`
-      <p>
-        "My name is Sherlock Holmes. It is my business to know what other people
-        don't know."
-      </p>
-    `,
-    buttonText: 'Click me!',
   },
 };
