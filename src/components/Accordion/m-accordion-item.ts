@@ -1,8 +1,9 @@
 /** @format */
 
-import { LitElement, html, nothing } from 'lit';
+import { LitElement, html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
+import { map } from 'lit/directives/map.js';
 import { stackLayout } from '@helpers/layouts';
 import { accordionItemStyles } from './accordion-item-styles';
 import {
@@ -44,11 +45,13 @@ export class MAccordionItem extends LitElement {
   @state()
   protected _open = true;
 
-  @property({ type: Object, attribute: false })
-  item = {
-    itemTitle: 'Item Title',
-    itemContent: 'Item Content',
-  };
+  @property({ type: Array, attribute: false })
+  item = [
+    {
+      itemTitle: 'Item Title',
+      itemContent: 'Item Content',
+    },
+  ];
   @property({ type: Boolean })
   border = false;
   @property({ type: String })
@@ -80,6 +83,7 @@ export class MAccordionItem extends LitElement {
 
   render() {
     const { item } = this;
+    console.log(item);
 
     const classes = {
       'm-accordion-item': true,
@@ -96,8 +100,13 @@ export class MAccordionItem extends LitElement {
         borderWeight="${this.borderWeight}"
       >
         <div class="m-stack">
-          <div>${item.itemTitle}</div>
-          <div>${this._open ? item.itemContent : nothing}</div>
+          ${map(
+            item,
+            (i) => html`
+              <h3>${i.itemTitle}</h3>
+              <p>${i.itemContent}</p>
+            `
+          )}
         </div>
         <div>
           <m-button buttonSize="lg" style="width: 8em" @click=${this.onClick}>

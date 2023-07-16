@@ -92,19 +92,11 @@
             },
             {
               "kind": "field",
-              "name": "itemTitle",
+              "name": "item",
               "type": {
-                "text": "string"
+                "text": "array"
               },
-              "default": "'Accordion Item'"
-            },
-            {
-              "kind": "field",
-              "name": "itemContent",
-              "type": {
-                "text": "string"
-              },
-              "default": "'Accordion Item Content'"
+              "default": "[\n    {\n      itemTitle: 'Item Title',\n      itemContent: 'Item Content',\n    },\n  ]"
             },
             {
               "kind": "field",
@@ -217,9 +209,18 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "",
+          "description": "The Accordion element.",
           "name": "MAccordion",
-          "members": [],
+          "members": [
+            {
+              "kind": "field",
+              "name": "items",
+              "type": {
+                "text": "ReadonlyArray<MAccordionItem>"
+              },
+              "default": "[]"
+            }
+          ],
           "superclass": {
             "name": "LitElement",
             "package": "lit"
@@ -285,69 +286,6 @@
           "declaration": {
             "name": "MCard",
             "module": "src/components/Card/m-card.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/List/index.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/List/m-list.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "MList",
-          "members": [
-            {
-              "kind": "field",
-              "name": "items",
-              "type": {
-                "text": "array"
-              },
-              "default": "[]",
-              "attribute": "items",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "items",
-              "type": {
-                "text": "array"
-              },
-              "default": "[]",
-              "fieldName": "items"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "m-list",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "MList",
-          "declaration": {
-            "name": "MList",
-            "module": "src/components/List/m-list.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "m-list",
-          "declaration": {
-            "name": "MList",
-            "module": "src/components/List/m-list.ts"
           }
         }
       ]
@@ -605,6 +543,69 @@
           "declaration": {
             "name": "MModal",
             "module": "src/components/Modal/m-modal.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/List/index.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/List/m-list.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MList",
+          "members": [
+            {
+              "kind": "field",
+              "name": "items",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "attribute": "items",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "items",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "fieldName": "items"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "m-list",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MList",
+          "declaration": {
+            "name": "MList",
+            "module": "src/components/List/m-list.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "m-list",
+          "declaration": {
+            "name": "MList",
+            "module": "src/components/List/m-list.ts"
           }
         }
       ]
