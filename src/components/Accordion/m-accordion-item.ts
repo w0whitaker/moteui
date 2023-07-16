@@ -1,6 +1,6 @@
 /** @format */
 
-import { LitElement, html } from 'lit';
+import { LitElement, html, nothing } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { map } from 'lit/directives/map.js';
@@ -82,7 +82,7 @@ export class MAccordionItem extends LitElement {
   }
 
   render() {
-    const { item } = this;
+    const { item, _open } = this;
     console.log(item);
 
     const classes = {
@@ -104,7 +104,7 @@ export class MAccordionItem extends LitElement {
             item,
             (i) => html`
               <h3>${i.itemTitle}</h3>
-              <p>${i.itemContent}</p>
+              <p>${_open ? i.itemContent : nothing}</p>
             `
           )}
         </div>
