@@ -1,10 +1,8 @@
 /** @format */
 
 import type { Meta, StoryObj } from '@storybook/web-components';
-import { MAccordionItem } from '../m-accordion-item';
-import { html } from 'lit';
 
-const meta: Meta<MAccordionItem> = {
+const meta: Meta = {
   title: 'Components/Accordion Item',
   component: 'm-accordion-item',
   tags: ['autodocs'],
@@ -19,6 +17,21 @@ const meta: Meta<MAccordionItem> = {
     borderWeight: {
       options: ['line', 'narrow', 'standard', 'wide', 'jumbo'],
       control: { type: 'select' },
+    },
+    item: {
+      table: {
+        disable: true,
+      },
+    },
+    onClick: {
+      table: {
+        disable: true,
+      },
+    },
+    _open: {
+      table: {
+        disable: true,
+      },
     },
   },
 };
