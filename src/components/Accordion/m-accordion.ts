@@ -15,20 +15,24 @@ import { accordionStyles } from './accordion-styles';
 @customElement('m-accordion')
 export class MAccordion extends LitElement {
   @state()
-  items = new Set([]);
+  items = [];
 
   static styles = [stackLayout, accordionStyles];
 
   render() {
     const { items } = this;
-    const itemTemplate = html`<!-- display: block -->
-    <m-accordion-item
-    `;
 
-    const k = Object.keys(items);
-    for (const i of k) {
-      const mai = items[i];
-      console.log(mai);
+    const itemTemplates = [];
+
+    for (const item of Object.entries(items)) {
+      const i = item[1];
+      console.log(i);
+      const template = html` <m-accordion-item
+        .item=${item[i]}
+      ></m-accordion-item>`;
+      // console.log(template);
+      // itemTemplates.push(i);
+      itemTemplates.push(template);
     }
 
     const classes = {
@@ -36,10 +40,7 @@ export class MAccordion extends LitElement {
     };
 
     return html` <!-- display: block -->
-      <div class="${classMap(classes)}">
-        ${html`<!-- display:block -->
-          <p>${this.mai}</p> `}
-      </div>`;
+      <div class="${classMap(classes)}">${itemTemplates}</div>`;
   }
 
   connectedCallback() {
