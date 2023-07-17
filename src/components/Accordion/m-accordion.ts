@@ -21,6 +21,9 @@ export class MAccordion extends LitElement {
 
   render() {
     const { items } = this;
+    const itemTemplate = html`<!-- display: block -->
+    <m-accordion-item
+    `;
 
     const k = Object.keys(items);
     for (const i of k) {
@@ -33,7 +36,10 @@ export class MAccordion extends LitElement {
     };
 
     return html` <!-- display: block -->
-      <div class="${classMap(classes)}">${Object.keys(items)}</div>`;
+      <div class="${classMap(classes)}">
+        ${html`<!-- display:block -->
+          <p>${this.mai}</p> `}
+      </div>`;
   }
 
   connectedCallback() {
