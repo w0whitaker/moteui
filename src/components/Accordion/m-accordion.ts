@@ -1,7 +1,7 @@
 /** @format */
 
 import { LitElement, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { map } from 'lit/directives/map.js';
 import { stackLayout } from '@helpers/layouts';
@@ -14,28 +14,26 @@ import { accordionStyles } from './accordion-styles';
 
 @customElement('m-accordion')
 export class MAccordion extends LitElement {
-  // This is an array of 'MAccordionItem' objects
-  @property({ type: Array, attribute: false })
-  items = [];
+  @state()
+  items = new Set([]);
 
   static styles = [stackLayout, accordionStyles];
 
   render() {
     const { items } = this;
-    const itemTemplates = [];
 
-    for (const i in items) {
-      itemTemplates.push(
-        html` <m-accordion-item .item=${items}></m-accordion-item> `
-      );
-      console.log(items[i]);
+    const k = Object.keys(items);
+    for (const i of k) {
+      const mai = items[i];
+      console.log(mai);
     }
 
     const classes = {
       'm-accordion': true,
     };
 
-    return html` <div class="${classMap(classes)}">${itemTemplates}</div>`;
+    return html` <!-- display: block -->
+      <div class="${classMap(classes)}">${Object.keys(items)}</div>`;
   }
 
   connectedCallback() {
