@@ -83,7 +83,6 @@ export class MAccordionItem extends LitElement {
 
   render() {
     const { item, _open } = this;
-    console.log(item);
 
     const classes = {
       'm-accordion-item': true,
@@ -98,6 +97,7 @@ export class MAccordionItem extends LitElement {
         ?border="${this.border}"
         borderColor="${this.borderColor}"
         borderWeight="${this.borderWeight}"
+        .item="${item}"
       >
         <div class="m-stack">
           ${map(
