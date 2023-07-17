@@ -13,6 +13,7 @@ import { accordionStyles } from './accordion-styles';
 
 @customElement('m-accordion')
 export class MAccordion extends LitElement {
+  // This is an array of 'MAccordionItem' objects
   @property({ type: Array, attribute: false })
   items = [];
 
