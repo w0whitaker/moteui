@@ -6,6 +6,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { map } from 'lit/directives/map.js';
 import { stackLayout } from '@helpers/layouts';
 import { accordionStyles } from './accordion-styles';
+import { MAccordionItem } from './m-accordion-item';
 
 /**
  * The Accordion element.
@@ -25,12 +26,12 @@ export class MAccordion extends LitElement {
     const itemTemplates = [];
 
     for (const item of Object.entries(items)) {
-      const i = item[1];
+      const i = item[1] as MAccordionItem;
       console.log(i);
       const template = html` <m-accordion-item
-        .item=${item[i]}
+        .item=${item}
       ></m-accordion-item>`;
-      // console.log(template);
+      console.log(template);
       // itemTemplates.push(i);
       itemTemplates.push(template);
     }
