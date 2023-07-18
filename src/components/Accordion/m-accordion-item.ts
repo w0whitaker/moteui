@@ -3,7 +3,7 @@
 import { LitElement, html, nothing } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
-import { map } from 'lit/directives/map.js';
+// import { map } from 'lit/directives/map.js';
 import { stackLayout } from '@helpers/layouts';
 import { accordionItemStyles } from './accordion-item-styles';
 import {
@@ -95,7 +95,11 @@ export class MAccordionItem extends LitElement {
       >
         <div class="m-stack">
           <p><strong>character:</strong> ${this.item[0]}</p>
-          <p><strong>occupation:</strong> ${this.item[1]}</p>
+          <p>
+            ${this._open
+              ? html`<strong>occupation:</strong> ${this.item[1]}`
+              : nothing}
+          </p>
         </div>
         <div>
           <m-button buttonSize="lg" style="width: 8em" @click=${this.onClick}>

@@ -1,7 +1,7 @@
 /** @format */
 
 import { LitElement, html } from 'lit';
-import { customElement, state } from 'lit/decorators.js';
+import { customElement, property, state } from 'lit/decorators.js';
 // import { classMap } from 'lit/directives/class-map.js';
 import { map } from 'lit/directives/map.js';
 // import { stackLayout } from '@helpers/layouts';
@@ -21,14 +21,16 @@ export class MAccordion extends LitElement {
     ['John Watson', 'doctor'],
     ['Mycroft Holmes', 'government'],
   ]);
+  @property({ attribute: false })
+  item = [];
   render() {
     return html` <!-- display: block -->
       <div>
         <h1>Accordion</h1>
           ${map(
             this._items,
-            (_item) => html`<!-- display:block -->
-              <m-accordion-item ._item=${_item}></m-accordion-item>`
+            (item) => html`<!-- display:block -->
+              <m-accordion-item .item="${item}"></m-accordion-item>`
           )}
         </ul>
       </div>`;
