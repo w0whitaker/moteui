@@ -42,13 +42,6 @@ type Story = StoryObj;
 
 export const Default: Story = {
   args: {
-    item: [
-      {
-        itemTitle: 'Sherlock Holmes',
-        itemContent:
-          "My name is Sherlock Holmes. It is my business to know what other people don't know.",
-      },
-    ],
     border: true,
     borderColor: 'primary',
     borderWeight: 'standard',

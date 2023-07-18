@@ -29,20 +29,5 @@ export default meta;
 type Story = StoryObj;
 
 export const Default: Story = {
-  args: {
-    items: [
-      {
-        itemTitle: 'Sherlock Holmes',
-        itemContent: 'My name is Sherlock Holmes.',
-      },
-      {
-        itemTitle: 'John Watson',
-        itemContent: 'My name is John Watson.',
-      },
-      {
-        itemTitle: 'Mycroft Holmes',
-        itemContent: 'My name is Mycroft Holmes.',
-      },
-    ],
-  },
+  args: {},
 };
