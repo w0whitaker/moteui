@@ -117,7 +117,7 @@
               "type": {
                 "text": "array"
               },
-              "default": "[\n    {\n      itemTitle: 'Item Title',\n      itemContent: 'Item Content',\n    },\n  ]"
+              "default": "[]"
             },
             {
               "kind": "field",
@@ -235,8 +235,8 @@
           "members": [
             {
               "kind": "field",
-              "name": "items",
-              "default": "new Set(['Sherlock Holmes', 'John Watson'])"
+              "name": "_items",
+              "default": "new Map([\n    ['Sherlock Holmes', 'detective'],\n    ['John Watson', 'doctor'],\n    ['Mycroft Holmes', 'government'],\n  ])"
             }
           ],
           "superclass": {
