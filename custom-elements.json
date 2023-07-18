@@ -46,6 +46,27 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/Accordion/data.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "items",
+          "default": "new Map([\n  [\n    'Sherlock Holmes',\n    \"My name is Sherlock Holmes. It is my business to know what other people don't know.\",\n  ],\n])"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "items",
+          "declaration": {
+            "name": "items",
+            "module": "src/components/Accordion/data.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/Accordion/index.ts",
       "declarations": [],
       "exports": []
@@ -215,10 +236,7 @@
             {
               "kind": "field",
               "name": "items",
-              "type": {
-                "text": "ReadonlyArray<MAccordionItem>"
-              },
-              "default": "[]"
+              "default": "new Set(['Sherlock Holmes', 'John Watson'])"
             }
           ],
           "superclass": {
@@ -244,48 +262,6 @@
           "declaration": {
             "name": "MAccordion",
             "module": "src/components/Accordion/m-accordion.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/Card/index.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/Card/m-card.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "MCard",
-          "members": [],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "m-card",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "MCard",
-          "declaration": {
-            "name": "MCard",
-            "module": "src/components/Card/m-card.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "m-card",
-          "declaration": {
-            "name": "MCard",
-            "module": "src/components/Card/m-card.ts"
           }
         }
       ]
@@ -349,6 +325,48 @@
           "declaration": {
             "name": "MInput",
             "module": "src/components/Input/m-input.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Card/index.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Card/m-card.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MCard",
+          "members": [],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "m-card",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MCard",
+          "declaration": {
+            "name": "MCard",
+            "module": "src/components/Card/m-card.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "m-card",
+          "declaration": {
+            "name": "MCard",
+            "module": "src/components/Card/m-card.ts"
           }
         }
       ]
@@ -486,69 +504,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/Modal/index.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/Modal/m-modal.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "MModal",
-          "members": [
-            {
-              "kind": "field",
-              "name": "text",
-              "type": {
-                "text": "string"
-              },
-              "default": "'Modal'",
-              "attribute": "text",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "text",
-              "type": {
-                "text": "string"
-              },
-              "default": "'Modal'",
-              "fieldName": "text"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "m-modal",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "MModal",
-          "declaration": {
-            "name": "MModal",
-            "module": "src/components/Modal/m-modal.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "m-modal",
-          "declaration": {
-            "name": "MModal",
-            "module": "src/components/Modal/m-modal.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/List/index.ts",
       "declarations": [],
       "exports": []
@@ -606,6 +561,69 @@
           "declaration": {
             "name": "MList",
             "module": "src/components/List/m-list.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Modal/index.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Modal/m-modal.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MModal",
+          "members": [
+            {
+              "kind": "field",
+              "name": "text",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Modal'",
+              "attribute": "text",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "text",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Modal'",
+              "fieldName": "text"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "m-modal",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MModal",
+          "declaration": {
+            "name": "MModal",
+            "module": "src/components/Modal/m-modal.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "m-modal",
+          "declaration": {
+            "name": "MModal",
+            "module": "src/components/Modal/m-modal.ts"
           }
         }
       ]
