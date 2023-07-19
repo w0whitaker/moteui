@@ -19,6 +19,10 @@ const meta: Meta = {
       options: ['sm', 'md', 'lg'],
       control: { type: 'select' },
     },
+    borderColor: {
+      options: ['primary', 'secondary', 'light', 'dark'],
+      control: { type: 'select' },
+    },
     onClick: {
       table: {
         disable: true,
@@ -40,6 +44,7 @@ export const Generic: Story = {
     disabled: false,
     buttonSize: Sizes.Medium,
     buttonText: 'Click me!',
+    borderColor: 'light',
     onClick: action('clicked'),
   },
 };
