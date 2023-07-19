@@ -41,6 +41,8 @@ export class MButton extends LitElement {
   borderColor = 'light';
   @property({ type: Boolean })
   disabled = false;
+  @property({ type: Boolean })
+  square = false;
   @property({ attribute: false })
   onClick = () => {
     return;
@@ -69,6 +71,7 @@ export class MButton extends LitElement {
         border-color="${this.borderColor}"
         @click="${this.onClick}"
         ?disabled="${this.disabled}"
+        ?square="${this.square}"
       >
         <slot name="button-content" class="m-button--content">
           <span>${this.buttonText}</span>

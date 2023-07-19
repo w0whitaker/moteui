@@ -13,7 +13,8 @@ export const buttonStyles = css`
     border-width: 0.375em;
     border-color: #e6ebff;
     border-radius: 0.25em;
-    padding: 0;
+    padding-block: 1.5em;
+    padding-inline: 1em;
     background-color: #00171f;
     position: relative;
     font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, 'Segoe UI',
@@ -25,6 +26,15 @@ export const buttonStyles = css`
   }
 
   .m-button:after {
+    content: '';
+    display: none;
+  }
+
+  .m-button[square] {
+    padding: 0;
+  }
+
+  .m-button[square]:after {
     content: '';
     display: block;
     padding-bottom: 100%;
@@ -46,7 +56,7 @@ export const buttonStyles = css`
     font-size: 1.75em;
   }
 
-  .m-button--content {
+  .m-button--content[square] {
     position: absolute;
     width: 100%;
     height: 100%;
