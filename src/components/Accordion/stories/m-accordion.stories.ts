@@ -51,5 +51,6 @@ export const Default: Story = {
       ],
       ['Matlock', "I'm not a magician, I'm just a country lawyer."],
     ],
+    border: true,
   },
 };
