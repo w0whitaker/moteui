@@ -36,6 +36,7 @@ export class MButton extends LitElement {
   /** 'sm' || 'md' || 'lg' */
   @property({ type: String })
   buttonSize = 'md';
+  /** 'primary' || 'secondary' || 'light' || 'dark' */
   @property({ type: String })
   borderColor = 'light';
   @property({ type: Boolean })
