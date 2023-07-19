@@ -10,6 +10,16 @@ const meta: Meta = {
   component: 'm-accordion',
   tags: ['autodocs'],
   argTypes: {
+    _items: {
+      table: {
+        disable: true,
+      },
+    },
+    item: {
+      table: {
+        disable: true,
+      },
+    },
     border: {
       control: { type: 'boolean' },
     },
@@ -29,5 +39,17 @@ export default meta;
 type Story = StoryObj;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    _items: [
+      [
+        'Sherlock Holmes',
+        "My name is Sherlock Holmes. It is my business to know what other people don't know.",
+      ],
+      [
+        'Dr. Watson',
+        'You have a grand gift for silence, Watson. It makes you quite invaluable as a companion.',
+      ],
+      ['Matlock', "I'm not a magician, I'm just a country lawyer."],
+    ],
+  },
 };

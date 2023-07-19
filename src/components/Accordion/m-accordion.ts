@@ -2,11 +2,37 @@
 
 import { LitElement, html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
-// import { classMap } from 'lit/directives/class-map.js';
+import { classMap } from 'lit/directives/class-map.js';
 import { map } from 'lit/directives/map.js';
-// import { stackLayout } from '@helpers/layouts';
-// import { accordionStyles } from './accordion-styles';
-// import { MAccordionItem } from './m-accordion-item';
+import { stackLayout } from '@helpers/layouts';
+import { accordionStyles } from './accordion-styles';
+import { accordionItemStyles } from './accordion-item-styles';
+import {
+  borderLine,
+  borderNarrow,
+  borderStandard,
+  borderWide,
+  borderJumbo,
+  borderPrimary,
+  borderSecondary,
+  borderLight,
+  borderDark,
+} from '@helpers/borders';
+
+export const BorderColor = {
+  Primary: 'primary',
+  Secondary: 'secondary',
+  Light: 'light',
+  Dark: 'dark',
+} as const;
+
+export const BorderWeight = {
+  Line: 'line',
+  Narrow: 'narrow',
+  Standard: 'standard',
+  Wide: 'wide',
+  Jumbo: 'jumbo',
+} as const;
 
 /**
  * The Accordion element.
@@ -16,23 +42,59 @@ import { map } from 'lit/directives/map.js';
 @customElement('m-accordion')
 export class MAccordion extends LitElement {
   @state()
-  _items = new Map([
-    ['Sherlock Holmes', 'detective'],
-    ['John Watson', 'doctor'],
-    ['Mycroft Holmes', 'government'],
-  ]);
-  @property({ attribute: false })
+  _items = new Map();
+  @state()
   item = [];
+  @property({ type: Boolean })
+  border = false;
+  @property({ type: String })
+  borderColor = 'primary';
+  @property({ type: String })
+  borderWeight = 'standard';
+
+  static styles = [
+    stackLayout,
+    accordionStyles,
+    accordionItemStyles,
+    borderLine,
+    borderNarrow,
+    borderStandard,
+    borderWide,
+    borderJumbo,
+    borderPrimary,
+    borderSecondary,
+    borderLight,
+    borderDark,
+  ];
+
   render() {
+    const { _items, border, borderColor, borderWeight } = this;
+
+    const parentClasses = {
+      'm-accordion': true,
+      'm-stack': true,
+    };
+
+    const childClasses = {
+      'm-accordion-item': true,
+      'm-accordion-item--border': border,
+      [`border-${borderColor}`]: border ? borderColor : false,
+      [`border-${borderWeight}`]: border ? borderWeight : false,
+    };
+
     return html` <!-- display: block -->
-      <div>
-        <h1>Accordion</h1>
-          ${map(
-            this._items,
-            (item) => html`<!-- display:block -->
-              <m-accordion-item .item="${item}"></m-accordion-item>`
-          )}
-        </ul>
+      <div class="${classMap(parentClasses)}">
+        ${map(
+          _items,
+          (item) => html`<!-- display:block -->
+            <m-accordion-item
+              class="${classMap(childClasses)}"
+              .item="${item}"
+              ?border="${border}"
+              borderColor="${borderColor}"
+              borderWeight="${borderWeight}"
+            ></m-accordion-item>`
+        )}
       </div>`;
   }
 }
