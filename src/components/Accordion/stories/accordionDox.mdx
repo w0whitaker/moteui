@@ -1,0 +1,25 @@
+import { Meta, Story, Canvas } from '@storybook/blocks';
+import * as AccordionStories from './m-accordion.stories';
+
+<Meta title="MDX/Accordion" of={AccordionStories} />
+
+# The accordion.
+
+## Description
+The accordion component is used to show and hide content. It is composed of a series of panels. Each panel consists of a heading and an associated panel content. The accordion component is used to progressively disclose content.
+_"Thanks github copilot, yer the best!"_
+
+## Usage
+```
+<m-accordion>
+  <m-accordion-item border bordercolor borderweight>
+    <p slot="title"></p>
+    <p slot="content"></p>
+  </m-accordion-item>
+</m-accordion>
+```
+
+<Canvas>
+  <Story of={AccordionStories.Default} />
+</Canvas>
+

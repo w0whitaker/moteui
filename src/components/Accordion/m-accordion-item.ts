@@ -1,61 +1,44 @@
-import { LitElement, html, css } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
-import { classMap } from 'lit/directives/class-map.js';
-import { boxLayout, stackLayout } from '@helpers/layouts';
-import { line } from '@helpers/borders';
+/** @format */
+
+import { LitElement, html, nothing } from 'lit';
+import { customElement, property, state } from 'lit/decorators.js';
+import { stackLayout } from '@helpers/layouts';
 
 /**
  *
  * The Accordion item element.
  *
- * @slot - This element has a slot
+ * @slot button-content - The button content.
  */
 
 @customElement('m-accordion-item')
 export class MAccordionItem extends LitElement {
-  @property({ type: Boolean })
-  border = false;
+  @state()
+  protected _open = false;
+  @state()
+  item = [];
+  @property({ attribute: false })
+  onClick = () => {
+    return this.fold();
+  };
 
-  static styles = [
-    stackLayout,
-    boxLayout,
-    line,
-    css`
-      :host {
-        display: block;
-      }
+  static styles = [stackLayout];
 
-      button {
-        border: none;
-        background-color: var(--secondary, lightgray);
-        padding-inline: 2rem;
-        border-left: 1px solid black;
-      }
-
-      .m-accordion-item {
-        padding-inline-start: var(--space-s, 1rem);
-        display: flex;
-        justify-content: space-between;
-      }
-    `,
-  ];
+  fold() {
+    this._open = !this._open;
+  }
 
   render() {
-    const { border } = this;
+    const { _open } = this;
 
-    const classes = {
-      'm-accordion-item': true,
-      'm-box': true,
-      'm-border--line': border,
-    };
     return html`
-      <div class="${classMap(classes)}">
-        <div class="m-stack">
-          <slot name="title"></slot>
-          <slot name="content"></slot>
-        </div>
-        <m-button>
-          <p slot="button-content">Toggle</p>
+      <div class="m-stack">
+        <h3>${this.item[0]}</h3>
+        <p>${_open ? html`${this.item[1]}` : nothing}</p>
+      </div>
+      <div>
+        <m-button buttonSize="lg" style="width: 8em" @click=${this.onClick}>
+          <span slot="button-content">${_open ? 'close' : 'open'}</span>
         </m-button>
       </div>
     `;

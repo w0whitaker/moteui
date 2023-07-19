@@ -4,6 +4,7 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "declaration": true,
+    "downlevelIteration": true,
     "emitDeclarationOnly": true,
     "experimentalDecorators": true,
     "outDir": "src/typings",

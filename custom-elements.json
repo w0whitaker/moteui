@@ -4,198 +4,6 @@
   "modules": [
     {
       "kind": "javascript-module",
-      "path": "src/components/Accordion/defs.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/Accordion/index.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/Accordion/m-accordion-item.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "\nThe Accordion item element.",
-          "name": "MAccordionItem",
-          "slots": [
-            {
-              "description": "This element has a slot",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "border",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "attribute": "border"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "border",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "fieldName": "border"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "m-accordion-item",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "MAccordionItem",
-          "declaration": {
-            "name": "MAccordionItem",
-            "module": "src/components/Accordion/m-accordion-item.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "m-accordion-item",
-          "declaration": {
-            "name": "MAccordionItem",
-            "module": "src/components/Accordion/m-accordion-item.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/Accordion/m-accordion.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "The Accordion element.",
-          "name": "MAccordion",
-          "slots": [
-            {
-              "description": "This element has a slot",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "size",
-              "attribute": "size",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "size",
-              "fieldName": "size"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "m-accordion",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "MAccordion",
-          "declaration": {
-            "name": "MAccordion",
-            "module": "src/components/Accordion/m-accordion.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "m-accordion",
-          "declaration": {
-            "name": "MAccordion",
-            "module": "src/components/Accordion/m-accordion.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/Input/index.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/Input/m-input.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "The Input element.",
-          "name": "MInput",
-          "members": [
-            {
-              "kind": "field",
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "'enter'",
-              "attribute": "name",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "'enter'",
-              "fieldName": "name"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "m-input",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "MInput",
-          "declaration": {
-            "name": "MInput",
-            "module": "src/components/Input/m-input.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "m-input",
-          "declaration": {
-            "name": "MInput",
-            "module": "src/components/Input/m-input.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/Card/index.ts",
       "declarations": [],
       "exports": []
@@ -243,7 +51,7 @@
         {
           "kind": "variable",
           "name": "buttonStyles",
-          "default": "css`\n  /* https://spin.atomicobject.com/2015/07/14/css-responsive-square/ */\n  :host {\n    display: block;\n  }\n\n  .m-button {\n    border-style: solid;\n    border-width: 0.375em;\n    border-color: #e6ebff;\n    border-radius: 0.25em;\n    padding: 0;\n    background-color: #00171f;\n    position: relative;\n    font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, 'Segoe UI',\n      Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',\n      sans-serif;\n    color: #e6ebff;\n  }\n\n  .m-button:after {\n    content: '';\n    display: block;\n    padding-bottom: 100%;\n  }\n\n  .m-button--sm {\n    width: 50%;\n    font-size: 1em;\n  }\n\n  .m-button--md {\n    width: 75%;\n    font-size: 1.5em;\n  }\n\n  .m-button--lg {\n    width: 100%;\n    font-size: 1.75em;\n  }\n\n  .m-button--content {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    top: 0;\n    left: 0;\n    color: #e6ebff;\n  }\n\n  .m-button[disabled] {\n    /* filter: brightness(0.5); */\n    filter: invert(25%);\n  }\n\n  .m-button[disabled] > * {\n    text-decoration: underline;\n    text-underline-offset: -0.3em;\n    text-decoration-skip-ink: none;\n    /* text-decoration: line-through; */\n  }\n`"
+          "default": "css`\n  /* https://spin.atomicobject.com/2015/07/14/css-responsive-square/ */\n  :host {\n    display: block;\n  }\n\n  .m-button {\n    border-style: solid;\n    border-width: 0.375em;\n    border-color: #e6ebff;\n    border-radius: 0.25em;\n    padding: 0;\n    background-color: #00171f;\n    position: relative;\n    font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, 'Segoe UI',\n      Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',\n      sans-serif;\n    color: #e6ebff;\n    box-shadow: -0.0625em 0.165em hsla(0, 0%, 0%, 0.25),\n      inset -0.125em 0.165em hsla(0, 100%, 100%, 0.25);\n  }\n\n  .m-button:after {\n    content: '';\n    display: block;\n    padding-bottom: 100%;\n  }\n\n  .m-button--sm {\n    width: 50%;\n    font-size: 1em;\n    position: relative;\n  }\n\n  .m-button--md {\n    width: 75%;\n    font-size: 1.5em;\n  }\n\n  .m-button--lg {\n    width: 100%;\n    font-size: 1.75em;\n  }\n\n  .m-button--content {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    top: 0;\n    left: 0;\n    color: #e6ebff;\n  }\n\n  .m-button[disabled] {\n    /* filter: brightness(0.5); */\n    filter: invert(25%);\n    box-shadow: none;\n  }\n\n  .m-button[disabled] > * {\n    text-decoration: underline;\n    text-underline-offset: -0.3em;\n    text-decoration-skip-ink: none;\n    /* text-decoration: line-through; */\n  }\n`"
         }
       ],
       "exports": [
@@ -363,6 +171,341 @@
           "declaration": {
             "name": "MButton",
             "module": "src/components/Button/m-button.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Input/index.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Input/m-input.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The Input element.",
+          "name": "MInput",
+          "members": [
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "'enter'",
+              "attribute": "name",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "'enter'",
+              "fieldName": "name"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "m-input",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MInput",
+          "declaration": {
+            "name": "MInput",
+            "module": "src/components/Input/m-input.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "m-input",
+          "declaration": {
+            "name": "MInput",
+            "module": "src/components/Input/m-input.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Accordion/accordion-item-styles.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "accordionItemStyles",
+          "default": "css`\n  :host {\n    display: block;\n  }\n\n  .m-accordion-item {\n    padding-inline: var(--space-s, 1rem);\n    padding-block: var(--space-m, 1.5rem);\n    display: flex;\n    justify-content: space-between;\n    font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, 'Segoe UI',\n      Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',\n      sans-serif;\n  }\n\n  .m-accordion-item--border {\n    border-style: solid;\n    border-radius: 0.25em;\n  }\n`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "accordionItemStyles",
+          "declaration": {
+            "name": "accordionItemStyles",
+            "module": "src/components/Accordion/accordion-item-styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Accordion/accordion-styles.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "accordionStyles",
+          "default": "css`\n  :host {\n    display: block;\n  }\n\n  .m-accordion > ::slotted(*:not(:first-child)) {\n    margin-block-start: 0.125rem;\n  }\n`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "accordionStyles",
+          "declaration": {
+            "name": "accordionStyles",
+            "module": "src/components/Accordion/accordion-styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Accordion/data.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "items",
+          "default": "new Map([\n  [\n    'Sherlock Holmes',\n    \"My name is Sherlock Holmes. It is my business to know what other people don't know.\",\n  ],\n])"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "items",
+          "declaration": {
+            "name": "items",
+            "module": "src/components/Accordion/data.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Accordion/index.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Accordion/m-accordion-item.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "BorderColor",
+          "type": {
+            "text": "{\n  Primary: 'primary',\n  Secondary: 'secondary',\n  Light: 'light',\n  Dark: 'dark',\n}"
+          },
+          "default": "{\n  Primary: 'primary',\n  Secondary: 'secondary',\n  Light: 'light',\n  Dark: 'dark',\n}"
+        },
+        {
+          "kind": "variable",
+          "name": "BorderWeight",
+          "type": {
+            "text": "{\n  Line: 'line',\n  Narrow: 'narrow',\n  Standard: 'standard',\n  Wide: 'wide',\n  Jumbo: 'jumbo',\n}"
+          },
+          "default": "{\n  Line: 'line',\n  Narrow: 'narrow',\n  Standard: 'standard',\n  Wide: 'wide',\n  Jumbo: 'jumbo',\n}"
+        },
+        {
+          "kind": "class",
+          "description": "\nThe Accordion item element.",
+          "name": "MAccordionItem",
+          "slots": [
+            {
+              "description": "This element has a slot",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "_open",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "protected",
+              "default": "true"
+            },
+            {
+              "kind": "field",
+              "name": "item",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]"
+            },
+            {
+              "kind": "field",
+              "name": "border",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "border"
+            },
+            {
+              "kind": "field",
+              "name": "borderColor",
+              "type": {
+                "text": "string"
+              },
+              "default": "'primary'",
+              "attribute": "borderColor"
+            },
+            {
+              "kind": "field",
+              "name": "borderWeight",
+              "type": {
+                "text": "string"
+              },
+              "default": "'standard'",
+              "attribute": "borderWeight"
+            },
+            {
+              "kind": "field",
+              "name": "onClick"
+            },
+            {
+              "kind": "method",
+              "name": "fold"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "border",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "border"
+            },
+            {
+              "name": "borderColor",
+              "type": {
+                "text": "string"
+              },
+              "default": "'primary'",
+              "fieldName": "borderColor"
+            },
+            {
+              "name": "borderWeight",
+              "type": {
+                "text": "string"
+              },
+              "default": "'standard'",
+              "fieldName": "borderWeight"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "m-accordion-item",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "BorderColor",
+          "declaration": {
+            "name": "BorderColor",
+            "module": "src/components/Accordion/m-accordion-item.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "BorderWeight",
+          "declaration": {
+            "name": "BorderWeight",
+            "module": "src/components/Accordion/m-accordion-item.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "MAccordionItem",
+          "declaration": {
+            "name": "MAccordionItem",
+            "module": "src/components/Accordion/m-accordion-item.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "m-accordion-item",
+          "declaration": {
+            "name": "MAccordionItem",
+            "module": "src/components/Accordion/m-accordion-item.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Accordion/m-accordion.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The Accordion element.",
+          "name": "MAccordion",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_items",
+              "default": "new Map([\n    ['Sherlock Holmes', 'detective'],\n    ['John Watson', 'doctor'],\n    ['Mycroft Holmes', 'government'],\n  ])"
+            },
+            {
+              "kind": "field",
+              "name": "item",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "m-accordion",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MAccordion",
+          "declaration": {
+            "name": "MAccordion",
+            "module": "src/components/Accordion/m-accordion.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "m-accordion",
+          "declaration": {
+            "name": "MAccordion",
+            "module": "src/components/Accordion/m-accordion.ts"
           }
         }
       ]

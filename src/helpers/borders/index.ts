@@ -1,7 +1,17 @@
-import { line } from './line';
-import { narrow } from './narrow';
-import { standard } from './standard';
-import { wide } from './wide';
-import { jumbo } from './jumbo';
+/** @format */
 
-export { line, narrow, standard, wide, jumbo };
+import { line, narrow, standard, wide, jumbo } from './weights';
+
+import { primary, secondary, light, dark } from './colors';
+
+export {
+  line as borderLine,
+  narrow as borderNarrow,
+  standard as borderStandard,
+  wide as borderWide,
+  jumbo as borderJumbo,
+  primary as borderPrimary,
+  secondary as borderSecondary,
+  light as borderLight,
+  dark as borderDark,
+};

@@ -20,7 +20,8 @@ export const buttonStyles = css`
       Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
       sans-serif;
     color: #e6ebff;
-    box-shadow: -0.125em 0.33em hsla(0, 0%, 0%, 0.25);
+    box-shadow: -0.0625em 0.165em hsla(0, 0%, 0%, 0.25),
+      inset -0.125em 0.165em hsla(0, 100%, 100%, 0.25);
   }
 
   .m-button:after {
@@ -60,6 +61,7 @@ export const buttonStyles = css`
   .m-button[disabled] {
     /* filter: brightness(0.5); */
     filter: invert(25%);
+    box-shadow: none;
   }
 
   .m-button[disabled] > * {
