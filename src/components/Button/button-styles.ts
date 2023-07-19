@@ -59,7 +59,6 @@ export const buttonStyles = css`
   }
 
   .m-button[disabled] {
-    /* filter: brightness(0.5); */
     filter: invert(25%);
     box-shadow: none;
   }
@@ -69,5 +68,12 @@ export const buttonStyles = css`
     text-underline-offset: -0.3em;
     text-decoration-skip-ink: none;
     /* text-decoration: line-through; */
+  }
+
+  .m-button:not([border-color='light']) > * {
+    background-color: #e6ebff;
+    color: #00171f;
+    box-shadow: -0.0625em 0.165em hsla(0, 100%, 100%, 0.25),
+      inset -0.125em 0.165em hsla(0, 0%, 0%, 0.25);
   }
 `;
