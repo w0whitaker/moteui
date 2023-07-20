@@ -11,18 +11,61 @@ export const buttonStyles = css`
   .m-button {
     border-style: solid;
     border-width: 0.375em;
-    border-color: #e6ebff;
+    border-color: inherit;
     border-radius: 0.25em;
-    padding-block: 1.5em;
-    padding-inline: 1em;
-    background-color: #00171f;
-    position: relative;
+    padding: 0;
+    display: flex;
+    /* position: relative; */
+    background-color: transparent;
+    color: #e6ebff;
     font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, 'Segoe UI',
       Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
       sans-serif;
-    color: #e6ebff;
     box-shadow: -0.0625em 0.165em hsla(0, 0%, 0%, 0.25),
       inset -0.125em 0.165em hsla(0, 100%, 100%, 0.25);
+  }
+
+  .m-button:disabled {
+    filter: invert(25%);
+    box-shadow: none;
+    text-decoration: underline;
+    text-underline-offset: -0.3em;
+    text-decoration-skip-ink: none;
+  }
+
+  .m-button--content {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #e6ebff;
+    padding-block: 1.5em;
+    padding-inline: 1em;
+    z-index: -1;
+  }
+
+  /* .m-button,
+  .m-button[square] {
+    background-color: #00171f;
+  }
+
+  .m-button[square]:not([border-color='light']),
+  .m-button:not[border-color='light']) > * {
+    background-color: #e6ebff;
+    box-shadow: -0.0625em 0.165em hsla(0, 100%, 100%, 0.25),
+      inset -0.125em 0.165em hsla(0, 0%, 0%, 0.25);
+  }
+
+  .m-button > .m-button--content {
+    color: #e6ebff;
+  }
+
+  .m-button:not([border-color='light']) > .m-button--content,
+  .m-button[square]:not([border-color='light']) > .m-button--content {
+    color: #00171f;
+  }
+
+  .m-button:not([border-color='light']) {
+    background-color: #e6ebff;
   }
 
   .m-button:after {
@@ -41,49 +84,46 @@ export const buttonStyles = css`
   }
 
   .m-button--sm {
-    width: 50%;
     font-size: 1em;
+  }
+
+  .m-button--sm[square] {
+    width: 50%;
     position: relative;
   }
 
   .m-button--md {
-    width: 75%;
     font-size: 1.5em;
   }
 
+  .m-button--md[square] {
+    width: 75%;
+  }
+
   .m-button--lg {
-    width: 100%;
     font-size: 1.75em;
   }
 
-  .m-button--content[square] {
-    position: absolute;
+  .m-button--lg[square] {
+    width: 100%;
+  }
+
+  .m-button--content {
     width: 100%;
     height: 100%;
+  }
+  .m-button[square] > .m-button--content {
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     top: 0;
     left: 0;
-    color: #e6ebff;
   }
 
-  .m-button[disabled] {
-    filter: invert(25%);
-    box-shadow: none;
-  }
-
-  .m-button[disabled] > * {
+  .m-button[disabled] > .m-button--content {
     text-decoration: underline;
     text-underline-offset: -0.3em;
     text-decoration-skip-ink: none;
-    /* text-decoration: line-through; */
-  }
-
-  .m-button:not([border-color='light']) > * {
-    background-color: #e6ebff;
-    color: #00171f;
-    box-shadow: -0.0625em 0.165em hsla(0, 100%, 100%, 0.25),
-      inset -0.125em 0.165em hsla(0, 0%, 0%, 0.25);
-  }
+  } */
 `;

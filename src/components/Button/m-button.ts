@@ -65,18 +65,19 @@ export class MButton extends LitElement {
     };
 
     return html`
-      <button
-        class="${classMap(classes)}"
-        size="${this.buttonSize}"
-        border-color="${this.borderColor}"
-        @click="${this.onClick}"
-        ?disabled="${this.disabled}"
-        ?square="${this.square}"
-      >
-        <slot name="button-content" class="m-button--content">
-          <span>${this.buttonText}</span>
-        </slot>
-      </button>
+      <div border-color="${this.borderColor}">
+        <button
+          class="${classMap(classes)}"
+          size="${this.buttonSize}"
+          @click="${this.onClick}"
+          ?disabled="${this.disabled}"
+          ?square="${this.square}"
+        >
+          <slot name="button-content" class="m-button--content">
+            <span>${this.buttonText}</span>
+          </slot>
+        </button>
+      </div>
     `;
   }
 }
