@@ -16,8 +16,8 @@ export const buttonStyles = css`
     padding: 0;
     display: flex;
     /* position: relative; */
-    background-color: transparent;
-    color: #e6ebff;
+    background-color: inherit;
+    color: inherit;
     font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, 'Segoe UI',
       Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
       sans-serif;
@@ -37,10 +37,9 @@ export const buttonStyles = css`
     display: block;
     width: 100%;
     height: 100%;
-    color: #e6ebff;
     padding-block: 1.5em;
     padding-inline: 1em;
-    z-index: -1;
+    box-shadow: inset -0.0625em 0.165em hsla(0, 0%, 0%, 0.25);
   }
 
   /* .m-button,

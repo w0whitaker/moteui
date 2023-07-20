@@ -10,6 +10,7 @@ import {
   borderLight,
   borderDark,
 } from '@helpers/borders';
+import { Light, Dark, Primary, Secondary } from '@themes/index';
 
 export const BorderColor = {
   Primary: 'primary',
@@ -39,6 +40,8 @@ export class MButton extends LitElement {
   /** 'primary' || 'secondary' || 'light' || 'dark' */
   @property({ type: String })
   borderColor = 'light';
+  @property({ type: String })
+  theme = 'Light';
   @property({ type: Boolean })
   disabled = false;
   @property({ type: Boolean })
@@ -54,18 +57,23 @@ export class MButton extends LitElement {
     borderSecondary,
     borderLight,
     borderDark,
+    Light,
+    Dark,
+    Primary,
+    Secondary,
   ];
 
   render() {
-    const { borderColor } = this;
+    const { theme } = this;
     const classes = {
       'm-button': true,
       [`m-button--${this.buttonSize}`]: true,
-      [`border-${borderColor}`]: borderColor,
+      [`${theme}`]: theme,
+      // [`border-${borderColor}`]: borderColor,
     };
 
     return html`
-      <div border-color="${this.borderColor}">
+      <div border-color="${this.borderColor}" theme="${theme}">
         <button
           class="${classMap(classes)}"
           size="${this.buttonSize}"

@@ -41,6 +41,7 @@ type Story = StoryObj;
 /** A generic button has no assigned action, and can be adapted for multiple uses. */
 export const Generic: Story = {
   args: {
+    theme: 'Light',
     square: false,
     disabled: false,
     buttonSize: Sizes.Medium,
