@@ -7,6 +7,6 @@ export const Primary = css`
     background-color: var(--light, #e6ebff);
     border-color: var(--primary, #1e88e5);
     text-decoration-color: var(--primary, #1e88e5);
-    color: var(--dark, #00171f);
+    color: var(--primary, #1e88e5);
   }
 `;

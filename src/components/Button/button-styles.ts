@@ -70,9 +70,10 @@ export const buttonStyles = css`
   .m-button:after {
     content: '';
     display: none;
-  }
+  }*/
 
   .m-button[square] {
+    position: relative;
     padding: 0;
   }
 
@@ -80,7 +81,7 @@ export const buttonStyles = css`
     content: '';
     display: block;
     padding-bottom: 100%;
-  }*/
+  }
 
   .m-button--sm {
     font-size: 1em;
@@ -88,10 +89,13 @@ export const buttonStyles = css`
     padding-block: 0.5em;
   }
 
-  /* .m-button--sm[square] {
-    width: 50%;
+  .m-button--sm[square],
+  .m-button--md[square],
+  .m-button--lg[square] {
     position: relative;
-  } */
+    padding-inline: 0.5em;
+    padding-block: 0.25em;
+  }
 
   .m-button--md {
     font-size: 1.5em;
@@ -99,19 +103,11 @@ export const buttonStyles = css`
     padding-block: 0.75em;
   }
 
-  /* .m-button--md[square] {
-    width: 75%;
-  } */
-
   .m-button--lg {
     font-size: 3em;
     padding-inline: 3ch;
     padding-block: 1.5em;
   }
-
-  /* .m-button--lg[square] {
-    width: 100%;
-  } */
 
   /* .m-button--content {
     width: 100%;
