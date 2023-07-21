@@ -10,13 +10,13 @@ const meta: Meta = {
   title: 'Components/Button',
   component: 'm-button',
   tags: ['autodocs'],
-  decorators: [
-    (story) =>
-      html`<div style="width: 200px; margin: 2em auto;">${story()}</div>`,
-  ],
   argTypes: {
     buttonSize: {
       options: ['sm', 'md', 'lg'],
+      control: { type: 'select' },
+    },
+    theme: {
+      options: ['Light', 'Dark', 'Primary', 'Secondary'],
       control: { type: 'select' },
     },
     borderColor: {

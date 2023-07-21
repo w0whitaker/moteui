@@ -51,41 +51,29 @@ export class MButton extends LitElement {
     return;
   };
 
-  static styles = [
-    buttonStyles,
-    borderPrimary,
-    borderSecondary,
-    borderLight,
-    borderDark,
-    Light,
-    Dark,
-    Primary,
-    Secondary,
-  ];
+  static styles = [buttonStyles, Light, Dark, Primary, Secondary];
 
   render() {
     const { theme } = this;
     const classes = {
       'm-button': true,
       [`m-button--${this.buttonSize}`]: true,
-      [`${theme}`]: theme,
-      // [`border-${borderColor}`]: borderColor,
+      [`${theme.toLowerCase()}-theme`]: true,
     };
 
     return html`
-      <div border-color="${this.borderColor}" theme="${theme}">
-        <button
-          class="${classMap(classes)}"
-          size="${this.buttonSize}"
-          @click="${this.onClick}"
-          ?disabled="${this.disabled}"
-          ?square="${this.square}"
-        >
-          <slot name="button-content" class="m-button--content">
-            <span>${this.buttonText}</span>
-          </slot>
-        </button>
-      </div>
+      <button
+        class="${classMap(classes)}"
+        size="${this.buttonSize}"
+        @click="${this.onClick}"
+        ?disabled="${this.disabled}"
+        ?square="${this.square}"
+        theme="${this.theme}"
+      >
+        <slot name="button-content" class="m-button--content">
+          <span>${this.buttonText}</span>
+        </slot>
+      </button>
     `;
   }
 }
