@@ -26,7 +26,7 @@ export const buttonStyles = css`
     filter: invert(25%);
     box-shadow: none;
     text-decoration: underline;
-    text-underline-offset: -0.3em;
+    text-underline-offset: -0.325em;
     text-decoration-skip-ink: none;
   }
 
