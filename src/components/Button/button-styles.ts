@@ -11,13 +11,11 @@ export const buttonStyles = css`
   .m-button {
     display: flex;
     position: relative;
-    padding: 0;
-      border-style: solid;
+    border-style: solid;
     border-width: 0.375em;
     border-radius: 0.25em;
     outline width: 2px;
     outline-style: solid;
-    outline-offset: -0.25em;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 700;
@@ -30,18 +28,17 @@ export const buttonStyles = css`
     left: -0.375em;
     display: block;
     width: 100%;
-    padding-bottom: 100%;
+    height: 100%;
     border-style: solid;
     border-width: 0.375em;
     border-radius: 0.25em;
     border-color: inherit;
-    filter: drop-shadow(-0.375em 0.125em 0 var(--dark, #00171f)) brightness(8) saturate(0.1);
+    filter: drop-shadow(-0.375em 0.125em 0 var(--dark, #00171f)) brightness(10) saturate(0);
     z-index: -1;
   }
   
   .m-button[square] {
     position: relative;
-    outline: none;
     /* display: flex; */
   }
   
@@ -78,7 +75,6 @@ export const buttonStyles = css`
   .m-button--md[square],
   .m-button--lg[square] {
     position: relative;
-    padding: 0;
   }
 
   .m-button--md {
