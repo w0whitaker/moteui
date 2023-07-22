@@ -38,7 +38,7 @@ export const buttonStyles = css`
     border-width: 0.375em;
     box-sizing: contnet-box;
     background-color: transparent;
-    filter: brightness(0.1);
+    filter: brightness(1.5);
   }
 
   .m-button:hover {
