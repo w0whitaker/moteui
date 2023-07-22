@@ -33,8 +33,13 @@ export const buttonStyles = css`
     border-width: 0.375em;
     border-radius: 0.25em;
     border-color: inherit;
+    background-color: inherit;
     filter: drop-shadow(-0.375em 0.125em 0 var(--dark, #00171f)) brightness(10) saturate(0);
     z-index: -1;
+  }
+  
+  .m-button:hover::before {
+    filter: drop-shadow(-0.375em 0.125em 0 var(--dark, #00171f)) brightness(10) saturate(0.2);
   }
   
   .m-button[square] {
@@ -56,7 +61,7 @@ export const buttonStyles = css`
     text-underline-offset: -0.325em;
     text-decoration-skip-ink: none;
   }
-
+  
   .m-button:disabled:hover {
     filter: invert(25%);
   }
