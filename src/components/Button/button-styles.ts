@@ -18,8 +18,8 @@ export const buttonStyles = css`
     border-style: solid;
     border-width: 0.375em;
     border-radius: 0.25em;
-    outline: 1px solid var(--light, #e6ebff);
-    outline-offset: -0.25em;
+    outline: 2px solid var(--light, #e6ebff);
+    /* outline-offset: -0.25em; */
     z-index: 1;
   }
 
@@ -34,7 +34,7 @@ export const buttonStyles = css`
     left: -0.375em;
     border-radius: inherit;
     border-color: inherit;
-    border-style: dashed;
+    border-style: solid;
     border-width: 0.375em;
     box-sizing: contnet-box;
     background-color: transparent;
