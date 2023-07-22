@@ -11,6 +11,6 @@ export const Dark = css`
   }
 
   .dark-theme:hover {
-    filter: drop-shadow(-0.5em 0.125em 0 var(--dark, #00171f)) brightness(2.5);
+    filter: drop-shadow(-0.5em 0.125em 0 var(--dark, #00171f)) brightness(2);
   }
 `;

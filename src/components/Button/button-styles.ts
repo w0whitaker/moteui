@@ -18,7 +18,8 @@ export const buttonStyles = css`
     border-style: solid;
     border-width: 0.375em;
     border-radius: 0.25em;
-    outline: 2px solid var(--light, #e6ebff);
+    outline width: 2px;
+    outline-style: solid;
     /* outline-offset: -0.25em; */
     z-index: 1;
   }
