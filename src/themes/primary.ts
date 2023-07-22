@@ -5,15 +5,8 @@ import { css } from 'lit';
 export const Primary = css`
   .primary-theme {
     background-color: var(--primary, #1e88e5);
-    border-color: var(--light, #e6ebff);
-    outline-color: var(--primary, #1e88e5);
-    text-decoration-color: var(--primary, #1e88e5);
+    border-color: var(--primary, #1e88e5);
+    outline-color: var(--light, #e6ebff);
     color: var(--light, #e6ebff);
-    filter: drop-shadow(-0.5em 0.125em 0 var(--primary, #1e88e5)) brightness(1);
-  }
-
-  .primary-theme:hover {
-    filter: drop-shadow(-0.5em 0.125em 0 var(--primary, #1e88e5))
-      brightness(1.125);
   }
 `;

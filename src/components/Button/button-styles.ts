@@ -48,10 +48,6 @@ export const buttonStyles = css`
     padding-bottom: 100%;
   }
 
-  .m-button:hover {
-    filter: brightness(3);
-  }
-
   .m-button:disabled {
     filter: invert(25%);
     outline: none;
