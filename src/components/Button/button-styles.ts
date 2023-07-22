@@ -9,36 +9,56 @@ export const buttonStyles = css`
   }
 
   .m-button {
-    border-style: solid;
-    border-width: 0.375em;
-    border-radius: 0.25em;
     padding: 0;
     display: flex;
-    /* position: relative; */
+    position: relative;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
       Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 700;
-    box-shadow: -0.25ch 0.25em hsla(0, 0%, 0%, 0.25),
-      inset -0.125em 0.125ch hsla(0, 100%, 100%, 0.25);
+    border-style: solid;
+    border-width: 0.375em;
+    border-radius: 0.25em;
+    outline: 1px solid var(--light, #e6ebff);
+    outline-offset: -0.25em;
+    z-index: 1;
+  }
+
+  .m-button::after {
+    content: '';
+    box-sizing: content-box;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -0.375em;
+    left: -0.375em;
+    border-radius: inherit;
+    border-color: inherit;
+    border-style: dashed;
+    border-width: 0.375em;
+    box-sizing: contnet-box;
+    background-color: transparent;
+    filter: brightness(0.1);
+  }
+
+  .m-button:hover {
+    filter: brightness(3);
   }
 
   .m-button:disabled {
     filter: invert(25%);
+    outline: none;
     box-shadow: none;
     text-decoration: underline;
     text-underline-offset: -0.325em;
     text-decoration-skip-ink: none;
   }
 
-  .m-button:not([theme='Dark']) {
-    box-shadow: -0.25ch 0.25em hsla(0, 0%, 0%, 0.25),
-      inset -0.125em 0.125ch hsla(0, 0%, 0%, 0.25);
+  .m-button:disabled:hover {
+    filter: invert(25%);
   }
 
   .m-button--content {
-    display: block;
-    width: 100%;
-    height: 100%;
     padding: 0;
   }
 

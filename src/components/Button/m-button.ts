@@ -4,12 +4,6 @@ import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { buttonStyles } from './button-styles';
-import {
-  borderPrimary,
-  borderSecondary,
-  borderLight,
-  borderDark,
-} from '@helpers/borders';
 import { Light, Dark, Primary, Secondary } from '@themes/index';
 
 export const BorderColor = {
@@ -37,9 +31,6 @@ export class MButton extends LitElement {
   /** 'sm' || 'md' || 'lg' */
   @property({ type: String })
   buttonSize = 'md';
-  /** 'primary' || 'secondary' || 'light' || 'dark' */
-  @property({ type: String })
-  borderColor = 'light';
   @property({ type: String })
   theme = 'Light';
   @property({ type: Boolean })

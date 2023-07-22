@@ -4,7 +4,6 @@ import type { Meta, StoryObj } from '@storybook/web-components';
 import '../m-button';
 import { Sizes } from '../m-button';
 import { action } from '@storybook/addon-actions';
-import { html } from 'lit';
 
 const meta: Meta = {
   title: 'Components/Button',
@@ -17,10 +16,6 @@ const meta: Meta = {
     },
     theme: {
       options: ['Light', 'Dark', 'Primary', 'Secondary'],
-      control: { type: 'select' },
-    },
-    borderColor: {
-      options: ['primary', 'secondary', 'light', 'dark'],
       control: { type: 'select' },
     },
     onClick: {
@@ -46,7 +41,6 @@ export const Generic: Story = {
     disabled: false,
     buttonSize: Sizes.Medium,
     buttonText: 'Click me!',
-    borderColor: 'light',
     onClick: action('clicked'),
   },
 };
