@@ -4,11 +4,19 @@ import type { Meta, StoryObj } from '@storybook/web-components';
 import '../m-button';
 import { Sizes } from '../m-button';
 import { action } from '@storybook/addon-actions';
+import { html } from 'lit';
 
 const meta: Meta = {
   title: 'Components/Button',
   component: 'm-button',
   tags: ['autodocs'],
+  decorators: [
+    (story) => {
+      return html`
+        <div style="padding: 1em 6ch; max-width: 40ch;">${story()}</div>
+      `;
+    },
+  ],
   argTypes: {
     buttonSize: {
       options: ['sm', 'md', 'lg'],
@@ -37,7 +45,7 @@ type Story = StoryObj;
 export const Generic: Story = {
   args: {
     theme: 'Light',
-    square: false,
+    square: true,
     disabled: false,
     buttonSize: Sizes.Medium,
     buttonText: 'Click me!',

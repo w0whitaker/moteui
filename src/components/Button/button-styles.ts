@@ -9,22 +9,28 @@ export const buttonStyles = css`
   }
 
   .m-button {
-    padding: 0;
     display: flex;
     position: relative;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 700;
+    padding: 0;
     border-style: solid;
     border-width: 0.375em;
     border-radius: 0.25em;
     outline width: 2px;
     outline-style: solid;
-    /* outline-offset: -0.25em; */
-    z-index: 1;
+    outline-offset: -0.25em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
   }
 
-  .m-button::after {
+  .m-button[square] {
+    position: relative;
+    width: 100%;
+    /* display: flex; */
+    background-color: dodgerblue;
+  }
+
+  /*.m-button::after {
     content: '';
     box-sizing: content-box;
     display: block;
@@ -40,6 +46,12 @@ export const buttonStyles = css`
     box-sizing: contnet-box;
     background-color: transparent;
     filter: brightness(1.5);
+  }*/
+
+  .m-button[square]::after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
   }
 
   .m-button:hover {
@@ -57,51 +69,6 @@ export const buttonStyles = css`
 
   .m-button:disabled:hover {
     filter: invert(25%);
-  }
-
-  .m-button--content {
-    padding: 0;
-  }
-
-  /* .m-button,
-  .m-button[square] {
-    background-color: #00171f;
-  }
-
-  .m-button[square]:not([border-color='light']),
-  .m-button:not[border-color='light']) > * {
-    background-color: #e6ebff;
-    box-shadow: -0.0625em 0.165em hsla(0, 100%, 100%, 0.25),
-      inset -0.125em 0.165em hsla(0, 0%, 0%, 0.25);
-  }
-
-  .m-button > .m-button--content {
-    color: #e6ebff;
-  }
-
-  .m-button:not([border-color='light']) > .m-button--content,
-  .m-button[square]:not([border-color='light']) > .m-button--content {
-    color: #00171f;
-  }
-
-  .m-button:not([border-color='light']) {
-    background-color: #e6ebff;
-  }
-
-  .m-button:after {
-    content: '';
-    display: none;
-  }*/
-
-  .m-button[square] {
-    position: relative;
-    padding: 0;
-  }
-
-  .m-button[square]:after {
-    content: '';
-    display: block;
-    padding-bottom: 100%;
   }
 
   .m-button--sm {
@@ -130,18 +97,11 @@ export const buttonStyles = css`
     padding-block: 1.5em;
   }
 
-  /* .m-button--content {
+  .m-button--content {
+    position: absolute;
     width: 100%;
     height: 100%;
-  } */
-  /* .m-button[square] > .m-button--content {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    left: 0;
-  } */
+  }
 
   /* .m-button[disabled] > .m-button--content {
     text-decoration: underline;
