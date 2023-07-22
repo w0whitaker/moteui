@@ -12,7 +12,7 @@ export const buttonStyles = css`
     display: flex;
     position: relative;
     padding: 0;
-    border-style: solid;
+      border-style: solid;
     border-width: 0.375em;
     border-radius: 0.25em;
     outline width: 2px;
@@ -23,31 +23,28 @@ export const buttonStyles = css`
     font-weight: 700;
   }
 
-  .m-button[square] {
-    position: relative;
-    width: 100%;
-    /* display: flex; */
-    background-color: dodgerblue;
-  }
-
-  /*.m-button::after {
+  .m-button::before {
     content: '';
-    box-sizing: content-box;
-    display: block;
     position: absolute;
-    width: 100%;
-    height: 100%;
     top: -0.375em;
     left: -0.375em;
-    border-radius: inherit;
-    border-color: inherit;
+    display: block;
+    width: 100%;
+    padding-bottom: 100%;
     border-style: solid;
     border-width: 0.375em;
-    box-sizing: contnet-box;
-    background-color: transparent;
-    filter: brightness(1.5);
-  }*/
-
+    border-radius: 0.25em;
+    border-color: inherit;
+    filter: drop-shadow(-0.375em 0.125em 0 var(--dark, #00171f)) brightness(8) saturate(0.1);
+    z-index: -1;
+  }
+  
+  .m-button[square] {
+    position: relative;
+    outline: none;
+    /* display: flex; */
+  }
+  
   .m-button[square]::after {
     content: '';
     display: block;
@@ -81,8 +78,7 @@ export const buttonStyles = css`
   .m-button--md[square],
   .m-button--lg[square] {
     position: relative;
-    padding-inline: 0.5em;
-    padding-block: 0.25em;
+    padding: 0;
   }
 
   .m-button--md {
@@ -96,13 +92,13 @@ export const buttonStyles = css`
     padding-inline: 3ch;
     padding-block: 1.5em;
   }
-
+  
   .m-button--content {
     position: absolute;
     width: 100%;
     height: 100%;
   }
-
+  
   /* .m-button[disabled] > .m-button--content {
     text-decoration: underline;
     text-underline-offset: -0.3em;
