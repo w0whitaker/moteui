@@ -33,13 +33,15 @@ export const buttonStyles = css`
     border-width: 0.375em;
     border-radius: 0.25em;
     border-color: inherit;
-    background-color: inherit;
-    filter: drop-shadow(-0.375em 0.125em 0 var(--dark, #00171f)) brightness(10) saturate(0);
+    transition: filter 0.125s ease-in-out;
+    background-color: transparent;
     z-index: -1;
+    filter: brightness(0) saturate(0.3);
   }
   
   .m-button:hover::before {
-    filter: drop-shadow(-0.375em 0.125em 0 var(--dark, #00171f)) brightness(10) saturate(0.2);
+    border-color: inherit;
+    filter: contrast(1) brightness(0) saturate(0.3);
   }
   
   .m-button[square] {
@@ -94,6 +96,11 @@ export const buttonStyles = css`
     position: absolute;
     width: 100%;
     height: 100%;
+  }
+  
+  .m-button--content > * {
+    color: inherit;
+    filter: brightness(0);
   }
   
   /* .m-button[disabled] > .m-button--content {
