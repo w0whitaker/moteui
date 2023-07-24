@@ -9,10 +9,6 @@ export const Light = css`
     /* outline-color: var(--light, #e6ebff); */
     color: var(--dark, #00171f);
     box-shadow: -0.125em 0.125em var(--light, #e6ebff),
-      -0.25em 0.25em var(--dark, #00171f);
-  }
-
-  .light-theme:hover {
-    filter: brightness(300%) saturate(50%);
+      -0.375em 0.25em var(--dark, #00171f);
   }
 `;

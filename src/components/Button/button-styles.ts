@@ -34,13 +34,16 @@ export const buttonStyles = css`
     border-width: 0.375em;
     border-radius: 0.25em;
     border-color: inherit;
-    transition: filter 0.125s ease-in-out;
+    /* transition: filter 0.125s ease-in-out; */
     background-color: transparent;
-    z-index: -1;
+    filter: brightness(3) saturate(0.2);
+    z-index: 1;
   }
 
   .m-button:hover::before {
     border-color: inherit;
+    filter: brightness(2) saturate(4);
+    transition: filter 0.25s ease-in-out;
   }
 
   .m-button[square] {
