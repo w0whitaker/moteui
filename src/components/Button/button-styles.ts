@@ -14,11 +14,12 @@ export const buttonStyles = css`
     border-style: solid;
     border-width: 0.375em;
     border-radius: 0.25em;
-    outline width: 2px;
-    outline-style: solid;
+    /* outline width: 2px;
+    outline-style: solid; */
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 700;
+    /* box-shadow: -0.365em -0.125em; */
   }
 
   .m-button::before {
@@ -36,19 +37,17 @@ export const buttonStyles = css`
     transition: filter 0.125s ease-in-out;
     background-color: transparent;
     z-index: -1;
-    filter: brightness(0) saturate(0.3);
   }
-  
+
   .m-button:hover::before {
     border-color: inherit;
-    filter: contrast(1) brightness(0) saturate(0.3);
   }
-  
+
   .m-button[square] {
     position: relative;
     /* display: flex; */
   }
-  
+
   .m-button[square]::after {
     content: '';
     display: block;
@@ -63,7 +62,7 @@ export const buttonStyles = css`
     text-underline-offset: -0.325em;
     text-decoration-skip-ink: none;
   }
-  
+
   .m-button:disabled:hover {
     filter: invert(25%);
   }
@@ -91,18 +90,17 @@ export const buttonStyles = css`
     padding-inline: 3ch;
     padding-block: 1.5em;
   }
-  
+
   .m-button--content {
     position: absolute;
     width: 100%;
     height: 100%;
   }
-  
+
   .m-button--content > * {
     color: inherit;
-    filter: brightness(0);
   }
-  
+
   /* .m-button[disabled] > .m-button--content {
     text-decoration: underline;
     text-underline-offset: -0.3em;
