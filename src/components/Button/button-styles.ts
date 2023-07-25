@@ -43,7 +43,7 @@ export const buttonStyles = css`
 
   .m-button:hover::before,
   .m-button:hover * {
-    filter: brightness(4) saturate(2);
+    filter: brightness(1.5);
     transition: filter 0.25s ease-in-out;
   }
 
