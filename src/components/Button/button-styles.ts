@@ -37,6 +37,7 @@ export const buttonStyles = css`
     /* transition: filter 0.125s ease-in-out; */
     background-color: transparent;
     /* filter: brightness(3) saturate(0.2); */
+    box-shadow: -0.125em 0.125em var(--light, #e6ebff);
     z-index: 1;
   }
 
