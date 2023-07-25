@@ -11,12 +11,19 @@ const meta: Meta = {
   component: 'm-button',
   tags: ['autodocs'],
   decorators: [
-    (story) =>
-      html`<div style="width: 200px; margin: 2em auto;">${story()}</div>`,
+    (story) => {
+      return html`
+        <div style="padding: 1em 6ch; max-width: 40ch;">${story()}</div>
+      `;
+    },
   ],
   argTypes: {
     buttonSize: {
       options: ['sm', 'md', 'lg'],
+      control: { type: 'select' },
+    },
+    theme: {
+      options: ['Light', 'Dark', 'Primary', 'Secondary'],
       control: { type: 'select' },
     },
     onClick: {
@@ -37,6 +44,8 @@ type Story = StoryObj;
 /** A generic button has no assigned action, and can be adapted for multiple uses. */
 export const Generic: Story = {
   args: {
+    theme: 'Light',
+    square: true,
     disabled: false,
     buttonSize: Sizes.Medium,
     buttonText: 'Click me!',

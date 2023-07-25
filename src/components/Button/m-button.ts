@@ -1,9 +1,17 @@
 /** @format */
 
-import { LitElement, html } from 'lit';
+import { LitElement, css, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { buttonStyles } from './button-styles';
+import { Light, Dark, Primary, Secondary } from '@themes/index';
+
+export const BorderColor = {
+  Primary: 'primary',
+  Secondary: 'secondary',
+  Light: 'light',
+  Dark: 'dark',
+} as const;
 
 export const Sizes = {
   Small: 'sm',
@@ -23,19 +31,25 @@ export class MButton extends LitElement {
   /** 'sm' || 'md' || 'lg' */
   @property({ type: String })
   buttonSize = 'md';
+  @property({ type: String })
+  theme = 'Light';
   @property({ type: Boolean })
   disabled = false;
+  @property({ type: Boolean })
+  square = false;
   @property({ attribute: false })
   onClick = () => {
     return;
   };
 
-  static styles = [buttonStyles];
+  static styles = [buttonStyles, Light, Dark, Primary, Secondary];
 
   render() {
+    const { theme } = this;
     const classes = {
       'm-button': true,
       [`m-button--${this.buttonSize}`]: true,
+      [`${theme.toLowerCase()}-theme`]: true,
     };
 
     return html`
@@ -44,6 +58,8 @@ export class MButton extends LitElement {
         size="${this.buttonSize}"
         @click="${this.onClick}"
         ?disabled="${this.disabled}"
+        ?square="${this.square}"
+        theme="${this.theme}"
       >
         <slot name="button-content" class="m-button--content">
           <span>${this.buttonText}</span>
