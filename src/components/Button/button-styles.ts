@@ -36,13 +36,13 @@ export const buttonStyles = css`
     border-color: inherit;
     /* transition: filter 0.125s ease-in-out; */
     background-color: transparent;
-    filter: brightness(3) saturate(0.2);
+    /* filter: brightness(3) saturate(0.2); */
     z-index: 1;
   }
 
-  .m-button:hover::before {
-    border-color: inherit;
-    filter: brightness(2) saturate(4);
+  .m-button:hover::before,
+  .m-button:hover * {
+    filter: brightness(4) saturate(2);
     transition: filter 0.25s ease-in-out;
   }
 
@@ -99,11 +99,6 @@ export const buttonStyles = css`
     width: 100%;
     height: 100%;
   }
-
-  .m-button--content > * {
-    color: inherit;
-  }
-
   /* .m-button[disabled] > .m-button--content {
     text-decoration: underline;
     text-underline-offset: -0.3em;
