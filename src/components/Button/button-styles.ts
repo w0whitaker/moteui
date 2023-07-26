@@ -77,8 +77,8 @@ export const buttonStyles = css`
 
   .m-button--sm {
     font-size: var(--step-1, 1.5em);
-    padding-inline: var(--space-2xs, 0.5rem);
-    padding-block: var(--space-xs, 0.75rem);
+    padding-inline: var(--space-xs, 0.75rem);
+    padding-block: var(--space-3xs, 0.25rem);
   }
 
   .m-button--md {
