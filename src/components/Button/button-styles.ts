@@ -89,7 +89,7 @@ export const buttonStyles = css`
 
   .m-button--lg {
     font-size: var(--step-3, 3.38rem);
-    padding-inline: var(--space-s, 1rem);
-    padding-block: var(--space-m, 1.5rem);
+    padding-inline: var(--space-l, 2rem);
+    padding-block: var(--space-s, 1rem);
   }
 `;
