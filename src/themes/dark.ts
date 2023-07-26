@@ -12,5 +12,6 @@ export const Dark = css`
 
   .dark-theme:hover {
     filter: brightness(2) saturate(0.1);
+    transition: filter 0.125s ease-in-out;
   }
 `;
