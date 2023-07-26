@@ -71,36 +71,25 @@ export const buttonStyles = css`
   .m-button--sm[square],
   .m-button--md[square],
   .m-button--lg[square] {
-    position: relative;
-    padding: var(--space-xs, 0.75rem);
+    padding: var(--space-2xs, 0.5rem);
+    min-width: 2em;
   }
 
   .m-button--sm {
-    font-size: 1em;
+    font-size: var(--step-1, 1.5em);
     padding-inline: var(--space-2xs, 0.5rem);
     padding-block: var(--space-xs, 0.75rem);
   }
 
   .m-button--md {
-    font-size: 1.5em;
+    font-size: var(--step-2, 2.25rem);
     padding-inline: var(--space-xs, 0.75rem);
     padding-block: var(--space-s, 1rem);
   }
 
   .m-button--lg {
-    font-size: 3em;
+    font-size: var(--step-3, 3.38rem);
     padding-inline: var(--space-s, 1rem);
     padding-block: var(--space-m, 1.5rem);
   }
-
-  .m-button--content {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-  /* .m-button[disabled] > .m-button--content {
-    text-decoration: underline;
-    text-underline-offset: -0.3em;
-    text-decoration-skip-ink: none;
-  } */
 `;
