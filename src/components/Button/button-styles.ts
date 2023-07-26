@@ -56,12 +56,9 @@ export const buttonStyles = css`
   }
 
   .m-button:disabled {
-    filter: invert(25%);
+    filter: contrast(35%);
     outline: none;
     box-shadow: none;
-    text-decoration: underline;
-    text-underline-offset: -0.325em;
-    text-decoration-skip-ink: none;
   }
 
   .m-button:disabled:hover {
