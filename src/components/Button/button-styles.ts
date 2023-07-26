@@ -13,9 +13,8 @@ export const buttonStyles = css`
     position: relative;
     padding: 0;
     border-style: solid;
-    border-width: 0.375em;
+    border-width: 2px;
     border-radius: 0.25em;
-    outline-style: solid; */
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
       Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 700;
@@ -24,19 +23,17 @@ export const buttonStyles = css`
   .m-button::before {
     content: '';
     position: absolute;
-    top: -0.375em;
-    left: -0.375em;
+    top: -2px;
+    left: -2px;
     display: block;
     width: 100%;
     height: 100%;
     border-style: solid;
-    border-width: 0.375em;
+    border-width: 2px;
     border-radius: 0.25em;
     border-color: inherit;
-    /* transition: filter 0.125s ease-in-out; */
     background-color: transparent;
-    /* filter: brightness(3) saturate(0.2); */
-    box-shadow: -0.125em 0.125em var(--light, #e6ebff);
+    box-shadow: -1px 1px var(--light, #e6ebff);
     z-index: 1;
   }
 
@@ -51,7 +48,7 @@ export const buttonStyles = css`
   }
   /* https://spin.atomicobject.com/2015/07/14/css-responsive-square/ */
   /* re: padding-bottom: 'The solution relies on the somewhat counterintuitive fact that padding is calculated as a percentage of its parent element’s width, not height.' */
-  
+
   .m-button[square]::after {
     content: '';
     display: block;
@@ -70,19 +67,19 @@ export const buttonStyles = css`
   .m-button:disabled:hover {
     filter: invert(25%);
   }
-  
+
   .m-button--sm[square],
   .m-button--md[square],
   .m-button--lg[square] {
     position: relative;
   }
-  
+
   .m-button--sm {
     font-size: 1em;
     padding-inline: var(--space-2xs, 0.5rem);
     padding-block: var(--space-xs, 0.75rem);
   }
-  
+
   .m-button--sm[square] {
     padding: var(--space-xs, 0.75rem);
   }
