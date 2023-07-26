@@ -41,10 +41,9 @@ export const buttonStyles = css`
     z-index: 1;
   }
 
-  .m-button:hover::before,
-  .m-button:hover * {
-    filter: brightness(1.5);
-    transition: filter 0.25s ease-in-out;
+  .m-button:hover {
+    filter: contrast(2);
+    transition: filter 0.125s ease-in-out;
   }
 
   .m-button[square] {

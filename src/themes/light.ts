@@ -9,4 +9,9 @@ export const Light = css`
     color: var(--dark, #00171f);
     box-shadow: -0.375em 0.25em var(--dark, #00171f);
   }
+  .light-theme:hover::before,
+  .light-theme:hover * {
+    filter: brightness(4.5) saturate(2);
+    transition: filter 0.125s ease-in-out;
+  }
 `;
