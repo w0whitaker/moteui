@@ -9,4 +9,8 @@ export const Dark = css`
     color: var(--light, #e6ebff);
     box-shadow: -0.375em 0.25em var(--dark, #00171f);
   }
+
+  .dark-theme:hover {
+    filter: brightness(2) saturate(0.1);
+  }
 `;
