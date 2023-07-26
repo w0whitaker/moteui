@@ -12,9 +12,7 @@ const meta: Meta = {
   tags: ['autodocs'],
   decorators: [
     (story) => {
-      return html`
-        <div style="padding: 1em 6ch; max-width: 40ch;">${story()}</div>
-      `;
+      return html` <div style="padding: 1em 6ch;">${story()}</div> `;
     },
   ],
   argTypes: {
