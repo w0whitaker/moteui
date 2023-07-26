@@ -7,8 +7,9 @@ export const Light = css`
     background-color: var(--light, #e6ebff);
     border-color: var(--dark, #00171f);
     color: var(--dark, #00171f);
-    box-shadow: -0.375em 0.25em var(--dark, #00171f);
+    box-shadow: -6px 4px var(--dark, #00171f);
   }
+
   .light-theme:hover::before,
   .light-theme:hover * {
     filter: brightness(5.5) saturate(0.1);
