@@ -72,6 +72,7 @@ export const buttonStyles = css`
   .m-button--md[square],
   .m-button--lg[square] {
     position: relative;
+    padding: var(--space-xs, 0.75rem);
   }
 
   .m-button--sm {
@@ -80,16 +81,16 @@ export const buttonStyles = css`
     padding-block: var(--space-xs, 0.75rem);
   }
 
-  .m-button--sm[square] {
-    padding: var(--space-xs, 0.75rem);
-  }
-
   .m-button--md {
     font-size: 1.5em;
+    padding-inline: var(--space-xs, 0.75rem);
+    padding-block: var(--space-s, 1rem);
   }
 
   .m-button--lg {
     font-size: 3em;
+    padding-inline: var(--space-s, 1rem);
+    padding-block: var(--space-m, 1.5rem);
   }
 
   .m-button--content {
