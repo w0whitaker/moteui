@@ -12,7 +12,7 @@ export const Light = css`
 
   .light-theme:hover::before,
   .light-theme:hover * {
-    filter: brightness(5.5) saturate(0.1);
+    filter: brightness(4) saturate(0.1);
     transition: filter 0.125s ease-in-out;
   }
 `;
