@@ -7,7 +7,7 @@ export const Dark = css`
     background-color: var(--dark, #00171f);
     border-color: var(--dark, #00171f);
     color: var(--light, #e6ebff);
-    box-shadow: -0.375em 0.25em var(--dark, #00171f);
+    box-shadow: -6px 4px var(--dark, #00171f);
   }
 
   .dark-theme:hover {
