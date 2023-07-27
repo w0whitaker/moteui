@@ -9,6 +9,9 @@ import { html } from 'lit';
 const meta: Meta = {
   title: 'Components/Button',
   component: 'm-button',
+  parameters: {
+    layout: 'centered',
+  },
   tags: ['autodocs'],
   decorators: [
     (story) => {
