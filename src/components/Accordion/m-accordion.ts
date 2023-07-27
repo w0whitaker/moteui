@@ -6,7 +6,6 @@ import { classMap } from 'lit/directives/class-map.js';
 import { map } from 'lit/directives/map.js';
 import { stackLayout } from '@helpers/layouts';
 import { accordionStyles } from './accordion-styles';
-import { accordionItemStyles } from './accordion-item-styles';
 import {
   borderLine,
   borderNarrow,
@@ -55,7 +54,6 @@ export class MAccordion extends LitElement {
   static styles = [
     stackLayout,
     accordionStyles,
-    accordionItemStyles,
     borderLine,
     borderNarrow,
     borderStandard,
@@ -75,20 +73,12 @@ export class MAccordion extends LitElement {
       'm-stack': true,
     };
 
-    const childClasses = {
-      'm-accordion-item': true,
-      'm-accordion-item--border': border,
-      [`border-${borderColor}`]: border ? borderColor : false,
-      [`border-${borderWeight}`]: border ? borderWeight : false,
-    };
-
     return html` <!-- display: block -->
       <div class="${classMap(parentClasses)}">
         ${map(
           _items,
           (item) => html`<!-- display:block -->
             <m-accordion-item
-              class="${classMap(childClasses)}"
               .item="${item}"
               ?border="${border}"
               borderColor="${borderColor}"

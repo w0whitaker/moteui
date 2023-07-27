@@ -3,6 +3,7 @@
 import { LitElement, html, nothing } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { stackLayout } from '@helpers/layouts';
+import { accordionItemStyles } from './accordion-item-styles';
 
 /**
  *
@@ -22,7 +23,7 @@ export class MAccordionItem extends LitElement {
     return this.fold();
   };
 
-  static styles = [stackLayout];
+  static styles = [stackLayout, accordionItemStyles];
 
   fold() {
     this._open = !this._open;
@@ -32,7 +33,7 @@ export class MAccordionItem extends LitElement {
     const { _open } = this;
 
     return html`
-      <div class="m-stack">
+      <div class="m-accordion-item--content">
         <h3>${this.item[0]}</h3>
         <p>${_open ? html`${this.item[1]}` : nothing}</p>
       </div>
