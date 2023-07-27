@@ -5,7 +5,6 @@ import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property, state } from 'lit/decorators.js';
 import { stackLayout } from '@helpers/layouts';
 import { accordionItemStyles } from './accordion-item-styles';
-import { Light, Dark, Primary, Secondary } from '@themes/index';
 
 /**
  *
@@ -24,9 +23,6 @@ export class MAccordionItem extends LitElement {
   onClick = () => {
     return this.fold();
   };
-  /** 'Light' || 'Dark' || 'Primary' || 'Secondary' */
-  @property({ type: String })
-  theme = 'Dark';
 
   static styles = [stackLayout, accordionItemStyles];
 
@@ -35,10 +31,9 @@ export class MAccordionItem extends LitElement {
   }
 
   render() {
-    const { _open, theme } = this;
+    const { _open } = this;
     const classes = {
       bottom: _open ? true : false,
-      [`${theme.toLowerCase()}-theme`]: true,
     };
 
     return html`
