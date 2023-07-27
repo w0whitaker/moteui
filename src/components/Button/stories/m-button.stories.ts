@@ -20,6 +20,9 @@ const meta: Meta = {
       options: ['sm', 'md', 'lg'],
       control: { type: 'select' },
     },
+    square: {
+      control: { type: 'boolean' },
+    },
     theme: {
       options: ['Light', 'Dark', 'Primary', 'Secondary'],
       control: { type: 'select' },
