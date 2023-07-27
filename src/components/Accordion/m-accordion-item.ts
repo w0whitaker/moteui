@@ -36,8 +36,8 @@ export class MAccordionItem extends LitElement {
         <h3>${this.item[0]}</h3>
         <p>${_open ? html`${this.item[1]}` : nothing}</p>
       </div>
-      <div>
-        <m-button buttonSize="lg" style="width: 8em" @click=${this.onClick}>
+      <div class="m-accordion-item--button">
+        <m-button buttonSize="sm" square @click=${this.onClick}>
           <span slot="button-content">${_open ? 'close' : 'open'}</span>
         </m-button>
       </div>
