@@ -4,242 +4,6 @@
   "modules": [
     {
       "kind": "javascript-module",
-      "path": "src/components/Card/index.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/Card/m-card.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "MCard",
-          "members": [],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "m-card",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "MCard",
-          "declaration": {
-            "name": "MCard",
-            "module": "src/components/Card/m-card.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "m-card",
-          "declaration": {
-            "name": "MCard",
-            "module": "src/components/Card/m-card.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/Button/button-styles.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "buttonStyles",
-          "default": "css`\n  /* https://spin.atomicobject.com/2015/07/14/css-responsive-square/ */\n  :host {\n    display: block;\n  }\n\n  .m-button {\n    border-style: solid;\n    border-width: 0.375em;\n    border-color: #e6ebff;\n    border-radius: 0.25em;\n    padding: 0;\n    background-color: #00171f;\n    position: relative;\n    font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, 'Segoe UI',\n      Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',\n      sans-serif;\n    color: #e6ebff;\n    box-shadow: -0.0625em 0.165em hsla(0, 0%, 0%, 0.25),\n      inset -0.125em 0.165em hsla(0, 100%, 100%, 0.25);\n  }\n\n  .m-button:after {\n    content: '';\n    display: block;\n    padding-bottom: 100%;\n  }\n\n  .m-button--sm {\n    width: 50%;\n    font-size: 1em;\n    position: relative;\n  }\n\n  .m-button--md {\n    width: 75%;\n    font-size: 1.5em;\n  }\n\n  .m-button--lg {\n    width: 100%;\n    font-size: 1.75em;\n  }\n\n  .m-button--content {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    top: 0;\n    left: 0;\n    color: #e6ebff;\n  }\n\n  .m-button[disabled] {\n    /* filter: brightness(0.5); */\n    filter: invert(25%);\n    box-shadow: none;\n  }\n\n  .m-button[disabled] > * {\n    text-decoration: underline;\n    text-underline-offset: -0.3em;\n    text-decoration-skip-ink: none;\n    /* text-decoration: line-through; */\n  }\n`"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "buttonStyles",
-          "declaration": {
-            "name": "buttonStyles",
-            "module": "src/components/Button/button-styles.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/Button/index.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/Button/m-button.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "Sizes",
-          "type": {
-            "text": "{\n  Small: 'sm',\n  Medium: 'md',\n  Large: 'lg',\n}"
-          },
-          "default": "{\n  Small: 'sm',\n  Medium: 'md',\n  Large: 'lg',\n}"
-        },
-        {
-          "kind": "class",
-          "description": "The Button element.",
-          "name": "MButton",
-          "members": [
-            {
-              "kind": "field",
-              "name": "buttonText",
-              "type": {
-                "text": "string"
-              },
-              "default": "'Button'",
-              "description": "Keep it short and use verbs."
-            },
-            {
-              "kind": "field",
-              "name": "buttonSize",
-              "type": {
-                "text": "string"
-              },
-              "default": "'md'",
-              "description": "'sm' || 'md' || 'lg'",
-              "attribute": "buttonSize"
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "attribute": "disabled"
-            },
-            {
-              "kind": "field",
-              "name": "onClick"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "buttonSize",
-              "type": {
-                "text": "string"
-              },
-              "default": "'md'",
-              "description": "'sm' || 'md' || 'lg'",
-              "fieldName": "buttonSize"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "fieldName": "disabled"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "m-button",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "Sizes",
-          "declaration": {
-            "name": "Sizes",
-            "module": "src/components/Button/m-button.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "MButton",
-          "declaration": {
-            "name": "MButton",
-            "module": "src/components/Button/m-button.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "m-button",
-          "declaration": {
-            "name": "MButton",
-            "module": "src/components/Button/m-button.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/Input/index.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/Input/m-input.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "The Input element.",
-          "name": "MInput",
-          "members": [
-            {
-              "kind": "field",
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "'enter'",
-              "attribute": "name",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "'enter'",
-              "fieldName": "name"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "m-input",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "MInput",
-          "declaration": {
-            "name": "MInput",
-            "module": "src/components/Input/m-input.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "m-input",
-          "declaration": {
-            "name": "MInput",
-            "module": "src/components/Input/m-input.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/Accordion/accordion-item-styles.ts",
       "declarations": [
         {
@@ -312,6 +76,74 @@
       "path": "src/components/Accordion/m-accordion-item.ts",
       "declarations": [
         {
+          "kind": "class",
+          "description": "\nThe Accordion item element.",
+          "name": "MAccordionItem",
+          "slots": [
+            {
+              "description": "The button content.",
+              "name": "button-content"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "_open",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "protected",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "item",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]"
+            },
+            {
+              "kind": "field",
+              "name": "onClick"
+            },
+            {
+              "kind": "method",
+              "name": "fold"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "m-accordion-item",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MAccordionItem",
+          "declaration": {
+            "name": "MAccordionItem",
+            "module": "src/components/Accordion/m-accordion-item.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "m-accordion-item",
+          "declaration": {
+            "name": "MAccordionItem",
+            "module": "src/components/Accordion/m-accordion-item.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Accordion/m-accordion.ts",
+      "declarations": [
+        {
           "kind": "variable",
           "name": "BorderColor",
           "type": {
@@ -329,23 +161,13 @@
         },
         {
           "kind": "class",
-          "description": "\nThe Accordion item element.",
-          "name": "MAccordionItem",
-          "slots": [
-            {
-              "description": "This element has a slot",
-              "name": ""
-            }
-          ],
+          "description": "The Accordion element.",
+          "name": "MAccordion",
           "members": [
             {
               "kind": "field",
-              "name": "_open",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "protected",
-              "default": "true"
+              "name": "_items",
+              "default": "new Map()"
             },
             {
               "kind": "field",
@@ -381,14 +203,6 @@
               },
               "default": "'standard'",
               "attribute": "borderWeight"
-            },
-            {
-              "kind": "field",
-              "name": "onClick"
-            },
-            {
-              "kind": "method",
-              "name": "fold"
             }
           ],
           "attributes": [
@@ -421,7 +235,7 @@
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "m-accordion-item",
+          "tagName": "m-accordion",
           "customElement": true
         }
       ],
@@ -431,7 +245,7 @@
           "name": "BorderColor",
           "declaration": {
             "name": "BorderColor",
-            "module": "src/components/Accordion/m-accordion-item.ts"
+            "module": "src/components/Accordion/m-accordion.ts"
           }
         },
         {
@@ -439,59 +253,9 @@
           "name": "BorderWeight",
           "declaration": {
             "name": "BorderWeight",
-            "module": "src/components/Accordion/m-accordion-item.ts"
+            "module": "src/components/Accordion/m-accordion.ts"
           }
         },
-        {
-          "kind": "js",
-          "name": "MAccordionItem",
-          "declaration": {
-            "name": "MAccordionItem",
-            "module": "src/components/Accordion/m-accordion-item.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "m-accordion-item",
-          "declaration": {
-            "name": "MAccordionItem",
-            "module": "src/components/Accordion/m-accordion-item.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/Accordion/m-accordion.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "The Accordion element.",
-          "name": "MAccordion",
-          "members": [
-            {
-              "kind": "field",
-              "name": "_items",
-              "default": "new Map([\n    ['Sherlock Holmes', 'detective'],\n    ['John Watson', 'doctor'],\n    ['Mycroft Holmes', 'government'],\n  ])"
-            },
-            {
-              "kind": "field",
-              "name": "item",
-              "type": {
-                "text": "array"
-              },
-              "default": "[]"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "m-accordion",
-          "customElement": true
-        }
-      ],
-      "exports": [
         {
           "kind": "js",
           "name": "MAccordion",
@@ -506,6 +270,283 @@
           "declaration": {
             "name": "MAccordion",
             "module": "src/components/Accordion/m-accordion.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Button/button-styles.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "buttonStyles",
+          "default": "css`\n  /* https://spin.atomicobject.com/2015/07/14/css-responsive-square/ */\n  :host {\n    display: block;\n  }\n\n  .m-button {\n    display: flex;\n    position: relative;\n    padding: 0;\n    border-style: solid;\n    border-width: 2px;\n    border-radius: 0.25em;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,\n      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n    font-weight: 700;\n  }\n\n  .m-button::before {\n    content: '';\n    position: absolute;\n    top: -2px;\n    left: -2px;\n    display: block;\n    width: 100%;\n    height: 100%;\n    border-style: solid;\n    border-width: 2px;\n    border-radius: 0.25em;\n    border-color: inherit;\n    background-color: transparent;\n    box-shadow: -1px 1px var(--light, #e6ebff);\n    z-index: 1;\n  }\n\n  .m-button:hover {\n    filter: contrast(2);\n    transition: filter 0.125s ease-in-out;\n  }\n\n  .m-button[square] {\n    position: relative;\n    /* display: flex; */\n  }\n  /* https://spin.atomicobject.com/2015/07/14/css-responsive-square/ */\n  /* re: padding-bottom: 'The solution relies on the somewhat counterintuitive fact that padding is calculated as a percentage of its parent element’s width, not height.' */\n\n  .m-button[square]::after {\n    content: '';\n    display: block;\n    padding-bottom: 100%;\n  }\n\n  .m-button:disabled {\n    filter: contrast(35%);\n    outline: none;\n    box-shadow: none;\n  }\n\n  .m-button:disabled:hover {\n    filter: invert(25%);\n  }\n\n  .m-button--sm[square],\n  .m-button--md[square],\n  .m-button--lg[square] {\n    padding: var(--space-2xs, 0.5rem);\n    min-width: 2em;\n  }\n\n  .m-button--sm {\n    font-size: var(--step-1, 1.5em);\n    padding-inline: var(--space-xs, 0.75rem);\n    padding-block: var(--space-3xs, 0.25rem);\n  }\n\n  .m-button--md {\n    font-size: var(--step-2, 2.25rem);\n    padding-inline: var(--space-s, 1rem);\n    padding-block: var(--space-2xs, 0.5rem);\n  }\n\n  .m-button--lg {\n    font-size: var(--step-3, 3.38rem);\n    padding-inline: var(--space-l, 2rem);\n    padding-block: var(--space-s, 1rem);\n  }\n`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "buttonStyles",
+          "declaration": {
+            "name": "buttonStyles",
+            "module": "src/components/Button/button-styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Button/index.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Button/m-button.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "Sizes",
+          "type": {
+            "text": "{\n  Small: 'sm',\n  Medium: 'md',\n  Large: 'lg',\n}"
+          },
+          "default": "{\n  Small: 'sm',\n  Medium: 'md',\n  Large: 'lg',\n}"
+        },
+        {
+          "kind": "class",
+          "description": "The Button element.",
+          "name": "MButton",
+          "members": [
+            {
+              "kind": "field",
+              "name": "buttonText",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Button'",
+              "description": "Keep it short and use verbs."
+            },
+            {
+              "kind": "field",
+              "name": "buttonSize",
+              "type": {
+                "text": "string"
+              },
+              "default": "'md'",
+              "description": "'sm' || 'md' || 'lg'",
+              "attribute": "buttonSize"
+            },
+            {
+              "kind": "field",
+              "name": "theme",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Light'",
+              "description": "'Light' || 'Dark' || 'Primary' || 'Secondary'",
+              "attribute": "theme"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "True if disabled, false if functional",
+              "attribute": "disabled"
+            },
+            {
+              "kind": "field",
+              "name": "square",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "True if the button has styling to make it square",
+              "attribute": "square"
+            },
+            {
+              "kind": "field",
+              "name": "onClick",
+              "description": "Callback function for button click."
+            }
+          ],
+          "attributes": [
+            {
+              "name": "buttonSize",
+              "type": {
+                "text": "string"
+              },
+              "default": "'md'",
+              "description": "'sm' || 'md' || 'lg'",
+              "fieldName": "buttonSize"
+            },
+            {
+              "name": "theme",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Light'",
+              "description": "'Light' || 'Dark' || 'Primary' || 'Secondary'",
+              "fieldName": "theme"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "True if disabled, false if functional",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "square",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "True if the button has styling to make it square",
+              "fieldName": "square"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "m-button",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Sizes",
+          "declaration": {
+            "name": "Sizes",
+            "module": "src/components/Button/m-button.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "MButton",
+          "declaration": {
+            "name": "MButton",
+            "module": "src/components/Button/m-button.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "m-button",
+          "declaration": {
+            "name": "MButton",
+            "module": "src/components/Button/m-button.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Modal/index.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Modal/m-modal.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MModal",
+          "members": [
+            {
+              "kind": "field",
+              "name": "text",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Modal'",
+              "attribute": "text",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "text",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Modal'",
+              "fieldName": "text"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "m-modal",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MModal",
+          "declaration": {
+            "name": "MModal",
+            "module": "src/components/Modal/m-modal.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "m-modal",
+          "declaration": {
+            "name": "MModal",
+            "module": "src/components/Modal/m-modal.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Card/index.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Card/m-card.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MCard",
+          "members": [],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "m-card",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MCard",
+          "declaration": {
+            "name": "MCard",
+            "module": "src/components/Card/m-card.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "m-card",
+          "declaration": {
+            "name": "MCard",
+            "module": "src/components/Card/m-card.ts"
           }
         }
       ]
@@ -575,63 +616,63 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/Modal/index.ts",
+      "path": "src/components/Input/index.ts",
       "declarations": [],
       "exports": []
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/Modal/m-modal.ts",
+      "path": "src/components/Input/m-input.ts",
       "declarations": [
         {
           "kind": "class",
-          "description": "",
-          "name": "MModal",
+          "description": "The Input element.",
+          "name": "MInput",
           "members": [
             {
               "kind": "field",
-              "name": "text",
+              "name": "name",
               "type": {
                 "text": "string"
               },
-              "default": "'Modal'",
-              "attribute": "text",
+              "default": "'enter'",
+              "attribute": "name",
               "reflects": true
             }
           ],
           "attributes": [
             {
-              "name": "text",
+              "name": "name",
               "type": {
                 "text": "string"
               },
-              "default": "'Modal'",
-              "fieldName": "text"
+              "default": "'enter'",
+              "fieldName": "name"
             }
           ],
           "superclass": {
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "m-modal",
+          "tagName": "m-input",
           "customElement": true
         }
       ],
       "exports": [
         {
           "kind": "js",
-          "name": "MModal",
+          "name": "MInput",
           "declaration": {
-            "name": "MModal",
-            "module": "src/components/Modal/m-modal.ts"
+            "name": "MInput",
+            "module": "src/components/Input/m-input.ts"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "m-modal",
+          "name": "m-input",
           "declaration": {
-            "name": "MModal",
-            "module": "src/components/Modal/m-modal.ts"
+            "name": "MInput",
+            "module": "src/components/Input/m-input.ts"
           }
         }
       ]
