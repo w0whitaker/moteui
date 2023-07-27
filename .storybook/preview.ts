@@ -1,3 +1,5 @@
+/** @format */
+
 // 'setCustomElementsManifest' is required for docs addon to work
 import { Preview, setCustomElementsManifest } from '@storybook/web-components';
 
@@ -11,4 +13,3 @@ import '../src/assets/css/main.css';
 const preview: Preview = {};
 
 export default preview;
-
