@@ -18,14 +18,14 @@ const meta: Meta = {
   argTypes: {
     buttonSize: {
       options: ['sm', 'md', 'lg'],
-      control: { type: 'select' },
+      control: { type: 'inline-radio' },
     },
     square: {
       control: { type: 'boolean' },
     },
     theme: {
       options: ['Light', 'Dark', 'Primary', 'Secondary'],
-      control: { type: 'select' },
+      control: { type: 'inline-radio' },
     },
     onClick: {
       table: {
@@ -46,7 +46,7 @@ type Story = StoryObj;
 export const Generic: Story = {
   args: {
     theme: 'Light',
-    square: true,
+    square: false,
     disabled: false,
     buttonSize: Sizes.Medium,
     buttonText: 'Click me!',
