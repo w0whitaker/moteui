@@ -8,8 +8,8 @@ export const accordionItemStyles = css`
     border-style: solid;
     border-width: 2px;
     border-radius: 0.25em;
-    border-color: var(--dark, #00171f);
-    background-color: var(--light, #e6ebff);
+    border-color: inherit;
+    background-color: inherit;
     box-shadow: -1px 1px var(--light, #e6ebff), -6px 4px var(--dark, #00171f);
   }
 
