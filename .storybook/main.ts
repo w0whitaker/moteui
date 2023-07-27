@@ -7,7 +7,7 @@ const config: StorybookConfig = {
   addons: [
     '@storybook/addon-essentials',
     '@storybook/addon-links',
-    '@storybook/addon-docs',
+    '@storybook/addon-a11y',
   ],
   docs: {
     autodocs: 'tag',
