@@ -34,11 +34,11 @@ export class MAccordionItem extends LitElement {
 
     return html`
       <div class="m-accordion-item--content">
-        <h3>${this.item[0]}</h3>
+        <h3 class="top">${this.item[0]}</h3>
         <p>${_open ? html`${this.item[1]}` : nothing}</p>
       </div>
       <div class="m-accordion-item--button">
-        <m-button buttonSize="sm" theme="primary" @click=${this.onClick}>
+        <m-button buttonSize="sm" theme="light" @click=${this.onClick}>
           <span slot="button-content">${_open ? 'close' : 'open'}</span>
         </m-button>
       </div>
