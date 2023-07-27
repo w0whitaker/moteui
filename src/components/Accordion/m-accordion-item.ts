@@ -1,6 +1,7 @@
 /** @format */
 
 import { LitElement, html, nothing } from 'lit';
+import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property, state } from 'lit/decorators.js';
 import { stackLayout } from '@helpers/layouts';
 import { accordionItemStyles } from './accordion-item-styles';
@@ -31,16 +32,19 @@ export class MAccordionItem extends LitElement {
 
   render() {
     const { _open } = this;
+    const classes = {
+      bottom: _open ? true : false,
+    };
 
     return html`
-      <div class="m-accordion-item--content">
-        <h3 class="top">${this.item[0]}</h3>
-        <p>${_open ? html`${this.item[1]}` : nothing}</p>
-      </div>
-      <div class="m-accordion-item--button">
-        <m-button buttonSize="sm" theme="light" @click=${this.onClick}>
+      <div class="top">
+        <h3>${this.item[0]}</h3>
+        <m-button buttonSize="sm" theme="dark" @click=${this.onClick}>
           <span slot="button-content">${_open ? 'close' : 'open'}</span>
         </m-button>
+      </div>
+      <div class="${classMap(classes)}">
+        <p>${_open ? html`${this.item[1]}` : nothing}</p>
       </div>
     `;
   }

@@ -4,8 +4,7 @@ import { css } from 'lit';
 
 export const accordionItemStyles = css`
   :host {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
     border-style: solid;
     border-width: 2px;
     border-radius: 0.25em;
@@ -20,34 +19,25 @@ export const accordionItemStyles = css`
     margin: 0;
   }
 
-  .top {
-    padding-block-end: 1.25rem;
-    background-color: var(--dark, #00171f);
-    color: var(--light, #e6ebff);
-  }
-
-  .m-accordion-item--content {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-    flex-basis: 80%;
-  }
-
-  .m-accordion-item--button {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-    align-items: center;
+  m-button {
     /* this padding-block-end squeezes the button's box-shadow into this container */
     padding-block-end: 4px;
     /* ditto for this padding-inline-start */
     padding-inline-start: 6px;
-    flex-basis: auto;
-    flex-grow: 1;
   }
 
-  .m-accordion-item--border {
-    border-style: solid;
-    border-radius: 0.25em;
+  .top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--dark, #00171f);
+    color: var(--light, #e6ebff);
+  }
+
+  .top,
+  .bottom {
+    padding-block: var(--space-xs, 0.75rem);
+    padding-inline: var(--space-m, 1.5rem);
   }
 `;
