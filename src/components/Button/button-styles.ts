@@ -15,8 +15,6 @@ export const buttonStyles = css`
     border-style: solid;
     border-width: 2px;
     border-radius: 0.25em;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 700;
   }
 
