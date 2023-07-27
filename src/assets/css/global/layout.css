@@ -11,7 +11,8 @@ div,
 header,
 nav,
 main,
-footer {
+footer,
+table {
   max-inline-size: none;
 }
 
