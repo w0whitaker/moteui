@@ -4,11 +4,16 @@ import { css } from 'lit';
 
 export const accordionItemStyles = css`
   :host {
-    background-color: magenta;
-    padding-inline: var(--space-s, 1rem);
-    padding-block: var(--space-m, 1.5rem);
     display: flex;
     justify-content: space-between;
+    padding-inline: var(--space-s, 1rem);
+    padding-block: var(--space-m, 1.5rem);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 0.25em;
+    border-color: var(--dark, #00171f);
+    background-color: var(--light, #e6ebff);
+    box-shadow: -1px 1px var(--light, #e6ebff), -6px 4px var(--dark, #00171f);
   }
 
   .m-accordion-item--content {
