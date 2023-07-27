@@ -6,13 +6,6 @@ import { classMap } from 'lit/directives/class-map.js';
 import { buttonStyles } from './button-styles';
 import { Light, Dark, Primary, Secondary } from '@themes/index';
 
-export const BorderColor = {
-  Primary: 'primary',
-  Secondary: 'secondary',
-  Light: 'light',
-  Dark: 'dark',
-} as const;
-
 export const Sizes = {
   Small: 'sm',
   Medium: 'md',
@@ -31,12 +24,16 @@ export class MButton extends LitElement {
   /** 'sm' || 'md' || 'lg' */
   @property({ type: String })
   buttonSize = 'md';
+  /** 'Light' || 'Dark' || 'Primary' || 'Secondary' */
   @property({ type: String })
   theme = 'Light';
+  /** True if disabled, false if functional */
   @property({ type: Boolean })
   disabled = false;
+  /** True if the button has styling to make it square */
   @property({ type: Boolean })
   square = false;
+  /** Callback function for button click. */
   @property({ attribute: false })
   onClick = () => {
     return;
