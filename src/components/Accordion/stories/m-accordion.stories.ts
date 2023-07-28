@@ -20,16 +20,9 @@ const meta: Meta = {
         disable: true,
       },
     },
-    border: {
-      control: { type: 'boolean' },
-    },
-    borderColor: {
-      options: ['primary', 'secondary', 'light', 'dark'],
-      control: { type: 'select' },
-    },
-    borderWeight: {
-      options: ['line', 'narrow', 'standard', 'wide', 'jumbo'],
-      control: { type: 'select' },
+    theme: {
+      options: ['Light', 'Dark', 'Primary', 'Secondary'],
+      control: { type: 'inline-radio' },
     },
   },
 };
@@ -51,6 +44,6 @@ export const Default: Story = {
       ],
       ['Matlock', "I'm not a magician, I'm just a country lawyer."],
     ],
-    border: true,
+    theme: 'Light',
   },
 };

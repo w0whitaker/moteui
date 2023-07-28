@@ -9,7 +9,7 @@
         {
           "kind": "variable",
           "name": "accordionItemStyles",
-          "default": "css`\n  :host {\n    display: block;\n  }\n\n  .m-accordion-item {\n    padding-inline: var(--space-s, 1rem);\n    padding-block: var(--space-m, 1.5rem);\n    display: flex;\n    justify-content: space-between;\n    font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, 'Segoe UI',\n      Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',\n      sans-serif;\n  }\n\n  .m-accordion-item--border {\n    border-style: solid;\n    border-radius: 0.25em;\n  }\n`"
+          "default": "css`\n  :host {\n    display: block;\n    border-radius: 0.25em;\n  }\n\n  h3,\n  p {\n    padding: 0;\n    margin: 0;\n  }\n\n  m-button {\n    /* this padding-block-end squeezes the button's box-shadow into this container */\n    padding-block-end: 4px;\n    /* ditto for this padding-inline-start */\n    padding-inline-start: 6px;\n  }\n\n  .m-accordion-item {\n    border-style: solid;\n    border-left-width: var(--space-s, 1rem);\n    border-right-width: var(--space-s, 1rem);\n    border-bottom-width: var(--space-3xs, 0.25rem);\n    border-radius: 0.25em;\n    border-color: inherit;\n    background-color: inherit;\n    box-shadow: -1px 1px var(--light, #e6ebff);\n  }\n\n  .top {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    justify-content: space-between;\n  }\n\n  .top,\n  .bottom {\n    padding-block: var(--space-3xs, 0.25rem);\n    padding-inline-start: var(--space-m, 1.5rem);\n    padding-inline-end: var(--space-3xs, 0.25rem);\n  }\n\n  .bottom {\n    background-color: var(--light, #e6ebff);\n    color: var(--dark, #00171f);\n  }\n`"
         }
       ],
       "exports": [
@@ -30,7 +30,7 @@
         {
           "kind": "variable",
           "name": "accordionStyles",
-          "default": "css`\n  :host {\n    display: block;\n  }\n\n  .m-accordion > ::slotted(*:not(:first-child)) {\n    margin-block-start: 0.125rem;\n  }\n`"
+          "default": "css`\n  :host {\n    display: block;\n  }\n`"
         }
       ],
       "exports": [
@@ -105,6 +105,15 @@
             },
             {
               "kind": "field",
+              "name": "theme",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "'Light' || 'Dark' || 'Primary' || 'Secondary'"
+            },
+            {
+              "kind": "field",
               "name": "onClick"
             },
             {
@@ -144,22 +153,6 @@
       "path": "src/components/Accordion/m-accordion.ts",
       "declarations": [
         {
-          "kind": "variable",
-          "name": "BorderColor",
-          "type": {
-            "text": "{\n  Primary: 'primary',\n  Secondary: 'secondary',\n  Light: 'light',\n  Dark: 'dark',\n}"
-          },
-          "default": "{\n  Primary: 'primary',\n  Secondary: 'secondary',\n  Light: 'light',\n  Dark: 'dark',\n}"
-        },
-        {
-          "kind": "variable",
-          "name": "BorderWeight",
-          "type": {
-            "text": "{\n  Line: 'line',\n  Narrow: 'narrow',\n  Standard: 'standard',\n  Wide: 'wide',\n  Jumbo: 'jumbo',\n}"
-          },
-          "default": "{\n  Line: 'line',\n  Narrow: 'narrow',\n  Standard: 'standard',\n  Wide: 'wide',\n  Jumbo: 'jumbo',\n}"
-        },
-        {
           "kind": "class",
           "description": "The Accordion element.",
           "name": "MAccordion",
@@ -179,56 +172,24 @@
             },
             {
               "kind": "field",
-              "name": "border",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "attribute": "border"
-            },
-            {
-              "kind": "field",
-              "name": "borderColor",
+              "name": "theme",
               "type": {
                 "text": "string"
               },
-              "default": "'primary'",
-              "attribute": "borderColor"
-            },
-            {
-              "kind": "field",
-              "name": "borderWeight",
-              "type": {
-                "text": "string"
-              },
-              "default": "'standard'",
-              "attribute": "borderWeight"
+              "default": "'Light'",
+              "description": "'Light' || 'Dark' || 'Primary' || 'Secondary'",
+              "attribute": "theme"
             }
           ],
           "attributes": [
             {
-              "name": "border",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "fieldName": "border"
-            },
-            {
-              "name": "borderColor",
+              "name": "theme",
               "type": {
                 "text": "string"
               },
-              "default": "'primary'",
-              "fieldName": "borderColor"
-            },
-            {
-              "name": "borderWeight",
-              "type": {
-                "text": "string"
-              },
-              "default": "'standard'",
-              "fieldName": "borderWeight"
+              "default": "'Light'",
+              "description": "'Light' || 'Dark' || 'Primary' || 'Secondary'",
+              "fieldName": "theme"
             }
           ],
           "superclass": {
@@ -240,22 +201,6 @@
         }
       ],
       "exports": [
-        {
-          "kind": "js",
-          "name": "BorderColor",
-          "declaration": {
-            "name": "BorderColor",
-            "module": "src/components/Accordion/m-accordion.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "BorderWeight",
-          "declaration": {
-            "name": "BorderWeight",
-            "module": "src/components/Accordion/m-accordion.ts"
-          }
-        },
         {
           "kind": "js",
           "name": "MAccordion",
@@ -281,7 +226,7 @@
         {
           "kind": "variable",
           "name": "buttonStyles",
-          "default": "css`\n  /* https://spin.atomicobject.com/2015/07/14/css-responsive-square/ */\n  :host {\n    display: block;\n  }\n\n  .m-button {\n    display: flex;\n    position: relative;\n    padding: 0;\n    border-style: solid;\n    border-width: 2px;\n    border-radius: 0.25em;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,\n      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n    font-weight: 700;\n  }\n\n  .m-button::before {\n    content: '';\n    position: absolute;\n    top: -2px;\n    left: -2px;\n    display: block;\n    width: 100%;\n    height: 100%;\n    border-style: solid;\n    border-width: 2px;\n    border-radius: 0.25em;\n    border-color: inherit;\n    background-color: transparent;\n    box-shadow: -1px 1px var(--light, #e6ebff);\n    z-index: 1;\n  }\n\n  .m-button:hover {\n    filter: contrast(2);\n    transition: filter 0.125s ease-in-out;\n  }\n\n  .m-button[square] {\n    position: relative;\n    /* display: flex; */\n  }\n  /* https://spin.atomicobject.com/2015/07/14/css-responsive-square/ */\n  /* re: padding-bottom: 'The solution relies on the somewhat counterintuitive fact that padding is calculated as a percentage of its parent element’s width, not height.' */\n\n  .m-button[square]::after {\n    content: '';\n    display: block;\n    padding-bottom: 100%;\n  }\n\n  .m-button:disabled {\n    filter: contrast(35%);\n    outline: none;\n    box-shadow: none;\n  }\n\n  .m-button:disabled:hover {\n    filter: invert(25%);\n  }\n\n  .m-button--sm[square],\n  .m-button--md[square],\n  .m-button--lg[square] {\n    padding: var(--space-2xs, 0.5rem);\n    min-width: 2em;\n  }\n\n  .m-button--sm {\n    font-size: var(--step-1, 1.5em);\n    padding-inline: var(--space-xs, 0.75rem);\n    padding-block: var(--space-3xs, 0.25rem);\n  }\n\n  .m-button--md {\n    font-size: var(--step-2, 2.25rem);\n    padding-inline: var(--space-s, 1rem);\n    padding-block: var(--space-2xs, 0.5rem);\n  }\n\n  .m-button--lg {\n    font-size: var(--step-3, 3.38rem);\n    padding-inline: var(--space-l, 2rem);\n    padding-block: var(--space-s, 1rem);\n  }\n`"
+          "default": "css`\n  /* https://spin.atomicobject.com/2015/07/14/css-responsive-square/ */\n  :host {\n    display: block;\n  }\n\n  .m-button {\n    display: flex;\n    position: relative;\n    padding: 0;\n    border-style: solid;\n    border-width: 2px;\n    border-radius: 0.25em;\n    font-weight: 700;\n  }\n\n  .m-button::before {\n    content: '';\n    position: absolute;\n    top: -2px;\n    left: -2px;\n    display: block;\n    width: 100%;\n    height: 100%;\n    border-style: solid;\n    border-width: 2px;\n    border-radius: 0.25em;\n    border-color: inherit;\n    background-color: transparent;\n    box-shadow: -1px 1px var(--light, #e6ebff);\n    z-index: 1;\n  }\n\n  .m-button:hover {\n    filter: contrast(2);\n    transition: filter 0.125s ease-in-out;\n  }\n\n  .m-button[square] {\n    position: relative;\n    /* display: flex; */\n  }\n  /* https://spin.atomicobject.com/2015/07/14/css-responsive-square/ */\n  /* re: padding-bottom: 'The solution relies on the somewhat counterintuitive fact that padding is calculated as a percentage of its parent element’s width, not height.' */\n\n  .m-button[square]::after {\n    content: '';\n    display: block;\n    padding-bottom: 100%;\n  }\n\n  .m-button:disabled {\n    filter: contrast(35%);\n    outline: none;\n    box-shadow: none;\n  }\n\n  .m-button:disabled:hover {\n    filter: invert(25%);\n  }\n\n  .m-button--sm[square],\n  .m-button--md[square],\n  .m-button--lg[square] {\n    padding: var(--space-2xs, 0.5rem);\n    min-width: 2em;\n  }\n\n  .m-button--sm {\n    font-size: var(--step-1, 1.5em);\n    padding-inline: var(--space-xs, 0.75rem);\n    padding-block: var(--space-3xs, 0.25rem);\n  }\n\n  .m-button--md {\n    font-size: var(--step-2, 2.25rem);\n    padding-inline: var(--space-s, 1rem);\n    padding-block: var(--space-2xs, 0.5rem);\n  }\n\n  .m-button--lg {\n    font-size: var(--step-3, 3.38rem);\n    padding-inline: var(--space-l, 2rem);\n    padding-block: var(--space-s, 1rem);\n  }\n`"
         }
       ],
       "exports": [
@@ -448,6 +393,111 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/Input/index.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Input/m-input.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The Input element.",
+          "name": "MInput",
+          "members": [
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "'enter'",
+              "attribute": "name",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "'enter'",
+              "fieldName": "name"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "m-input",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MInput",
+          "declaration": {
+            "name": "MInput",
+            "module": "src/components/Input/m-input.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "m-input",
+          "declaration": {
+            "name": "MInput",
+            "module": "src/components/Input/m-input.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Card/index.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Card/m-card.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MCard",
+          "members": [],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "m-card",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MCard",
+          "declaration": {
+            "name": "MCard",
+            "module": "src/components/Card/m-card.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "m-card",
+          "declaration": {
+            "name": "MCard",
+            "module": "src/components/Card/m-card.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/List/index.ts",
       "declarations": [],
       "exports": []
@@ -568,111 +618,6 @@
           "declaration": {
             "name": "MModal",
             "module": "src/components/Modal/m-modal.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/Card/index.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/Card/m-card.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "MCard",
-          "members": [],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "m-card",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "MCard",
-          "declaration": {
-            "name": "MCard",
-            "module": "src/components/Card/m-card.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "m-card",
-          "declaration": {
-            "name": "MCard",
-            "module": "src/components/Card/m-card.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/Input/index.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/Input/m-input.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "The Input element.",
-          "name": "MInput",
-          "members": [
-            {
-              "kind": "field",
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "'enter'",
-              "attribute": "name",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "'enter'",
-              "fieldName": "name"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "m-input",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "MInput",
-          "declaration": {
-            "name": "MInput",
-            "module": "src/components/Input/m-input.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "m-input",
-          "declaration": {
-            "name": "MInput",
-            "module": "src/components/Input/m-input.ts"
           }
         }
       ]
