@@ -42,17 +42,19 @@ export class MAccordionItem extends LitElement {
 
     return html`
       <div class="${classMap(classes)}">
-        <div class="top">
-          <h3>${this.item[0]}</h3>
-          <m-button buttonSize="sm" @click=${this.onClick} theme="${theme}">
-            <span slot="button-content">${_open ? 'close' : 'open'}</span>
-          </m-button>
+        <div class="row">
+          <header>
+            <h3>${this.item[0]}</h3>
+            <m-button buttonSize="sm" @click=${this.onClick} theme="${theme}">
+              <span slot="button-content">${_open ? 'close' : 'open'}</span>
+            </m-button>
+          </header>
         </div>
-        <div class="${_open ? 'bottom' : false}">
-          <div>
-            <p>${_open ? html`${this.item[1]}` : nothing}</p>
-          </div>
-        </div>
+        ${_open
+          ? html` <div class="row">
+              <p>${this.item[1]}</p>
+            </div>`
+          : nothing}
       </div>
     `;
   }

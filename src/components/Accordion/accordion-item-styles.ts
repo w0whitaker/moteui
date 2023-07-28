@@ -33,25 +33,27 @@ export const accordionItemStyles = css`
     box-shadow: -1px 1px var(--light, #e6ebff);
   }
 
-  .top,
-  .bottom {
+  .row {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    padding-block: var(--space-3xs, 0.25rem);
+    padding-inline: var(--space-xs, 0.75rem);
   }
 
-  .top,
-  .bottom {
-    /* padding-block: var(--space-3xs, 0.25rem); */
-    /* padding-inline-start: var(--space-3xs, 0.25rem); */
+  header,
+  p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    padding-block: var(--space-3xs, 0.25rem);
     padding-inline: var(--space-xs, 0.75rem);
-    /* padding-inline-end: var(--space-3xs, 0.25rem); */
   }
 
   p {
+    padding-block: var(--space-s, 1rem);
     border: 2px solid var(--dark, #00171f);
-    background-color: var(--light, #e6ebff);
-    color: var(--dark, #00171f);
+    border-radius: 0.25em;
   }
 `;
