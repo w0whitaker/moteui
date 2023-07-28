@@ -6,32 +6,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { map } from 'lit/directives/map.js';
 import { stackLayout } from '@helpers/layouts';
 import { accordionStyles } from './accordion-styles';
-import {
-  borderLine,
-  borderNarrow,
-  borderStandard,
-  borderWide,
-  borderJumbo,
-  borderPrimary,
-  borderSecondary,
-  borderLight,
-  borderDark,
-} from '@helpers/borders';
-
-export const BorderColor = {
-  Primary: 'primary',
-  Secondary: 'secondary',
-  Light: 'light',
-  Dark: 'dark',
-} as const;
-
-export const BorderWeight = {
-  Line: 'line',
-  Narrow: 'narrow',
-  Standard: 'standard',
-  Wide: 'wide',
-  Jumbo: 'jumbo',
-} as const;
+import { Light, Dark, Primary, Secondary } from '@themes/index';
 
 /**
  * The Accordion element.
@@ -44,33 +19,30 @@ export class MAccordion extends LitElement {
   _items = new Map();
   @state()
   item = [];
-  @property({ type: Boolean })
-  border = false;
+  /** 'Light' || 'Dark' || 'Primary' || 'Secondary' */
   @property({ type: String })
-  borderColor = 'primary';
-  @property({ type: String })
-  borderWeight = 'standard';
+  theme = 'Primary';
 
   static styles = [
     stackLayout,
     accordionStyles,
-    borderLine,
-    borderNarrow,
-    borderStandard,
-    borderWide,
-    borderJumbo,
-    borderPrimary,
-    borderSecondary,
-    borderLight,
-    borderDark,
+    Light,
+    Dark,
+    Primary,
+    Secondary,
   ];
 
   render() {
-    const { _items, border, borderColor, borderWeight } = this;
+    const { _items, theme } = this;
 
     const parentClasses = {
       'm-accordion': true,
       'm-stack': true,
+    };
+
+    const childClasses = {
+      'm-accordion-item': false,
+      [`${theme.toLowerCase()}-theme`]: true,
     };
 
     return html` <!-- display: block -->
@@ -80,9 +52,7 @@ export class MAccordion extends LitElement {
           (item) => html`<!-- display:block -->
             <m-accordion-item
               .item="${item}"
-              ?border="${border}"
-              borderColor="${borderColor}"
-              borderWeight="${borderWeight}"
+              class="${classMap(childClasses)}"
             ></m-accordion-item>`
         )}
       </div>`;
