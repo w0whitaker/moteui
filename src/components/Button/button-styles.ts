@@ -12,10 +12,15 @@ export const buttonStyles = css`
   .m-button {
     display: flex;
     position: relative;
+    background-color: var(--button-bg, #e6ebff);
     border-style: solid;
     border-width: 2px;
     border-radius: 0.25em;
+    border-color: var(--button-border, #00171f);
     font-weight: 700;
+    color: var(--button-text, #00171f);
+    box-shadow: -1px 1px var(--button-shadow-inner, #e6ebff),
+      -6px 4px var(--button-shadow-outer, #00171f);
   }
 
   .m-button::before {
@@ -29,9 +34,9 @@ export const buttonStyles = css`
     border-style: solid;
     border-width: 2px;
     border-radius: 0.25em;
-    border-color: inherit;
+    border-color: var(--button-border, #00171f);
     background-color: transparent;
-    box-shadow: -1px 1px var(--light, #e6ebff);
+    box-shadow: -1px 1px var(--button-shadow-inner, #e6ebff);
     z-index: 1;
   }
 

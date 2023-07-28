@@ -4,14 +4,20 @@ import { css } from 'lit';
 
 export const Dark = css`
   .dark-theme {
-    background-color: var(--dark, #00171f);
-    border-color: var(--dark, #00171f);
-    color: var(--light, #e6ebff);
-    box-shadow: -6px 4px var(--dark, #00171f);
-  }
-
-  .dark-theme:hover {
-    filter: brightness(2) saturate(0.1);
-    transition: filter 0.125s ease-in-out;
+    --item-bg: var(--dark, #00171f);
+    --item-title: var(--light, #e6ebff);
+    --item-border: var(--dark, #00171f);
+    --item-shadow-inner: var(--light, #e6ebff);
+    --item-shadow-outer: var(--dark, #00171f);
+    --button-bg: var(--dark, #00171f);
+    --button-text: var(--light, #e6ebff);
+    --button-border: var(--dark, #00171f);
+    --button-shadow-inner: var(--light, #e6ebff);
+    --button-shadow-outer: var(--dark, #00171f);
+    --textbox-bg: var(--light, #e6ebff);
+    --textbox-border: var(--dark, #00171f);
+    --textbox-shadow-inner: var(--light, #e6ebff);
+    --textbox-shadow-outer: var(--dark, #00171f);
+    --textbox-text: var(--dark, #00171f);
   }
 `;
