@@ -19,7 +19,6 @@ export const accordionItemStyles = css`
     justify-content: flex-end;
     align-items: center;
     flex-basis: 33%;
-    background-color: transparent;
   }
 
   .m-accordion-item {
@@ -28,9 +27,10 @@ export const accordionItemStyles = css`
     border-right-width: var(--space-s, 1rem);
     border-bottom-width: var(--space-3xs, 0.25rem);
     border-radius: 0.25em;
-    border-color: inherit;
-    background-color: inherit;
-    box-shadow: -1px 1px var(--light, #e6ebff);
+    border-color: var(--item-border, #00171f);
+    background-color: var(--item-bg, #e6ebff);
+    box-shadow: -1px 1px var(--item-shadow-inner, #e6ebff),
+      -6px 4px var(--item-shadow-outer, #00171f);
   }
 
   .row {
@@ -50,10 +50,16 @@ export const accordionItemStyles = css`
     padding-block: var(--space-3xs, 0.25rem);
   }
 
+  header {
+    color: var(--item-title, #00171f);
+  }
+
   p {
     padding-block: var(--space-s, 1rem);
     padding-inline: var(--space-xs, 0.75rem);
-    border: 2px solid var(--dark, #00171f);
+    border: 2px solid var(--textbox-border, #00171f);
+    background-color: var(--textbox-bg, #e6ebff);
+    color: var(--textbox-text, #00171f);
     border-radius: 0.25em;
   }
 `;

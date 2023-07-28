@@ -14,10 +14,10 @@ export const Dark = css`
     --button-border: var(--dark, #00171f);
     --button-shadow-inner: var(--light, #e6ebff);
     --button-shadow-outer: var(--dark, #00171f);
-    --textbox-bg: var(--light, #e6ebff);
-    --textbox-border: var(--dark, #00171f);
+    --textbox-bg: var(--dark, #00171f);
+    --textbox-border: var(--light, #e6ebff);
     --textbox-shadow-inner: var(--light, #e6ebff);
     --textbox-shadow-outer: var(--dark, #00171f);
-    --textbox-text: var(--dark, #00171f);
+    --textbox-text: var(--light, #e6ebff);
   }
 `;

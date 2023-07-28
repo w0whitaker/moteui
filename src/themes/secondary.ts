@@ -4,20 +4,20 @@ import { css } from 'lit';
 
 export const Secondary = css`
   .secondary-theme {
-    --item-bg: var(--light, #e6ebff);
-    --item-title: var(--dark, #00171f);
-    --item-border: var(--dark, #00171f);
+    --item-bg: var(--secondary, #ff4081);
+    --item-title: var(--light, #e6ebff);
+    --item-border: var(--secondary, #ff4081);
     --item-shadow-inner: var(--light, #e6ebff);
-    --item-shadow-outer: var(--dark, #00171f);
+    --item-shadow-outer: var(--secondary, #ff4081);
     --button-bg: var(--secondary, #ff4081);
     --button-text: var(--light, #e6ebff);
     --button-border: var(--secondary, #ff4081);
     --button-shadow-inner: var(--light, #e6ebff);
     --button-shadow-outer: var(--secondary, #ff4081);
-    --textbox-bg: var(--light, #e6ebff);
-    --textbox-border: var(--dark, #00171f);
+    --textbox-bg: var(--secondary, #ff4081);
+    --textbox-border: var(--light, #e6ebff);
     --textbox-shadow-inner: var(--light, #e6ebff);
     --textbox-shadow-outer: var(--dark, #00171f);
-    --textbox-text: var(--dark, #00171f);
+    --textbox-text: var(--light, #e6ebff);
   }
 `;
