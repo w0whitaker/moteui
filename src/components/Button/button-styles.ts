@@ -40,11 +40,6 @@ export const buttonStyles = css`
     z-index: 1;
   }
 
-  .m-button:hover {
-    filter: contrast(2);
-    transition: filter 0.125s ease-in-out;
-  }
-
   .m-button[square] {
     position: relative;
   }
