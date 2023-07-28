@@ -5,7 +5,8 @@ import { css } from 'lit';
 export const buttonStyles = css`
   /* https://spin.atomicobject.com/2015/07/14/css-responsive-square/ */
   :host {
-    display: block;
+    display: inline;
+    background-color: hotpink;
   }
 
   .m-button {
