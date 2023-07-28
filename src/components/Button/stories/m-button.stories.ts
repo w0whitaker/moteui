@@ -10,7 +10,7 @@ const meta: Meta = {
   title: 'Components/Button',
   component: 'm-button',
   parameters: {
-    layout: 'centered',
+    layout: 'left',
   },
   tags: ['autodocs'],
   decorators: [
