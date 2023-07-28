@@ -20,6 +20,8 @@ export class MAccordionItem extends LitElement {
   @state()
   item = [];
   @property({ attribute: false })
+  theme = 'Primary';
+  @property({ attribute: false })
   onClick = () => {
     return this.fold();
   };
@@ -31,7 +33,7 @@ export class MAccordionItem extends LitElement {
   }
 
   render() {
-    const { _open } = this;
+    const { _open, theme } = this;
 
     const parentClasses = {
       'm-accordion-item': true,
@@ -45,7 +47,7 @@ export class MAccordionItem extends LitElement {
       <div class="${classMap(parentClasses)}">
         <div class="top">
           <h3>${this.item[0]}</h3>
-          <m-button buttonSize="sm" @click=${this.onClick}>
+          <m-button buttonSize="sm" @click=${this.onClick} theme="${theme}">
             <span slot="button-content">${_open ? 'close' : 'open'}</span>
           </m-button>
         </div>
