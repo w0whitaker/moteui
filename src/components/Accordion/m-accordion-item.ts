@@ -45,7 +45,7 @@ export class MAccordionItem extends LitElement {
       <div class="${classMap(parentClasses)}">
         <div class="top">
           <h3>${this.item[0]}</h3>
-          <m-button buttonSize="sm" theme="dark" @click=${this.onClick}>
+          <m-button buttonSize="sm" @click=${this.onClick}>
             <span slot="button-content">${_open ? 'close' : 'open'}</span>
           </m-button>
         </div>

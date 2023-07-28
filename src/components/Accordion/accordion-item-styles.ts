@@ -5,8 +5,6 @@ import { css } from 'lit';
 export const accordionItemStyles = css`
   :host {
     display: block;
-    border-style: solid;
-    border-width: 2px;
     border-radius: 0.25em;
   }
 
@@ -24,25 +22,12 @@ export const accordionItemStyles = css`
   }
 
   .m-accordion-item {
-    position: relative;
-    border-color: inherit;
-  }
-
-  .m-accordion-item::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    display: block;
-    width: 100%;
-    height: 100%;
     border-style: solid;
     border-width: 2px;
     border-radius: 0.25em;
     border-color: inherit;
-    background-color: transparent;
+    background-color: inherit;
     box-shadow: -1px 1px var(--light, #e6ebff);
-    z-index: 1;
   }
 
   .top {
@@ -59,6 +44,9 @@ export const accordionItemStyles = css`
   }
 
   .bottom {
+    margin-inline: 2px;
+    margin-block-end: 2px;
+    border-radius: 0.25em;
     background-color: var(--light, #e6ebff);
     color: var(--dark, #00171f);
   }
