@@ -16,7 +16,7 @@ export const accordionItemStyles = css`
 
   m-button {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     flex-basis: 33%;
     background-color: transparent;
@@ -33,19 +33,20 @@ export const accordionItemStyles = css`
     box-shadow: -1px 1px var(--light, #e6ebff);
   }
 
-  .top {
+  .top,
+  .bottom {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
 
-  .top,
+  /* .top,
   .bottom {
     padding-block: var(--space-3xs, 0.25rem);
     padding-inline-start: var(--space-m, 1.5rem);
     padding-inline-end: var(--space-3xs, 0.25rem);
-  }
+  } */
 
   .bottom {
     border: 2px solid var(--dark, #00171f);
