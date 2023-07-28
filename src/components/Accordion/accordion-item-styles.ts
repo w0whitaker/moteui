@@ -15,10 +15,11 @@ export const accordionItemStyles = css`
   }
 
   m-button {
-    /* this padding-block-end squeezes the button's box-shadow into this container */
-    padding-block-end: 4px;
-    /* ditto for this padding-inline-start */
-    padding-inline-start: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 33%;
+    background-color: transparent;
   }
 
   .m-accordion-item {
