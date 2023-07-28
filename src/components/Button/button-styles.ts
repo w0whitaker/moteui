@@ -3,16 +3,15 @@
 import { css } from 'lit';
 
 export const buttonStyles = css`
-  /* https://spin.atomicobject.com/2015/07/14/css-responsive-square/ */
   :host {
-    display: inline;
-    background-color: hotpink;
+    display: inline-block;
+    padding-inline-start: 6px;
+    padding-block-end: 4px;
   }
 
   .m-button {
     display: flex;
     position: relative;
-    padding: 0;
     border-style: solid;
     border-width: 2px;
     border-radius: 0.25em;
@@ -43,10 +42,10 @@ export const buttonStyles = css`
 
   .m-button[square] {
     position: relative;
-    /* display: flex; */
   }
-  /* https://spin.atomicobject.com/2015/07/14/css-responsive-square/ */
-  /* re: padding-bottom: 'The solution relies on the somewhat counterintuitive fact that padding is calculated as a percentage of its parent element’s width, not height.' */
+
+  // ! https://spin.atomicobject.com/2015/07/14/css-responsive-square/
+  // ? re: padding-bottom: 'The solution relies on the somewhat counterintuitive that padding is calculated as a percentage of its parent element’s width, not height.'
 
   .m-button[square]::after {
     content: '';
