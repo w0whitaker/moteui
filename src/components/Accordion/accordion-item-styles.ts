@@ -39,13 +39,12 @@ export const accordionItemStyles = css`
 
   .top,
   .bottom {
-    padding-block: var(--space-xs, 0.75rem);
-    padding-inline: var(--space-m, 1.5rem);
+    padding-block: var(--space-3xs, 0.25rem);
+    padding-inline-start: var(--space-m, 1.5rem);
+    padding-inline-end: var(--space-3xs, 0.25rem);
   }
 
   .bottom {
-    margin-inline: 2px;
-    margin-block-end: 2px;
     border-radius: 0.25em;
     background-color: var(--light, #e6ebff);
     color: var(--dark, #00171f);
