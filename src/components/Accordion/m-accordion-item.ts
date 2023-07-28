@@ -32,19 +32,26 @@ export class MAccordionItem extends LitElement {
 
   render() {
     const { _open } = this;
+
+    const parentClasses = {
+      'm-accordion-item': true,
+    };
+
     const classes = {
       bottom: _open ? true : false,
     };
 
     return html`
-      <div class="top">
-        <h3>${this.item[0]}</h3>
-        <m-button buttonSize="sm" theme="dark" @click=${this.onClick}>
-          <span slot="button-content">${_open ? 'close' : 'open'}</span>
-        </m-button>
-      </div>
-      <div class="${classMap(classes)}">
-        <p>${_open ? html`${this.item[1]}` : nothing}</p>
+      <div class="${classMap(parentClasses)}">
+        <div class="top">
+          <h3>${this.item[0]}</h3>
+          <m-button buttonSize="sm" theme="dark" @click=${this.onClick}>
+            <span slot="button-content">${_open ? 'close' : 'open'}</span>
+          </m-button>
+        </div>
+        <div class="${classMap(classes)}">
+          <p>${_open ? html`${this.item[1]}` : nothing}</p>
+        </div>
       </div>
     `;
   }
