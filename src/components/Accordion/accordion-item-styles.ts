@@ -48,6 +48,7 @@ export const accordionItemStyles = css`
   }
 
   .bottom {
+    border: 2px solid var(--dark, #00171f);
     background-color: var(--light, #e6ebff);
     color: var(--dark, #00171f);
   }
