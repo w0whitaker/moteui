@@ -23,7 +23,9 @@ export const accordionItemStyles = css`
 
   .m-accordion-item {
     border-style: solid;
-    border-width: 2px;
+    border-left-width: var(--space-s, 1rem);
+    border-right-width: var(--space-s, 1rem);
+    border-bottom-width: var(--space-3xs, 0.25rem);
     border-radius: 0.25em;
     border-color: inherit;
     background-color: inherit;
@@ -45,7 +47,6 @@ export const accordionItemStyles = css`
   }
 
   .bottom {
-    border-radius: 0.25em;
     background-color: var(--light, #e6ebff);
     color: var(--dark, #00171f);
   }
