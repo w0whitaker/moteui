@@ -21,7 +21,7 @@ export class MAccordion extends LitElement {
   item = [];
   /** 'Light' || 'Dark' || 'Primary' || 'Secondary' */
   @property({ type: String })
-  theme = 'Primary';
+  theme = 'Light';
 
   static styles = [
     stackLayout,
@@ -51,6 +51,7 @@ export class MAccordion extends LitElement {
           _items,
           (item) => html`<!-- display:block -->
             <m-accordion-item
+              .theme="${theme}"
               .item="${item}"
               class="${classMap(childClasses)}"
             ></m-accordion-item>`
