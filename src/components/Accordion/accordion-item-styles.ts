@@ -48,11 +48,11 @@ export const accordionItemStyles = css`
     align-items: center;
     flex-grow: 1;
     padding-block: var(--space-3xs, 0.25rem);
-    padding-inline: var(--space-xs, 0.75rem);
   }
 
   p {
     padding-block: var(--space-s, 1rem);
+    padding-inline: var(--space-xs, 0.75rem);
     border: 2px solid var(--dark, #00171f);
     border-radius: 0.25em;
   }
