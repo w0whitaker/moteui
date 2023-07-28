@@ -19,8 +19,9 @@ export class MAccordionItem extends LitElement {
   protected _open = false;
   @state()
   item = [];
+  /** 'Light' || 'Dark' || 'Primary' || 'Secondary' */
   @property({ attribute: false })
-  theme = 'Primary';
+  theme = '';
   @property({ attribute: false })
   onClick = () => {
     return this.fold();
